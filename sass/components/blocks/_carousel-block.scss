@@ -1,0 +1,46 @@
+
+// Carousel Block    ==============================================
+
+.view-nodequeue-projects-featured  {
+  position: relative;
+  z-index: 10;
+ // background-color: $brand3;
+
+  button {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 35px;
+    height: 65px;
+    background-image: url('../img/slide-arrow-left.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-color: transparent;
+    filter:none;
+    border: none;
+    position: absolute;
+    z-index: 100;
+    top: 35%;
+    left: 1%;
+    float: left;
+
+    &.slick-next {
+      background-image: url('../img/slide-arrow-right.png');
+      background-repeat: no-repeat;
+      background-position: center right;
+      float: right;
+      left: auto;
+      right: 1%;
+    }
+  }
+}
+
+
+
+.view-nodequeue-projects-featured {
+
+  .slick-track {
+    width: 100% !important;
+   transform: none !important;
+   background: #eee;
+  }
+}

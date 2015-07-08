@@ -1,0 +1,41 @@
+
+/* =============================================================================
+    ADMINISTRTOR PROFILE
+   ========================================================================== */
+
+   article.profile {
+      .user-picture {
+        float: left;
+        //width: 30%;
+      }
+
+      .user-profile-category-history {
+        border: 1px solid $shade3;
+        margin-bottom: 1em;
+        float: left;
+        width: 100%;
+      }
+
+      a.privatemsg-send-link {
+        display: block;
+
+        @include btn-w-icon;
+        &:before {
+          @extend %icon-message;
+        }
+      }
+
+      .field-name-field-research-space,
+      .field-type-entityreference {
+        border: 1px solid $shade3;
+        float: left;
+        width: 30%;
+        padding: .7em;
+      }
+
+      dd,
+      dt {
+        float: left;
+        width: 100%;
+      }
+   }

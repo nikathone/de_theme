@@ -1,0 +1,11 @@
+#sidebar-second .block-search-filter{
+  .content li{
+    @include reset;
+    @include adjust-font-size-to(14px);
+    line-height: ms(.75);
+    margin-bottom: ms();
+  }
+  h2{
+    // @include svg-bkgd($misc, 'filter-dark');
+  }
+}

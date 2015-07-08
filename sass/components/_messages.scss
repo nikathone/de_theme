@@ -1,0 +1,113 @@
+
+/* =============================================================================
+    MESSAGES SECTION
+   ========================================================================== */
+
+
+#privatemsg-list-form {
+  .container-inline {
+    margin-bottom: ms(0);
+  }
+}
+
+//FORM
+
+div.section-content {
+  .page-user-messages form,
+  .page-messages form {
+
+    input.form-submit, input#edit-submit {
+      padding: .55em 1.1em !Important;
+    }
+
+    select {
+      height: 29px !Important;
+    }
+
+    select, textarea.form-textarea, input.form-text {
+      padding: 0em !important;
+    }
+
+    input.form-autocomplete {
+      height: 29px;
+    }
+
+    input.form-submit {
+      margin-top: 0 !Important;
+      margin-right: 0 !Important;
+      line-height: 15px;
+      position: Relative;
+      top: -1px
+    }
+
+    .container-inline {
+      border-bottom: 1px solid $light-grey;
+      padding-bottom: ms(0);
+    }
+
+    .fieldset-wrapper {
+      input.form-submit {
+        margin-right: ms(0) !important;
+      }
+    }
+  }
+}
+
+//filter messages
+
+form#privatemsg-list {
+  fieldset.collapsible {
+
+    .fieldset-wrapper {
+      margin-top: -1em;
+
+      .privatemsg-filter-actions {
+        margin-top: ms(0);
+      }
+
+      .form-item {
+        margin-bottom: .3em;
+
+        label {
+          display: block;
+          width: 100%;
+          text-align: left;
+          margin-bottom: 0;
+          font-size: ms(-.5);
+          text-transform: none;
+        }
+      }
+    }
+  }
+}
+
+
+
+//ACTION LINK
+
+.page-messages .region-main-prefix ul.action-links li {
+  a {
+    &:before {
+      @extend %icon-pencil-2;
+    }
+  }
+}
+
+//New Message
+
+form#privatemsg-list {
+  .compose-new-message a {
+    float: right;
+    @include btn-w-icon;
+    &:before {
+      @extend %icon-pencil-2;
+    }
+  }
+}
+
+
+//TITLE
+
+.page-messages h1#page-title {
+  margin-bottom: 0;
+}

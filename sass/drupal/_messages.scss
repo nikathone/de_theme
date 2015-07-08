@@ -1,0 +1,10 @@
+/* drupal/_messages.scss */
+
+div.messages{
+  @include reset;
+  margin-bottom: ms();
+  margin-top: 0;
+  padding: ms(-1);
+  padding-left: ms(1.75);
+}
+

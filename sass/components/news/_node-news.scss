@@ -1,0 +1,17 @@
+// news node
+
+// .node-type-news{
+// }
+
+.node-news{
+  .field-name-field-news-type a{
+    @extend %button-link;
+    @include button-link-styles($bg-color: $dark-grey, $text-color: white, $bg-color-hover: $light-grey, $text-color-hover: white, $bg-color-active: black);
+    font-weight: $normal;
+  }
+}
+
+
+//logged in node news
+
+

@@ -1,0 +1,580 @@
+
+/* =============================================================================
+    Islandora Colection
+   ========================================================================== */
+
+
+//GENERAL
+
+.page-islandora-object.page-islandora-object-islandoraroot .section-content .block{
+  //border: none;
+  //background: transparent;
+ // padding: 0;
+}
+
+.page-islandora-object.page-islandora-object-islandoraroot .section-content {
+  //background-color: #fff;
+}
+
+.page-islandora-object.page-islandora-object-islandoraroot .section-content  ul.pager {
+  float: left;
+  width: 100%;
+}
+
+/* =============================================================================
+    List / Grid Toggle
+   ========================================================================== */
+
+.islandora-basic-collection-display-switch {
+  position: Relative;
+  top: 3.5em;
+  z-index: 500;
+
+  ul.links {
+    float: right;
+
+    li {
+      display: inline-block;
+      margin-left: .5em;
+      width: auto;
+
+      a{
+        background-repeat: no-repeat;
+        background-position: center right;
+        display: block;
+        position: relative;
+        width: 25px;
+        height: 25px;
+        overflow: hidden;
+        color: lighten($brand1, 40%);
+        @extend %transition;
+        padding-top: 5px;
+
+        //grid
+
+        &.islandora-view-grid {
+          &:before {
+            @extend %icon-grid-view;
+          }
+        }
+
+        //list
+
+        &.islandora-view-list {
+          &:before {
+            @extend %icon-list-view;
+          }
+        }
+
+        &:hover {
+         color: $brand1;
+        }
+
+        &.active:before{
+         color: $brand1;
+        }
+      }
+    }
+  }
+}
+
+
+/* =============================================================================
+    Sort
+   ========================================================================== */
+
+.islandora-basic-collection .form-wrapper {
+  float: left;
+  padding: 0;
+  border: none;
+  margin-bottom: ms(.5);
+  width: 100%;
+  padding-bottom: ms(-2);
+  border-bottom: 1px solid $shade3;
+  border-radius: 0;
+
+  label {
+    text-transform: uppercase;
+    font-size: .7em;
+    font-weight: 900;
+    line-height: 20px;
+  }
+
+  legend {
+    display: none;
+  }
+
+  .form-item.form-type-select {
+    float: left;
+  }
+}
+
+.section-content #main .islandora-basic-collection .form-wrapper input.form-submit {
+  margin-top: 2.2em;
+  margin-left: ms(0);
+}
+
+
+/* =============================================================================
+    Object Items
+   ========================================================================== */
+
+.islandora-basic-collection-grid {
+  width: 100%;
+  float: left;
+}
+
+.islandora-basic-collection {
+  overflow: visible;
+  top: -1em;
+  position: relative;
+
+
+//BOXES
+
+  dl.islandora-basic-collection-object {
+    width: 23.2%;
+    margin: 0 2% 2% 0;
+    padding: 1em;
+    border: 1px solid lighten($brand3, 10%);
+    position: relative;
+    background: #fff;
+    border: 1px solid $shade3;
+    @extend %border-radius-small;
+    //min-height: 130px;
+      @include breakpoint(max-width 830px) {
+        width: 31.5%;
+        @include breakpoint(max-width 710px) {
+          width: 48%;
+           @include breakpoint(max-width 420px) {
+            width: 98%;
+            min-height: 0;
+            margin: 2% 0;
+            height: auto !important;
+          }
+        }
+      }
+  }
+
+  dl.islandora-basic-collection-object:nth-child(4n+4){
+    margin-right: 0%;
+    @include breakpoint(830px 710px) {
+      margin-right: 2%;
+    }
+  }
+
+  dl.islandora-basic-collection-object:nth-child(3n+3) {
+    //background-color: blue;
+      @include breakpoint(830px 710px) {
+        margin-right: 0;
+    }
+  }
+
+  dl.islandora-basic-collection-object:nth-child(2n+2) {
+   // background-color: yellow;
+      @include breakpoint(710px 420px) {
+        margin-right: 0;
+    }
+  }
+
+
+//CAPTION
+
+dd.collection-value.dc-title,
+dd.islandora-basic-collection-caption {
+  padding: 0;
+
+  a {
+    text-decoration: none;
+    font-weight: $bold;
+    word-break: break-all;
+  }
+}
+
+
+//READ MORE
+
+.islandora-basic-collection-object dl dd.read-more,
+dl.islandora-basic-collection-object dd.read-more {
+  a {
+    color: $brand4;
+    font-weight: $bold;
+    font-size: .8em;
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+    text-decoration: none;
+      @include breakpoint(max-width 420px) {
+        position: relative;
+        float: right;
+        margin-top: 1em;
+      }
+
+    &:hover {
+      color: darken($brand4, 10%);
+    }
+
+    &:after {
+      @extend %icon-arrow-right;
+      float: right;
+      font-weight: $bold;
+      top: 4px;
+      font-size: .7em;
+      margin-left: .5em;
+    }
+  }
+}
+
+
+//IMAGES / ICONS
+
+  dt,
+  .islandora-basic-collection-object .islandora-collectioncmodel dt,
+  dl.islandora-basic-collection-object dt.islandora-basic-collection-thumb {
+    float: left;
+    height: 50px;
+    width: 50px;
+    background-color: $brand4;
+    margin-right: .8em;
+    @extend %border-radius-small;
+
+    &:before {
+      //@extend %icon-star;
+      color: #fff;
+      width: 50px !important;
+      line-height: 50px !important;
+      font-size: 1.5em !important;
+      font-weight: $normal !important;
+    }
+
+    img {
+      display: none;
+    }
+  }
+
+
+//Critical Edition Container Content Model
+
+  .islandora-basic-collection-object .islandora-criticaleditioncontainercmodel dt,
+  dl.islandora-basic-collection-object.islandora-criticaleditioncontainercmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-folder-open;
+    }
+  }
+
+//TEI-RDF Content Model
+
+  .islandora-basic-collection-object .islandora-tei-rdfcmodel dt,
+  dl.islandora-basic-collection-object.islandora-tei-rdfcmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-clipboard;
+    }
+  }
+
+//Transcription Content Model Content Model
+
+  .islandora-basic-collection-object .islandora-transcriptioncmodel dt,
+  dl.islandora-basic-collection-object.islandora-transcriptioncmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-file-text2;
+    }
+  }
+
+//Version Content Model
+
+  .islandora-basic-collection-object .islandora-versioncmodel dt,
+  dl.islandora-basic-collection-object.islandora-versioncmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-pencil;
+    }
+  }
+
+//Islandora Audio Content Model
+
+  .islandora-basic-collection-object .islandora-sp-audiocmodel dt,
+  dl.islandora-basic-collection-object.islandora-sp-audiocmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-file-music;
+    }
+  }
+
+//Islandora Collection Content Model
+
+  .islandora-basic-collection-object .islandora-collectioncmodel dt,
+  dl.islandora-basic-collection-object.islandora-collectioncmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-files-empty;
+    }
+  }
+
+//Islandora Basic Image Content Model
+
+  .islandora-basic-collection-object .islandora-sp_basic_image dt,
+  dl.islandora-basic-collection-object.islandora-sp_basic_image dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-file-picture;
+    }
+  }
+
+//Islandora Internet Archive Book Content Model
+
+  .islandora-basic-collection-object .islandora-bookcmodel dt,
+  dl.islandora-basic-collection-object.islandora-bookcmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-internet-archive;
+      font-size: 2.8em !important;
+    }
+  }
+
+//Islandora Page Content Model
+
+  .islandora-basic-collection-object .islandora-pagecmodel dt,
+  dl.islandora-basic-collection-object.islandora-pagecmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-file-empty;
+    }
+  }
+
+//Islandora Compound Object Content Model
+
+  .islandora-basic-collection-object .islandora-compoundcmodel dt,
+  dl.islandora-basic-collection-object.islandora-compoundcmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-object;
+      font-size: 2.2em !important;
+    }
+  }
+
+//CWRC Organization Entity Content Model
+
+  .islandora-basic-collection-object .cwrc-organization-entitycmodel dt,
+  dl.islandora-basic-collection-object.cwrc-organization-entitycmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-drawer;
+      top: -4px !important;
+    }
+  }
+
+//CWRC Person Entity Content Model
+
+  .islandora-basic-collection-object .cwrc-person-entitycmodel dt,
+  dl.islandora-basic-collection-object.cwrc-person-entitycmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-person;
+      font-size: 2.2em !important;
+    }
+  }
+
+//CWRC Place Entity Content Model
+
+  .islandora-basic-collection-object .cwrc-place-entitycmodel dt,
+  dl.islandora-basic-collection-object.cwrc-place-entitycmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-location;
+    }
+  }
+
+//CWRC Schema Content Model
+
+  .islandora-basic-collection-object .cwrc-schemacmodel dt,
+  dl.islandora-basic-collection-object.cwrc-schemacmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-libreoffice;
+    }
+  }
+
+//Islandora Large Image Content Model
+
+  .islandora-basic-collection-object .islandora-sp_large_image_cmodel dt,
+  dl.islandora-basic-collection-object.islandora-sp_large_image_cmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-file-picture;
+    }
+  }
+
+//Islandora PDF Content Mode
+
+  .islandora-basic-collection-object .islandora-sp_pdf dt,
+  dl.islandora-basic-collection-object.islandora-sp_pdf dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-file-pdf;
+    }
+  }
+
+//Islandora Video Content Model
+
+  .islandora-basic-collection-object .islandora-sp_videocmodel dt,
+  dl.islandora-basic-collection-object.islandora-sp_videocmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-file-play;
+    }
+  }
+
+//CWRC Document Content Model
+
+  .islandora-basic-collection-object .cwrc-documentcmodel dt,
+  dl.islandora-basic-collection-object.cwrc-documentcmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-file-text;
+    }
+  }
+
+//Citation Content Model
+
+  .islandora-basic-collection-object .cwrc-citationcmodel dt,
+  dl.islandora-basic-collection-object.cwrc-citationcmodel dt.islandora-basic-collection-thumb {
+    &:before {
+      @extend %icon-annotation;
+    }
+  }
+
+
+
+
+
+/* =============================================================================
+   Icon Types
+   ========================================================================== */
+/*
+//spaces icon
+
+  dl.cwrc-research-spaces dt,
+  dl.islandora-basic-collection-object.cwrc-research-spaces dt.islandora-basic-collection-thumb {
+
+    &:before {
+      @extend %icon-projects;
+      font-size: 2.1em !important;
+    }
+  }
+
+//entity collection icon
+
+  dl.cwrc-entitycollection dt,
+  dl.islandora-basic-collection-object.cwrc-entitycollection dt.islandora-basic-collection-thumb {
+
+    &:before {
+      @extend %icon-collection;
+      font-size: 1.5em !important;
+    }
+  }
+
+//document collection icon
+
+  dl.cwrc-documentcollection dt,
+  dl.islandora-basic-collection-object.cwrc-documentcollection dt.islandora-basic-collection-thumb {
+
+    &:before {
+      @extend %icon-collection-title;
+      font-size: 1.5em !important;
+    }
+  }
+
+//book collection icon
+
+  dl.islandora-bookcollection dt,
+  dl.islandora-basic-collection-object.islandora-bookcollection dt.islandora-basic-collection-thumb {
+
+    &:before {
+      @extend %icon-book;
+      font-size: .9em !important;
+    }
+  }
+
+//basic image collection icon
+
+  dl.islandora-sp-basic-image-collection dt,
+  dl.islandora-basic-collection-object.islandora-sp-basic-image-collection dt.islandora-basic-collection-thumb {
+
+    &:before {
+      @extend %icon-media-image;
+      font-size: 1.5em !important;
+    }
+  }
+
+//audio collection icon
+
+  dl.islandora-audio-collection dt,
+  dl.islandora-basic-collection-object.islandora-audio-collection dt.islandora-basic-collection-thumb {
+
+    &:before {
+      @extend %icon-media-audio;
+      font-size: 1.5em !important;
+    }
+  }
+
+//schema collection
+
+  dl.cwrc-schemacollection dt,
+  dl.islandora-basic-collection-object.cwrc-schemacollection dt.islandora-basic-collection-thumb {
+
+    &:before {
+      @extend %icon-flag;
+      font-size: .8em !important;
+    }
+  }
+
+//citation collection
+
+  dl.ir-citationcollection dt,
+  dl.islandora-basic-collection-object.ir-citationcollection dt.islandora-basic-collection-thumb {
+
+    &:before {
+      @extend %icon-annotation;
+      font-size: 2em !important;
+    }
+  }
+
+//source collection
+
+  dl.islandora-sourcecollection dt,
+  dl.islandora-basic-collection-object.islandora-sourcecollection dt.islandora-basic-collection-thumb {
+
+    &:before {
+      @extend %icon-magic-circle;
+      font-size: 1.8em !important;
+    }
+  }*/
+}
+
+
+/* =============================================================================
+    List View
+   ========================================================================== */
+
+
+.islandora-basic-collection .islandora-basic-collection-list-item {
+  dl dt {
+    width: 50px;
+    padding: 0;
+  }
+}
+
+.islandora-basic-collection-list-item dl {
+  margin: 0;
+}
+
+.islandora-basic-collection-list-item dl dd {
+  margin: 0 0 0 70px;
+}
+
+
+//READ MORE
+
+.islandora-basic-collection-object.islandora-basic-collection-list-item dl dd:nth-child(4) a {
+  position: relative;
+  float: right;
+  right: auto;
+  bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+/* components/_user-login.scss */
+
+// user login page
+
+// .not-logged-in.page-user-login .content-section{
+//   background-color: transparent;
+//   @include border-radius(0);
+//   @include box-shadow(none);
+//   border: none;
+// }
+
+// .not-logged-in.page-user-login .region-content{
+//   padding: 0;
+// }
+
+// .not-front.page-user-login{
+//   .intranet-form{
+//     background-color: white;
+//   }
+//   #block-block-34{ // user login instructions
+//     @include breakpoint($weird-screen) {
+//       max-width: 50%;
+//       margin: 0 auto;
+//     }
+//     p{
+//       @include adjust-font-size-to(14px);
+//       line-height: ms(.75);
+//     }
+//   }
+// }
+
+// #user-login{
+//   margin-left: 0;
+//   margin-right: 0;
+//   @include breakpoint($weird-screen) {
+//     max-width: 50%;
+//     margin-left: auto;
+//     margin-right: auto;
+//   }
+
+//   .form-item{
+//     .form-text{
+//       @extend %form-item-text;
+//       background-color: white;
+//       border: 1px solid $neutral-grey;
+//     }
+//   }
+// }
+
+
+
+// Member menu block    ==============================================
+
+// #block-menu-button-user-menu {
+//   float: right;
+
+//   // width: 0;
+//   // height: 0;
+//   // border-left: 4px solid transparent;
+//   // border-right: 4px solid transparent;
+//   // border-top: 4px solid #fff;
+//   //border: 1px solid #fff;
+//   // border-radius: 4px;
+//   // overflow: hidden;
+
+//   .menu_button__user-menu.menu_button_trigger {
+//     width: 20px;
+//     height: 20px;
+//     overflow: hidden;
+//     // padding: .1em 4em .1em .4em;
+//     // text-indent: -999px;
+//     // //background-image: url('../img/user-options.png');
+//     // background-position: right center;
+//     // background-repeat: no-repeat;
+
+//     &:before {
+//       @extend %icon-profile;
+//       color: #fff;
+//       margin-right: 0;
+//     }
+//   }
+// }
+
+// .menu_button__user-menu.menu_button_target {
+//   ul {
+//     margin: 0;
+//     padding: 1em;
+
+//     li {
+//       list-style: none;
+//       list-style-image: none;
+//       //border-bottom: 1px solid #fff;
+//       margin-bottom: .2em;
+//       padding-bottom: .2em;
+
+//       &.last {
+//         margin: 0;
+//         border-bottom: none;
+//       }
+
+//       a{
+//         text-decoration: none;
+//         color: #fff;
+//       }
+//     }
+//   }
+// }
+
+form#user-login,
+.page-user-password form,
+.page-user-register form,
+.page-user-login form {
+  padding: ms(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

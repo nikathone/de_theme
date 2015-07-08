@@ -1,0 +1,272 @@
+/* =============================================================================
+    PROJECT DASHBOARD GENERAL
+   ========================================================================== */
+
+ //bring in styles from section-page-user.scss
+
+.page-node-dashboard, .node-type-project {
+  @extend .page-user;
+}
+
+//page title icon
+
+.page-node-dashboard h1#page-title.title:before {
+  content: "\e963" !important;
+  font-size: 36px !important;
+}
+
+//reset content
+
+#block-views-pending-applications-block .content,
+#block-views-project-members-block .content{
+  padding: 0;
+  background: #fff;
+  @extend %border-radius-bottom-right;
+  @extend %border-radius-bottom-left;
+
+  .cwrc-dashboards-new-member-link-wrapper {
+    padding: 1em;
+  }
+}
+
+
+/* =============================================================================
+    ELEMENTS
+   ========================================================================== */
+
+//TABLE STYLES
+
+#block-views-pending-applications-block .content,
+#block-views-project-members-block .content{
+
+  table {
+    //padding: 1em;
+    background: $shade5;
+    border-top: 1px solid $shade3;
+    border-radius: 0;
+    font-size: 1em;
+
+    thead th {
+      background: $shade5;
+      //border-bottom: 1px solid #B2C8D2;
+      border-radius: 0;
+      padding: .8em .4em;
+      border-bottom: 0;
+      text-transform: uppercase;
+    }
+
+    thead tr {
+      border-bottom: 2px solid $shade2 !important;
+    }
+
+    tbody {
+      border-top: none;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    //checkboxes
+
+    tr td.views-field-views-bulk-operations,
+    tr th.views-field-views-bulk-operations {
+      padding: 0 1em;
+    }
+
+    td {
+      border-bottom: 1px solid $shade2;
+    }
+
+    tr {
+      background: $shade5;
+      float: left;
+      width: 100%;
+      border-bottom: 1px solid $shade3 !important;
+    }
+
+    tr.views-row-last {
+      border-bottom: none !important;
+    }
+
+    tr:nth-child(odd) {
+     // background-color: #eee;
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) {
+      //background-color: $shade5;
+    }
+  }
+
+}
+
+
+//CHECKBOXES
+
+// .form-item.form-type-checkbox {
+//   &:before {
+//     @extend %icon-unchecked;
+//   }
+// }
+
+// input[type="checkbox"]:before:checked {
+//   @extend %icon-checked;
+//   font-size: 2em;
+// }
+
+input[type="checkbox"], input[type="radio"] {
+  //&:checked {
+    // box-sizing: border-box;
+    // padding: 0;
+    // background: $grey-icon-back;
+    // height: 16px;
+    // width: 16px;
+    // -webkit-appearance: initial;
+    // border-radius: 2px;
+    // color: $grey-icon-front;
+
+    // &:checked {
+    //   background: red;
+    // }
+ // }
+}
+
+
+//BUTTONS
+
+.page-node-dashboard {
+  input.form-submit, input#edit-submit {
+    background-color: $brand4;
+  }
+}
+
+
+/* =============================================================================
+   FIELDSET STYLES
+   ========================================================================== */
+
+
+//FIELDSET / OPERATIONS STYLE
+
+.page-node-dashboard fieldset.form-wrapper {
+  background: #fff;
+  margin: 0;
+  padding: 0em;
+  border: none;
+  border-top: 1px solid $shade2;
+  @extend %border-radius-bottom-right;
+  @extend %border-radius-bottom-left;
+
+  //operations label
+
+  legend {
+    width: 100%;
+    display: block;
+    background: #fff;
+    padding: .7em;
+    border-top: 1px solid $shade2;
+    border-bottom: 1px solid $shade2;
+    text-transform: uppercase;
+    font-weight: $bold;
+    color: $brand1 !important;
+    font-size: 11px;
+
+    span {
+      line-height: 23px;
+    }
+
+    &:before {
+      @extend %circle-icon;
+      @extend %icon-wrench;
+    }
+  }
+
+  //buttons
+
+  .fieldset-wrapper {
+    padding: .9em;
+
+    input.form-submit {
+      @extend %btn-w-icon;
+      margin-bottom: 0;
+      // display: block;
+      // width: 50%;
+      // margin: 0;
+      // float: left;
+      // background-color: #fff;
+      // border-right: 1px solid $shade2;
+      // border-top-right-radius: 0;
+      // border-bottom-right-radius: 0;
+      // padding: 1em;
+      // color: $brand1;
+
+      &:hover {
+        //background-color: $shade5;
+      }
+    }
+
+    input.form-submit:nth-child(2){
+      // border-right: none;
+      // border-radius: 0;
+      // border-bottom-right-radius: 5px !important;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
