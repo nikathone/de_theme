@@ -15,33 +15,10 @@ text-align: center;
 
   @include breakpoint($medium-screen) {
     @include float-span(4,'last');
-    // text-align: right;
   }
-  // display: none;
-  // @include breakpoint($narrow-screen) {
-    // display: block;
-  // }
-  // position: relative;
-  // right:  auto;
-  // bottom: 0;
-  // @include breakpoint($narrow-screen) {
-  //   position: absolute;
-  //   right:  ms(1);
-  //   bottom:  35%;
-  // }
 
   h2{
     @include squish-text;
-  }
-
-  .form-submit{
-    // @extend %button-input;
-    // @include button-input-styles();
-  }
-
-  .form-search{
-    // @extend %form-item-text;
-    // width: 60%;
   }
 }
 
@@ -75,7 +52,7 @@ form#cwrc-search-bar-search {
     padding: .2em;
     border-radius: 4px;
     float: left;
-    @include breakpoint(max-width 680px) {
+    @include breakpoint(max-width 700px) {
       width: 60%;
         @include breakpoint(max-width 450px) {
           width: 100%;
@@ -129,7 +106,7 @@ form#cwrc-search-bar-search {
       width: 32%;
         @include breakpoint(max-width 770px) {
         width: 40%;
-          @include breakpoint(max-width 680px) {
+          @include breakpoint(max-width 700px) {
           width: 38%;
           font-size: .8em;
             @include breakpoint(max-width 550px){
@@ -154,13 +131,14 @@ form#cwrc-search-bar-search {
     overflow: hidden;
     background-color: transparent;
     filter: none;
-    background-image: url('../img/search-icon.png');
+    background-image: url('../img/search-icon.svg');
     background-repeat: no-repeat;
     background-position: center right;
     margin-right: 1%;
     margin-bottom: 0;
     top: 4px;
     position: relative;
+    //@include svg-bkgd('', 'search-icon', '.png');
   }
 
   //advanced search
@@ -171,7 +149,7 @@ form#cwrc-search-bar-search {
     float: left;
     padding-left: 4.5%;
     border-left: 2px solid $brand1;
-    color: $brand1;
+    color: $brand2 !important;
     color: #333;
     top: 6px;
     position: relative;
@@ -181,7 +159,7 @@ form#cwrc-search-bar-search {
         @extend %folder-plus-icon;
         margin-right: .4em;
         font-size: 1.3em;
-        top: 3px;
+        top: 9px;
         display: none;
       }
 
@@ -197,7 +175,7 @@ form#cwrc-search-bar-search {
       padding-bottom: .2em;
 
       &:before {
-       display: inline-block;
+       display: block;
       }
     }
   }

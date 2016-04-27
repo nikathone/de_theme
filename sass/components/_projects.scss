@@ -5,7 +5,7 @@
 
 //GENERAL
 
-.cwrc-project-homepage .section-content  {
+.cwrc-project-homepage .section-content .region-content {
   background-color: #fff;
 
   .block {
@@ -62,6 +62,12 @@
   margin: 1.4em 0;
 }
 
+.node-project .field {
+  ul li {
+    list-style: disc;
+  }
+}
+
 
 
 /* =============================================================================
@@ -70,11 +76,11 @@
 
 .region-project-banner {
   width: 100%;
-  height: 100px;
+  height: 300px;
 
   .field-name-field-banner-image {
     width: 100%;
-    height: 100px;
+    height: 300px;
     background-position: center;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -92,10 +98,8 @@
  #block-views-project-featured-object-block {
   border: none;
   margin-top: 1.5em;
-  //border-top: 1px solid $shade3;
-  //border-bottom: 1px solid $shade3;
   border-radius: 0;
-  //padding-top: 1em !important;
+
 
   h2 {
     background: none;
@@ -104,7 +108,6 @@
     margin-bottom: 1em;
     border-bottom: 1px solid $shade3;
     border-radius: 0;
-    //text-transform: uppercase;
     font-size: 1.2em;
 
     a {
@@ -158,32 +161,10 @@
 .group-left,
 .group-footer,
 .cwrc-project-homepage .section-content .group-right .field {
-  //border: 1px solid #C8C8C8;
-  //padding: .7em;
   border-radius: 5px;
   margin-bottom: ms(0);
   background: #fff;
 }
-/*
-.group-right,
-.group-footer,
-.cwrc-project-homepage .section-content .group-right .field {
-   .field-label {
-    margin: -.7em -.7em .7em;
-    border-radius: 4px;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-    background-color: #f7f7f7;
-    padding: 0.78615em 1em;
-    margin-bottom: 0;
-    font-size: 1em;
-    border-bottom: 1px solid #d7d7d7;
-    font-weight: 700;
-    color: #000;
-  }
-}*/
-
-//group
 
 .cwrc-project-homepage .field-name-group-group {
   span {
@@ -192,17 +173,58 @@
   }
 }
 
-//acknowledgements
+//sidebar content
 
-.cwrc-project-homepage .field-name-field-acknowledgements {
+.cwrc-project-homepage .field-name-field-acknowledgements.field-type-field-collection {
+
+  a {
+    color: #fff !important;
+  }
+
   .field-item {
     margin-top: .5em;
   }
-  .field-label {
-    margin-bottom: ms(-.2);
+
+  .field-name-field-title {
+    font-size: 1.1em;
+    font-weight: $bold;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .field-type-text-long {
+    padding: 1em;
+    background: #eee;
+    color: $brand1;
+
+    .field-item {
+      margin-top: 0;
+    }
+  }
+
+  .field-items .field-item:nth-child(even) .field-collection-view .field-type-text-long {
+    //background: red;
   }
 }
 
+
+.cwrc-project-theme-bloodorange, .cwrc-project-theme-burntsienna, .cwrc-project-theme-darktan, .cwrc-project-theme-desert, .cwrc-project-theme-forest, .cwrc-project-theme-marine, .cwrc-project-theme-mediumblue, .cwrc-project-theme-pomegranate, .cwrc-project-theme-sage, .cwrc-project-theme-slatemagenta {
+  &.cwrc-project-homepage .field-name-field-acknowledgements.field-type-field-collection .field-type-text-long{
+    color: #fff;
+  }
+}
+
+//SIDEBAR MENU
+
+.cwrc-project-theme-default .sidebar .block-menu-block ul li a {
+  color: $brand4;
+}
+
+.sidebar .block-menu-block ul li a.active:hover {
+  background-color: darken($brand4, 7%);
+}
 
 
 /* =============================================================================
@@ -211,6 +233,8 @@
 
 .field-name-field-featured-links {
   margin-bottom: 1.8em !important;
+  float: left;
+  width: 100%;
 
   .field-item {
     margin-bottom: .7em;
@@ -221,10 +245,16 @@
       color: #fff !important;
       padding: 1.2em .8em;
       font-size: .9em !important;
+      width: 100%;
 
       &:before {
         @extend %icon-link;
       }
+    }
+
+    &:last-child,
+    &:last-child a {
+      margin-bottom: 0;
     }
   }
 }
@@ -278,7 +308,6 @@
   margin-bottom: 1.8em;
 
   .field-label {
-   // text-transform: uppercase;
     border-bottom: 1px solid $shade3;
     border-radius: 0 ;
     padding-bottom: 1em;
@@ -307,49 +336,57 @@
    ========================================================================== */
 
 .cwrc-project-homepage .group-footer .field-collection-container{
-  //margin-top: 2em;
   float: left;
-  border: 1px solid $shade3;
-  padding: .7em;
-  border-radius: 5px;
+  margin-top: 1em;
+  width: 100%;
 
   .field-label {
     font-size: 1.2em;
     margin-bottom: .7em;
+    border-bottom: 1px solid $shade3;
+    padding: 0 0 1em 0;
   }
 
   .field-items {
     float: left;
-    width: 100%;
-    margin: 1em 0;
 
     .field-item {
-      width: 12.5%;
       float: left;
-      margin-right: 5%;
-      @include breakpoint(0 480px) {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 1em;
+      margin-right: 1.5em;
+      margin-bottom: 1.5em;
+
+      img {
+        max-height: 115px;
+        width: auto;
       }
-
-      .field-item {
-        width: 100%;
-        margin-right: 0;
-        height: auto !important;
-
-        img {
-          margin: 0 auto;
-          display: block;
-        }
-      }
-    }
-
-    .field-item:nth-child(6n+6) {
-      margin-right: 0;
     }
   }
 }
+
+
+
+/* =============================================================================
+   JOIN GROUP
+   ========================================================================== */
+
+.cwrc-project-homepage .field-name-group-join-form {
+  border: 1px solid $shade3;
+  float: left;
+  width: 100%;
+  padding: .7em;
+}
+
+.cwrc-project-homepage .section-content #block-cwrc-projects-project-group-join.block {
+  margin-bottom: 0;
+}
+
+.cwrc-project-homepage .section-content .region-content #block-cwrc-projects-project-group-join.block form .form-actions a,
+.cwrc-project-homepage .section-content .region-content #block-cwrc-projects-project-group-join.block form .form-actions input#edit-submit {
+  margin-bottom: 0 !important;
+  margin: 0 .5em 0em 0 !important;
+  margin-top: 0 !important;
+}
+
 
 
 
@@ -372,8 +409,7 @@
 }
 
 .node-type-project .region-main-suffix {
-  background-color: #af1100;
-  //margin-top: 5em;
+  background-color: $brand4;
   margin-bottom: 0;
   padding-top: 4.5em;
   padding-bottom: 4em;
@@ -442,8 +478,6 @@
 
 @import 'projects/project-themes';
 @import 'projects/project-admin-settings';
-
-
 
 
 

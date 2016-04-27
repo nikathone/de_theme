@@ -57,12 +57,9 @@ select{
 }
 
 select[multiple] {
-  height: auto;
+  height: auto !important;
 }
 
-.page-admin.admin-menu .region-content select[multiple] {
-  height: auto !Important;
-}
 
 
 //FIELDSET AND LEGEND
@@ -278,19 +275,16 @@ a.tabledrag-handle .handle {
 }
 
 
+//CHECKBOXES
 
-
-
-
-
-
-
-
-
-
-
-
-
+th.views-field-views-bulk-operations,
+td.views-field-views-bulk-operations {
+  input.form-checkbox {
+    width: 20px;
+    height: 20px;
+    position: relative;
+  }
+}
 
 
 

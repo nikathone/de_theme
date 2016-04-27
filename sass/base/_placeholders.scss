@@ -553,6 +553,11 @@ icons with borders
 
    %icon-add-workflow-stamp{
     @include icon;
+    content: "\e95b";
+   }
+
+  %icon-view-workflow-stamp{
+    @include icon;
     content: "\e95d";
    }
 
@@ -664,6 +669,18 @@ icons with borders
 
 
 //DEFAULT
+
+  %icon-calendar-2{
+    @include icon;
+    content: "\e925";
+    @include default-icomoon-icon-styles;
+  }
+
+  %icon-news-paper{
+    @include icon;
+    content: "\e975";
+    @include default-icomoon-icon-styles;
+  }
 
   %icon-pencil{
     @include icon;

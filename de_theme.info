@@ -19,12 +19,14 @@ regions[main_prefix_right] = 'Main Content Region Prefix (Right)'
 regions[toolbar]        = 'Toolbar Region'
 regions[user_menu]      = 'User Menu'
 regions[project_banner] = 'Project Banner'
+regions[slider_region] = 'Slider Region'
 regions[sidebar_first]  = 'Sidebar Primary'
 regions[content]        = 'Main Content Region'
 regions[sidebar_second] = 'Sidebar Secondary'
 regions[main_suffix]    = 'Main Content Region Suffix'
 
 ; Footer
+regions[sponsor_region] = 'Sponsor Region'
 regions[footer]         = 'Footer'
 
 ; ========================================

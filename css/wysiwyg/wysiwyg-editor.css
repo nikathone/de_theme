@@ -462,6 +462,12 @@ th {
     Circle Icons
    ========================================================================== */
 /* =============================================================================
+    MAKE ITEM LIKE BLOCK
+   ========================================================================== */
+/* =============================================================================
+   UNBLOCK
+   ========================================================================== */
+/* =============================================================================
     Placeholders
    ========================================================================== */
 .btn {
@@ -1082,13 +1088,14 @@ table tr:nth-child(even) {
 table th {
   font-weight: 900;
   vertical-align: middle;
+  border-bottom: 3px solid #ddd;
 }
 table th,
 table thead th {
-  color: white;
+  color: #333;
 }
 table th.select-all input {
-  left: 2px;
+  left: 5px;
   position: relative;
 }
 table tbody tr:last-child td {
@@ -1146,9 +1153,70 @@ img, video {
   height: auto;
 }
 
+.maintenance-page #content {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+
+.maintenance-page h1.title {
+  font-weight: 700;
+}
+.maintenance-page header {
+  position: relative;
+  margin: 0 auto 2em;
+  padding: .7em 2em;
+  background: #333;
+}
+.maintenance-page #name-and-slogan h1 a {
+  text-decoration: none;
+  overflow: hidden;
+  width: 45px;
+  height: 20px;
+  display: block;
+}
+.maintenance-page #name-and-slogan h1#site-name a {
+  display: none;
+}
+
+.jwplayer {
+  margin: 0 auto;
+  float: none;
+}
+
+a.contextual-links-trigger {
+  margin: 0 !important;
+  padding: 0 2px !important;
+  width: 28px !important;
+  border: none !important;
+}
+
+ul.contextual-links li {
+  margin: 0 !important;
+  padding: 0 .3em !important;
+  float: none !important;
+}
+
+.sidebar #block-islandora-blocks-collections ul.contextual-links li a,
+.block-menu-block ul.contextual-links li a,
+ul.contextual-links li a {
+  line-height: normal !important;
+  margin: 0.25em 0 !important;
+  padding: 0.25em 1em 0.25em 0.5em !important;
+  border: none !important;
+  font-weight: normal !important;
+  font-size: 14px !important;
+  background-color: #fff !important;
+}
+
 /* =============================================================================
     Reusable Classes That are Used Throughout The Site
    ========================================================================== */
+.front #block-system-main {
+  border: none;
+  padding: 0;
+}
+
 /* =============================================================================
     Placeholders
    ========================================================================== */

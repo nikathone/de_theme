@@ -5,7 +5,11 @@
 @import 'blocks/block--islandora-bookmark-form';
 @import 'blocks/block--islandora-saved-searches';
 @import 'blocks/block--user-login';
-
+@import 'blocks/block--openid-connect-login';
+@import 'blocks/block--islandora-collection';
+@import 'blocks/block--homepage-slider';
+@import 'blocks/block--what-are-we';
+@import 'blocks/block--homepage-sponsors';
 
 /* =============================================================================
     GENERAL BLOCK STYLES
@@ -15,7 +19,7 @@
 
 .section-content .block {
   background: #fff;
-  border: 1px solid #C8C8C8;
+  border: 1px solid $shade3;
   @extend %border-radius;
   padding: .7em;
   margin-bottom: 1em;
@@ -29,11 +33,19 @@
   }
 }
 
+  .page-node-dashboard, .page-user-dashboard {
+    .section-content .block {
+      border: 1px solid #C8C8C8
+    }
+  }
+
 //header
+
 
 .section-content .block .islandora-object h2,
 .section-content .block header > h2,
 .section-content .block > h2 {
+  margin: -.7em -.7em .7em -.7em !important;
   background-color: $header-grey;
   padding: ms(-.5) ms(0);
   margin-bottom: 0;
@@ -82,6 +94,14 @@
   width: 100%;
 }
 
+//side blocks inside nodes
+
+.node-type-page {
+  .sidebar .block header h2{
+    margin: -.7em -.7em .7em -.7em;
+  }
+}
+
 //inner content sub header
 
 .page-user .sidebar .block .view-content,
@@ -101,6 +121,13 @@
     text-decoration: none;
     font-weight: $bold;
   }
+}
+
+
+//no margin
+
+.page-islandora-search .section-content .block header > h2 {
+  margin: 0 !important;
 }
 
 

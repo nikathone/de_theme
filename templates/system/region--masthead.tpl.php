@@ -31,7 +31,17 @@
 <?php if ($content): ?>
   <div class="<?php print $classes; ?>" id="masthead">
     <div class="container clearfix">
-      <ul class="navbar">
+
+      <div class="logo-hamburger">
+        <?php print($elements['blockify_blockify-logo']['#markup']); ?>
+      </div>
+
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="main-navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <ul class="navbar collapsed" id="main-navbar">
       <?php print $content; ?>
       </ul>
     </div>

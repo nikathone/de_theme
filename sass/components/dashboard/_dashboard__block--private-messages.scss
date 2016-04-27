@@ -5,6 +5,11 @@
 
 #block-cwrc-dashboards-user-privatemsg {
 
+  h2:before {
+    @extend %icon-message;
+    font-size: 25px !important;
+  }
+
   //view all messages btn
 
   .compose-new-message,

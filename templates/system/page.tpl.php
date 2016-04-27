@@ -67,8 +67,9 @@
  */
 ?>
 
+
 <?php if ($page['masthead'] || $page['navigation']): ?>
-  <header id="header" role="banner">
+  <header id="de-header" role="banner">
     <div class="section-header">
       <?php print render($page['masthead']); ?>
       <?php print render($page['masthead_secondary']); ?>
@@ -99,6 +100,10 @@
 
 <?php if ($page['project_banner']): ?>
   <?php print render($page['project_banner']); ?>
+<?php endif; ?>
+
+<?php if ($page['slider_region']): ?>
+  <?php print render($page['slider_region']); ?>
 <?php endif; ?>
 
 <?php if ($page['user_menu']): ?>
@@ -134,6 +139,12 @@
 
 <?php if ($page['main_suffix']): ?>
   <?php print render($page['main_suffix']); ?>
+<?php endif; ?>
+
+<?php if ($page['sponsor_region']): ?>
+  <footer id="sponsors" role="contentinfo">
+    <?php print render($page['sponsor_region']); ?>
+  </footer>
 <?php endif; ?>
 
 <?php if ($page['footer']): ?>

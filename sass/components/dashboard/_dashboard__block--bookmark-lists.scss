@@ -1,6 +1,9 @@
 /* =============================================================================
     Dashboard - Bookmark Lists
    ========================================================================== */
+#block-cwrc-dashboards-user-bookmark-lists h2:first-of-type:before {
+  @extend %icon-book;
+}
 
 #block-cwrc-dashboards-user-bookmark-lists .content {
 
@@ -12,12 +15,16 @@
     display: inline-block;
     margin-bottom: 0;
     width: auto;
-    top: 5px;
+    top: 8px;
     position: relative;
+    line-height: 22px;
 
     &:before {
+      @extend %icon-bookmark;
       top: -2px !important;
-     // @extend %icon-place;
+      left: 0;
+      margin-right: .5em !important;
+      font-size: 1em !important;
     }
   }
 
@@ -40,6 +47,9 @@
 
     &:before {
       @extend %icon-bookmarks;
+      left: 0;
+      margin-right: .5em !important;
+      font-size: 1em !important;
     }
   }
  }

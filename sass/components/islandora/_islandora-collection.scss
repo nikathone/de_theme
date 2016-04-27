@@ -6,20 +6,23 @@
 
 //GENERAL
 
-.page-islandora-object.page-islandora-object-islandoraroot .section-content .block{
-  //border: none;
-  //background: transparent;
- // padding: 0;
-}
-
-.page-islandora-object.page-islandora-object-islandoraroot .section-content {
-  //background-color: #fff;
-}
-
 .page-islandora-object.page-islandora-object-islandoraroot .section-content  ul.pager {
   float: left;
   width: 100%;
 }
+
+.page-islandora-object-islandoracollectionCModel #block-system-main,
+.page-islandora-object-islandoraroot #block-system-main {
+  border: none;
+  padding: 0;
+}
+
+.page-islandora-object .islandora div.form-item.form-type-select.form-item-sort {
+  width: auto;
+}
+
+
+
 
 /* =============================================================================
     List / Grid Toggle
@@ -132,8 +135,9 @@
 
 //BOXES
 
-  dl.islandora-basic-collection-object {
-    width: 23.2%;
+  ul.list-layout li,
+  ul.grid-layout li {
+    width: 31.5%;
     margin: 0 2% 2% 0;
     padding: 1em;
     border: 1px solid lighten($brand3, 10%);
@@ -141,53 +145,82 @@
     background: #fff;
     border: 1px solid $shade3;
     @extend %border-radius-small;
-    //min-height: 130px;
-      @include breakpoint(max-width 830px) {
-        width: 31.5%;
-        @include breakpoint(max-width 710px) {
-          width: 48%;
-           @include breakpoint(max-width 420px) {
-            width: 98%;
-            min-height: 0;
-            margin: 2% 0;
-            height: auto !important;
-          }
+    min-height: 99px;
+    width: 48.5%;
+    @include breakpoint(max-width 710px) {
+      min-height: 80px;
+      @include breakpoint(max-width 715px) {
+        width: 98%;
+        margin: 2% 0;
         }
       }
   }
 
-  dl.islandora-basic-collection-object:nth-child(4n+4){
-    margin-right: 0%;
-    @include breakpoint(830px 710px) {
-      margin-right: 2%;
-    }
-  }
-
-  dl.islandora-basic-collection-object:nth-child(3n+3) {
-    //background-color: blue;
-      @include breakpoint(830px 710px) {
-        margin-right: 0;
-    }
-  }
-
-  dl.islandora-basic-collection-object:nth-child(2n+2) {
-   // background-color: yellow;
-      @include breakpoint(710px 420px) {
-        margin-right: 0;
-    }
+  ul.grid-layout li:nth-child(2n+2) {
+    @include breakpoint(420px) {
+     margin-right: 0;
+   }
   }
 
 
-//CAPTION
+//WITHIN BOX
 
-dd.collection-value.dc-title,
-dd.islandora-basic-collection-caption {
+.top-wrapper {
+  position: relative;
+  width: 100%;
+  float: left;
+}
+
+.right-wrapper {
+  float: left;
+  padding-left: 65px;
+  width: 100%;
+  @include breakpoint(715px) {
+    padding-left: 80px;
+  }
+
+  .project-info {
+    a {
+      img {
+        width: auto;
+        height: 30px;
+        margin-top: .2em;
+        float: left;
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+.left-wrapper {
+  float: left;
+  position: absolute;
+}
+
+.creation-info {
+  font-weight: $bold;
+  font-size: .8em;
+  margin-bottom: .5em;
+
+  .creator, .date {
+    line-height: 14px;
+  }
+
+  .date {
+    display: inline-block;
+  }
+}
+
+
+//CAPTION / TITLE
+
+.islandora-basic-collection .right-wrapper .label {
   padding: 0;
+  margin-bottom: .2em;
 
   a {
     text-decoration: none;
-    font-weight: $bold;
-    word-break: break-all;
+    font-weight: $xbold;
   }
 }
 
@@ -228,23 +261,30 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //IMAGES / ICONS
 
-  dt,
-  .islandora-basic-collection-object .islandora-collectioncmodel dt,
-  dl.islandora-basic-collection-object dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper a .no-image {
     float: left;
-    height: 50px;
-    width: 50px;
+    height: 64px;
+    width: 64px;
     background-color: $brand4;
-    margin-right: .8em;
     @extend %border-radius-small;
+    @include breakpoint(0 715px) {
+      width: 45px;
+      height: 45px;
+    }
 
     &:before {
-      //@extend %icon-star;
+      @extend %icon-files-empty;
       color: #fff;
-      width: 50px !important;
-      line-height: 50px !important;
-      font-size: 1.5em !important;
+      width: 64px !important;
+      line-height: 64px !important;
+      font-size: 1.8em !important;
       font-weight: $normal !important;
+      @include breakpoint(0 715px) {
+        width: 45px !important;
+        height: 45px !important;
+        font-size: 1.3em !important;
+        line-height: 45px !important;
+      }
     }
 
     img {
@@ -252,11 +292,50 @@ dl.islandora-basic-collection-object dd.read-more {
     }
   }
 
+//if it has an img
+
+  .islandora-basic-collection .left-wrapper a img {
+    background-color: #fff !important;
+    border: 1px solid $shade3;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: top;
+    width: 64px;
+    height: 64px;
+    @include breakpoint(0 715px) {
+      width: 45px;
+      height: 45px;
+    }
+
+    a {
+      height: 100%;
+      overflow: hidden;
+      position: relative;
+      display: block;
+    }
+
+    &:before {
+      content: none !important;
+    }
+
+    img {
+      display: block !important;
+      padding: 0em;
+      min-width: 100%;
+      min-height: 100%;
+      margin: auto;
+      position: absolute;
+      top: -100%;
+      right: -100%;
+      bottom: -100%;
+      left: -100%;
+      border-radius: 3px;
+    }
+  }
 
 //Critical Edition Container Content Model
 
-  .islandora-basic-collection-object .islandora-criticaleditioncontainercmodel dt,
-  dl.islandora-basic-collection-object.islandora-criticaleditioncontainercmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-criticaleditioncontainercmodel a .no-image:before {
     &:before {
       @extend %icon-folder-open;
     }
@@ -264,8 +343,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //TEI-RDF Content Model
 
-  .islandora-basic-collection-object .islandora-tei-rdfcmodel dt,
-  dl.islandora-basic-collection-object.islandora-tei-rdfcmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-tei-rdfcmodel a .no-image:before  {
     &:before {
       @extend %icon-clipboard;
     }
@@ -273,8 +351,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Transcription Content Model Content Model
 
-  .islandora-basic-collection-object .islandora-transcriptioncmodel dt,
-  dl.islandora-basic-collection-object.islandora-transcriptioncmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-transcriptioncmodel a .no-image:before {
     &:before {
       @extend %icon-file-text2;
     }
@@ -282,8 +359,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Version Content Model
 
-  .islandora-basic-collection-object .islandora-versioncmodel dt,
-  dl.islandora-basic-collection-object.islandora-versioncmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-versioncmodel a .no-image:before {
     &:before {
       @extend %icon-pencil;
     }
@@ -291,8 +367,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Audio Content Model
 
-  .islandora-basic-collection-object .islandora-sp-audiocmodel dt,
-  dl.islandora-basic-collection-object.islandora-sp-audiocmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-sp-audiocmodel a .no-image:before {
     &:before {
       @extend %icon-file-music;
     }
@@ -300,8 +375,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Collection Content Model
 
-  .islandora-basic-collection-object .islandora-collectioncmodel dt,
-  dl.islandora-basic-collection-object.islandora-collectioncmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-collectioncmodel a .no-image:before {
     &:before {
       @extend %icon-files-empty;
     }
@@ -309,8 +383,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Basic Image Content Model
 
-  .islandora-basic-collection-object .islandora-sp_basic_image dt,
-  dl.islandora-basic-collection-object.islandora-sp_basic_image dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-sp-basic-image a .no-image:before {
     &:before {
       @extend %icon-file-picture;
     }
@@ -318,8 +391,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Internet Archive Book Content Model
 
-  .islandora-basic-collection-object .islandora-bookcmodel dt,
-  dl.islandora-basic-collection-object.islandora-bookcmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-bookcmodel a .no-image:before {
     &:before {
       @extend %icon-internet-archive;
       font-size: 2.8em !important;
@@ -328,8 +400,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Page Content Model
 
-  .islandora-basic-collection-object .islandora-pagecmodel dt,
-  dl.islandora-basic-collection-object.islandora-pagecmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-pagecmodel a .no-image:before {
     &:before {
       @extend %icon-file-empty;
     }
@@ -337,8 +408,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Compound Object Content Model
 
-  .islandora-basic-collection-object .islandora-compoundcmodel dt,
-  dl.islandora-basic-collection-object.islandora-compoundcmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-compoundcmodel a .no-image:before {
     &:before {
       @extend %icon-object;
       font-size: 2.2em !important;
@@ -347,8 +417,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Organization Entity Content Model
 
-  .islandora-basic-collection-object .cwrc-organization-entitycmodel dt,
-  dl.islandora-basic-collection-object.cwrc-organization-entitycmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.cwrc-organization-entitycmodel a .no-image:before {
     &:before {
       @extend %icon-drawer;
       top: -4px !important;
@@ -357,8 +426,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Person Entity Content Model
 
-  .islandora-basic-collection-object .cwrc-person-entitycmodel dt,
-  dl.islandora-basic-collection-object.cwrc-person-entitycmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.cwrc-person-entitycmodel a .no-image:before {
     &:before {
       @extend %icon-person;
       font-size: 2.2em !important;
@@ -367,8 +435,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Place Entity Content Model
 
-  .islandora-basic-collection-object .cwrc-place-entitycmodel dt,
-  dl.islandora-basic-collection-object.cwrc-place-entitycmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.cwrc-place-entitycmodel a .no-image:before {
     &:before {
       @extend %icon-location;
     }
@@ -376,8 +443,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Schema Content Model
 
-  .islandora-basic-collection-object .cwrc-schemacmodel dt,
-  dl.islandora-basic-collection-object.cwrc-schemacmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.cwrc-schemacmodel a .no-image:before {
     &:before {
       @extend %icon-libreoffice;
     }
@@ -385,8 +451,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Large Image Content Model
 
-  .islandora-basic-collection-object .islandora-sp_large_image_cmodel dt,
-  dl.islandora-basic-collection-object.islandora-sp_large_image_cmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-sp-large-image-cmodel a .no-image:before {
     &:before {
       @extend %icon-file-picture;
     }
@@ -394,8 +459,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora PDF Content Mode
 
-  .islandora-basic-collection-object .islandora-sp_pdf dt,
-  dl.islandora-basic-collection-object.islandora-sp_pdf dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-sp-pdf a .no-image:before {
     &:before {
       @extend %icon-file-pdf;
     }
@@ -403,8 +467,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Video Content Model
 
-  .islandora-basic-collection-object .islandora-sp_videocmodel dt,
-  dl.islandora-basic-collection-object.islandora-sp_videocmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.islandora-sp-videocmodel a .no-image:before {
     &:before {
       @extend %icon-file-play;
     }
@@ -412,8 +475,7 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Document Content Model
 
-  .islandora-basic-collection-object .cwrc-documentcmodel dt,
-  dl.islandora-basic-collection-object.cwrc-documentcmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.cwrc-documentcmodel a .no-image:before {
     &:before {
       @extend %icon-file-text;
     }
@@ -421,119 +483,11 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Citation Content Model
 
-  .islandora-basic-collection-object .cwrc-citationcmodel dt,
-  dl.islandora-basic-collection-object.cwrc-citationcmodel dt.islandora-basic-collection-thumb {
+  .islandora-basic-collection .left-wrapper.cwrc-citationcmodel a .no-image:before {
     &:before {
       @extend %icon-annotation;
     }
   }
-
-
-
-
-
-/* =============================================================================
-   Icon Types
-   ========================================================================== */
-/*
-//spaces icon
-
-  dl.cwrc-research-spaces dt,
-  dl.islandora-basic-collection-object.cwrc-research-spaces dt.islandora-basic-collection-thumb {
-
-    &:before {
-      @extend %icon-projects;
-      font-size: 2.1em !important;
-    }
-  }
-
-//entity collection icon
-
-  dl.cwrc-entitycollection dt,
-  dl.islandora-basic-collection-object.cwrc-entitycollection dt.islandora-basic-collection-thumb {
-
-    &:before {
-      @extend %icon-collection;
-      font-size: 1.5em !important;
-    }
-  }
-
-//document collection icon
-
-  dl.cwrc-documentcollection dt,
-  dl.islandora-basic-collection-object.cwrc-documentcollection dt.islandora-basic-collection-thumb {
-
-    &:before {
-      @extend %icon-collection-title;
-      font-size: 1.5em !important;
-    }
-  }
-
-//book collection icon
-
-  dl.islandora-bookcollection dt,
-  dl.islandora-basic-collection-object.islandora-bookcollection dt.islandora-basic-collection-thumb {
-
-    &:before {
-      @extend %icon-book;
-      font-size: .9em !important;
-    }
-  }
-
-//basic image collection icon
-
-  dl.islandora-sp-basic-image-collection dt,
-  dl.islandora-basic-collection-object.islandora-sp-basic-image-collection dt.islandora-basic-collection-thumb {
-
-    &:before {
-      @extend %icon-media-image;
-      font-size: 1.5em !important;
-    }
-  }
-
-//audio collection icon
-
-  dl.islandora-audio-collection dt,
-  dl.islandora-basic-collection-object.islandora-audio-collection dt.islandora-basic-collection-thumb {
-
-    &:before {
-      @extend %icon-media-audio;
-      font-size: 1.5em !important;
-    }
-  }
-
-//schema collection
-
-  dl.cwrc-schemacollection dt,
-  dl.islandora-basic-collection-object.cwrc-schemacollection dt.islandora-basic-collection-thumb {
-
-    &:before {
-      @extend %icon-flag;
-      font-size: .8em !important;
-    }
-  }
-
-//citation collection
-
-  dl.ir-citationcollection dt,
-  dl.islandora-basic-collection-object.ir-citationcollection dt.islandora-basic-collection-thumb {
-
-    &:before {
-      @extend %icon-annotation;
-      font-size: 2em !important;
-    }
-  }
-
-//source collection
-
-  dl.islandora-sourcecollection dt,
-  dl.islandora-basic-collection-object.islandora-sourcecollection dt.islandora-basic-collection-thumb {
-
-    &:before {
-      @extend %icon-magic-circle;
-      font-size: 1.8em !important;
-    }
-  }*/
 }
 
 
@@ -542,29 +496,20 @@ dl.islandora-basic-collection-object dd.read-more {
    ========================================================================== */
 
 
-.islandora-basic-collection .islandora-basic-collection-list-item {
-  dl dt {
-    width: 50px;
-    padding: 0;
+.islandora-basic-collection ul.list-layout {
+  padding-bottom: .5em;
+  margin-bottom: .5em;
+  width: 100% !important;
+
+  li {
+    float: left;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $shade3;
+    padding: 1em 0;
+    border-radius: 0;
+    margin: 0;
   }
-}
-
-.islandora-basic-collection-list-item dl {
-  margin: 0;
-}
-
-.islandora-basic-collection-list-item dl dd {
-  margin: 0 0 0 70px;
-}
-
-
-//READ MORE
-
-.islandora-basic-collection-object.islandora-basic-collection-list-item dl dd:nth-child(4) a {
-  position: relative;
-  float: right;
-  right: auto;
-  bottom: 0;
 }
 
 

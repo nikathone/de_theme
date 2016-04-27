@@ -15,10 +15,12 @@
    SEARCH
    ========================================================================== */
 
-
-.page-islandora-search .section-content {
-  //background-color: #fff;
+.page-cwrc-search {
+  .section-content #block-system-main {
+    @include unblock;
+  }
 }
+
 
 #block-islandora-solr-cwrc-current-query {
   h3 {
@@ -34,12 +36,15 @@
   }
 }
 
+.page-islandora-search .section-content .region-content .block{
+  border: none;
+  padding: 0;
+}
+
+
 //TOOLBAR REGION
 
 .region-toolbar {
-  //background: #f7f7f7;
-  //border-top: 1px solid #d7d7d7;
- // border-bottom: 1px solid #d7d7d7;
  margin-bottom: ms(0);
 }
 
@@ -53,7 +58,6 @@
     h4,
     h3 {
       margin-bottom: .5em;
-      //text-transform: uppercase;
       color: $brand2;
       font-size: 1.1em;
       font-weight: $xbold;
@@ -67,7 +71,6 @@
       float: left;
       display: block;
       width: 100%;
-      // color: #565656;
     }
   }
 
@@ -150,6 +153,7 @@
     padding:0;
     width: 100%;
     float: left;
+    margin-bottom: .5em !important;
 
     li {
       display: inline-block;
@@ -232,23 +236,8 @@ a.soft-limit {
   }
 }
 
-//type
-
-#block-islandora-solr-cwrc-basic-facets {
-  h3 {
-    //display: none;
-  }
-}
-
-
-//}
-
 
 //SEARCH RESULT
-
-.cwrc-search-wrapper {
-
-}
 
 .islandora-solr-search-result {
   .solr-label,
@@ -266,7 +255,8 @@ a.soft-limit {
 
 .section-content .block #quicktabs-cwrc_advanced_search {
   .block {
-    border:1px solid $shade3;
+   @include unblock;
+    margin-bottom: 0;
   }
 
   ul.quicktabs-tabs {
@@ -328,19 +318,15 @@ a.soft-limit {
   .islandora-solr-advanced-controls {
     margin-bottom: 1em;
   }
+
+  .form-item.form-item-xquery {
+    margin: 0;
+  }
+
+  iframe {
+    margin-bottom: 0;
+  }
 }
-
-
-
-
-//BIBLIOGRAPHIC VIEW
-
-.layouts-select {
-
-}
-
-
-
 
 
 

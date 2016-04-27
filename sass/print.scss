@@ -1,5 +1,3 @@
-// // boilerplate or compass or ???
-
 html body.admin-menu {
   margin: 0 !important;
 }
@@ -19,6 +17,15 @@ body, body *{
   color:  black !important;
 }
 
+article {
+  border-top: 5px solid #000;
+}
+
+.node-type-project .region-main-suffix {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 #logo,
 #admin-menu,
 .messages,
@@ -27,7 +34,6 @@ body, body *{
 .book-navigation,
 #block-search-form,
 .region-navigation,
-.region-main-prefix,
 .sidebar,
 .pager,
 .block-echidnet-submit-blocks,
@@ -36,9 +42,15 @@ body, body *{
 .de-gallery-wrapper,
 #global-communications,
 #footer,
-.flag-outer-add-to-calendar
+.flag-outer-add-to-calendar,
+.region-masthead-secondary,
+.field-name-field-tags,
+.region-masthead-secondary,
+.region-project-banner,
+.region-main-prefix-right,
+#header
 {
-  display:  none;
+  display:  none !important;
 }
 
 
@@ -136,22 +148,24 @@ body, body *{
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+       //content: " (" attr(href) ")";
     }
 
+    a[href]:after { content: none ;}
+
     abbr[title]:after {
-        content: " (" attr(title) ")";
+       // content: " (" attr(title) ")";
     }
 
     // /*
     //  * Don't show links for images, or javascript/internal links
     //  */
 
-    .ir a:after,
-    a[href^="javascript:"]:after,
-    a[href^="#"]:after {
-        content: "";
-    }
+    // .ir a:after,
+    // a[href^="javascript:"]:after,
+    // a[href^="#"]:after {
+    //     content: "";
+    // }
 
     pre,
     blockquote {

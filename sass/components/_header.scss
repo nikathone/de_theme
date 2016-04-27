@@ -3,11 +3,23 @@
     HEADER ITEMS
    ========================================================================== */
 
+.region-masthead {
+  @include breakpoint(0 48em){
+    padding-bottom: 0;
+    .container {
+      padding: 0;
+    }
+  }
+}
+
 //links
 
-#header {
+#de-header {
   a {
     color: #fff;
+    @include breakpoint(0 48em){
+      color: $brand1;
+    }
   }
 }
 
@@ -20,13 +32,49 @@
   margin: 0;
   padding: 0;
   font-size: ms(-.5);
+  @include breakpoint(0 48em){
+    background: #FAFAFA;
+  }
 
     & > li {
       list-style-type: none;
       margin: 0;
       line-height: 40px;
       margin-left: ms(1);
+      @extend %transition;
       a{text-decoration: none;}
+
+      @include breakpoint(0 48em) {
+        border-bottom: 1px solid #fff;
+        line-height: normal;
+        float: left !important;
+        width: 100%;
+        &:hover{background: #fafafa;}
+        a {
+          display: block;
+          font-weight: $xbold !important;
+          float: left;
+          width: 100%;
+          font-size: 0.95em !important;
+          position: relative;
+          padding: .6em 1em;
+          line-height: 27px;
+          &:before {
+            line-height: normal;
+            top: 0;
+            font-size: 16px;
+            float: left;
+            margin-right: .7em;
+            display: none;
+          }
+          span {
+            overflow: visible;
+            width: auto;
+            display: block;
+            height: auto;
+          }
+        }
+      }
     }
 
 
@@ -58,6 +106,33 @@
       top:22px;
       margin-left: .3em;
       float: right;
+      @include breakpoint(0 48em) {
+        border: none !important;
+        top: 5px;
+        margin-left: 0;
+        @include icon;
+        content: "\e994";
+        @include default-icomoon-icon-styles;
+        position: absolute !important;
+        right: .7em !important;
+        top: 1em !important;
+        font-size: 1.2em !important;
+      }
+    }
+
+      &.open > a:after{
+        @include breakpoint(0 48em) {
+        border: none !important;
+        top: 5px;
+        margin-left: 0;
+        @include icon;
+        content: "\e992";
+        @include default-icomoon-icon-styles;
+        position: absolute !important;
+        right: .7em !important;
+        top: 1em !important;
+        font-size: 1.2em !important;
+      }
     }
   }
 }
@@ -65,7 +140,7 @@
 
 //Drop-down
 
-  li ul.dropdown-menu {
+  ul.dropdown-menu {
     display: none;
   }
 
@@ -73,7 +148,7 @@
     position: relative;
   }
 
-  li.open ul.dropdown-menu {
+  .open ul.dropdown-menu {
     display: block;
     position: absolute;
     z-index: 1000;
@@ -86,6 +161,14 @@
     -moz-box-shadow: 0px 2px 2px -1px rgba(77,77,77,0.59);
     box-shadow: 0px 2px 2px -1px rgba(77,77,77,0.59);
     @extend %transition;
+    @include breakpoint(0 48em) {
+      box-shadow: none;
+      background: #FAFAFA !important;
+      right: 0 !important;
+      border-radius: 0;
+      border-top: 1px solid #fff !important;
+      a {color: $brand1;}
+    }
 
     //arrow on drop-down
 
@@ -112,10 +195,20 @@
       margin-bottom: .3em;
       @extend %transition;
       &:hover {background-color: #eee; border-radius: 3px;}
+      @include breakpoint(0 48em) {
+        margin-bottom: 0;
+        padding: 0 0 0 2em;
+        border-bottom: 1px solid #fff;
+        float: left;
+        width: 100%;
+      }
 
       a {
         color: $brand1 !Important;
         display: block;
+        @include breakpoint(0 48em) {
+          font-weight: normal !important;
+        }
       }
     }
   }
@@ -136,7 +229,6 @@ ul.navbar li.logo {
 //LANGUAGE
 
 ul.navbar li.nav-language-switcher {
-  //font-weight: $bold;
 
   & > a {
     font-weight: $bold;
@@ -153,13 +245,15 @@ ul.navbar li.nav-language-switcher {
     position: relative;
     top:16px;
     margin-left: .2em;
+    @include breakpoint(0 48em) {
+      top: 5px !important;
+    }
   }
 
   ul.dropdown-menu {
     width: 70px;
     right: -2px;
     text-align: center;
-    //right: 22%;
   }
 }
 
@@ -175,11 +269,23 @@ ul.navbar li.nav-language-switcher {
   float: left;
   font-size: 1.25em;
   top: 4px;
+  @include breakpoint(0 48em) {
+    font-size: 1em;
+    top: 0;
+  }
 
   &:before {
     @extend %icon-notifications;
     margin-right: 0;
     line-height: 32px;
+    @include breakpoint(0 48em) {
+      position: relative;
+      line-height: 12px;
+      left: -14px !important;
+      font-size: 26px;
+      margin-right: 0em;
+      display: none;
+    }
   }
 }
 
@@ -199,6 +305,20 @@ ul.navbar li.nav-language-switcher {
     text-align: center;
     border-radius: 2px;
     padding: 0;
+    @include breakpoint(0 48em) {
+      position: relative !important;
+      width: 7px !important;
+      float: left;
+      top: -3px;
+      height: 9px !important;
+      font-size: 6px;
+      line-height: 9px;
+      left: 7px;
+      display: none !important;
+    }
+  &.notification-count-none {
+    visibility: hidden;
+  }
 }
 
 li.nav-notifications {
@@ -213,6 +333,12 @@ li.nav-notifications {
 }
 
 li.nav-user-menu {
+
+  > a {
+    overflow: hidden;
+
+  }
+
    > a {
     &:before {
       @extend %icon-profile;
@@ -221,22 +347,35 @@ li.nav-user-menu {
       line-height: 40px;
       left: -9px !important;
       width: 26px;
+      @include breakpoint(0 48em) {
+        top: -7px !important;
+        font-size: 29px !important;
+        float: left;
+        margin-right: 0 !important;
+      }
     }
+
     &:after {
-      top: -13px !important;
+      float: left !important;
+      left: -10px;
+      top: 24px !important;
+      @include breakpoint(0 48em) {
+        float: right !important;
+        left: auto;
+      }
     }
   }
 
   span.user-menu {
     overflow: hidden;
-    width: 19px;
-    display: block;
-    height: 6px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
   }
 
   ul.dropdown-menu {
     top: 40px;
-    right: 55px;
+    right: -5px;
 
     li.dropdown-header {
       font-weight: $xbold;
@@ -251,19 +390,40 @@ li.nav-user-menu {
       margin-bottom: .5em;
       padding-left: 0;
       padding-right: 0;
+      @include breakpoint(0 48em) {
+        margin: 0;
+        float: left;
+        width: 100%;
+        padding: .6em 1em;
+        line-height: 27px;
+        &:hover{background: transparent !important;}
+      }
+
+      li p {
+        @include breakpoint(0 48em) {
+        margin: 0;
+        padding: .6em 1em;
+        line-height: 27px;
+        }
+      }
 
       &:before {
         @extend %icon-projects;
         top: -4px;
         font-weight: bold;
         left: -2px;
+        @include breakpoint(0 48em) {
+          top: 4px;
+          left: -3px;
+          margin-right: .55em;
+        }
       }
       &:hover {background-color: #fff;}
     }
   }
 
   ul.dropdown-menu:before {
-    right: 16px;
+    right: 25px;
   }
 }
 
@@ -273,6 +433,9 @@ li.nav-user-menu {
   line-height: 40px;
   float: right;
   margin-left: 1.3em;
+  @include breakpoint(0 48em){
+    border-bottom: 1px solid #fff;
+  }
 
   a {
     text-decoration: none;
@@ -305,19 +468,26 @@ li.nav-help {
     line-height: 20px;
     top: 1px;
     position: relative;
+     @include breakpoint(0 48em) {
+      font-size: 13px !important;
+      height: 15.5px;
+      background: $brand1;
+      color: #fff;
+      width: 15.6px;
+     }
   }
 
   span.help-menu {
     overflow: hidden;
     width: 0;
     height: 24px;
-    display: inline-block
+    display: inline-block;
   }
 
   ul.dropdown-menu {
     right: -5px;
     width: 145px;
-    &:before {right: 18%;}
+    &:before {right: 19px;}
   }
 }
 
@@ -339,9 +509,30 @@ li.nav-help {
 }
 
 
-//
+//LOGIN
+
+.region-masthead ul.navbar {
+  @include breakpoint(0 48em) {
+    #block-cwrc-menu-links-login-link a {
+      padding: .6em 1em;
+      line-height: 27px;
+    }
+
+    #block-cwrc-menu-links-login-link a:before {
+      display: none;
+    }
+
+    > li.navbar-right,
+    #block-cwrc-menu-links-login-link,
+    > li {
+      margin-left: 0;
+    }
 
 
+
+
+  }
+}
 
 
 

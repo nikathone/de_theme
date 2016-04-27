@@ -36,8 +36,14 @@ function de_theme_modernizr_load_alter(&$load) {
  * @param $vars
  *   An array of variables to pass to the theme template.
  */
-/* -- Delete this line if you want to use this function
+
 function de_theme_preprocess_html(&$vars) {
+  $object = menu_get_object('islandora_object', 2);
+  if (!$object) return;
+
+  foreach ($object->models as $k => $model) {
+    $vars['classes_array'][] = "page-islandora-object-" . drupal_clean_css_identifier($model);
+  }
 
 }
 
@@ -265,7 +271,7 @@ function de_theme_menu_local_tasks(&$variables) {
     }
 
     $tabs['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
-    $tabs['#prefix'] .= '<ul class="tabs primary">';
+    $tabs['#prefix'] .= '<ul class="tabs primary collapsed" id="local-tasks-menu">';
     $tabs['#suffix'] = '</ul>';
 
     $output .= drupal_render($tabs);
@@ -298,7 +304,7 @@ function de_theme_menu_local_task(&$variables) {
   }
 
   $submenuhtml = '';
-  if (array_key_exists('submenu', $variables['element'])) {
+  if (array_key_exists('submenu', $variables['element']) && count($variables['element']['submenu']) > 1) {
     $submenu = array(
       '#theme' => 'item_list',
       '#items' => $variables['element']['submenu'],

@@ -2,16 +2,39 @@
 
 // @import 'components/basic/page-basic';
 
+@import 'nodes/events';
+@import 'nodes/news';
+
 /* =============================================================================
    Basic / general Node
    ========================================================================== */
 
-//Basic Page Node
+//no block styles on inner nodes
 
-h1#page-title {
-    font-weight: $bold;
-    margin-bottom: .8em;
-    margin-top: .8em;
+.node-type-article,
+.node-type-event,
+.page-news,
+.page-events {
+  .section-content .region-content .block {
+    @include unblock;
   }
 
+  .block .content {
+    padding: 0;
+  }
 
+  .field-name-field-image img {
+    padding: 0;
+    border: none;
+  }
+}
+
+.page-node-edit {
+  .image-widget-data {
+    img {
+      margin: 1em .5em 0 0 !important;
+      width: auto !important;
+      float: left;
+    }
+  }
+}

@@ -4,6 +4,13 @@
 
 #block-views-my-projects-block {
 
+  h2:before {
+    @extend %icon-projects;
+    font-size: 25px !Important;
+    left: -7px !Important;
+    margin-right: .2em !Important;
+  }
+
   .content {
     padding: 0;
   }
@@ -31,8 +38,26 @@
       }
     }
 
+    li div:nth-child(2), li div.views-field-og-roles {
+      display: inline-block;
+    }
+
     li.views-row:last-child {
       border-bottom: none;
+    }
+
+    li.views-row a[href^="/user/my-research-space"] {
+      @include btn-w-icon;
+      margin-left: .7em;
+      margin-top: .7em;
+      &:before {
+        @extend %icon-folder;
+        font-size: 11px;
+        margin-right: .8em !important;
+        margin-left: .2em;
+      }
+
+      //color: #fff;
     }
   }
 //}

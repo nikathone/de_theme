@@ -39,44 +39,67 @@
  * @see template_preprocess_html()
  * @see template_process()
  */
+$theme_path = drupal_get_path('theme', 'de_theme');
 ?><!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="no-js lt-ie7"<?php print $html_attributes; ?>> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7"<?php print $html_attributes; ?>> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8"<?php print $html_attributes; ?>> <![endif]-->
+<!--[if gt IE 8]> <html class="no-js ie9"<?php print $html_attributes; ?>> <![endif]-->
+<!--[if IE 9]> <html class="no-js ie9"<?php print $html_attributes; ?>> <![endif]-->
+
+
 <!--[if lt IE <?php print $minie; ?> ]>    <html class="lt-ie<?php print $minie; ?> no-js" <?php print $html_attributes; ?>> <![endif]-->
 <!--[if gte IE <?php print $minie; ?>]><!--> <html class="no-js" <?php print $html_attributes; ?> <?php print $rdf_attributes; ?>> <!--<![endif]-->
+
   <head>
     <?php print $head; ?>
-    <title><?php print $head_title; ?></title>
+    <title>
+      <?php
+        if (strpos($head_title, "|") === 0) print implode(" | ", $head_title_array);
+        else print $head_title;
+      ?>
+    </title>
     <meta name="theme-color" content="#78001E">
     <meta http-equiv="X-UA-Compatible" content="IE=8">
 
     <?php print $styles; ?>
 
     <!--[if LT IE 10]>
-    <script src="/sites/all/themes/de_theme/bower_components/respond/dest/respond.min.js"></script>
-    <script src="/sites/all/themes/de_theme/bower_components/respond/dest/respond.matchmedia.addListener.min.js"></script>
+    <script src="/<?php print $theme_path; ?>/bower_components/respond/dest/respond.min.js"></script>
+    <script src="/<?php print $theme_path; ?>/bower_components/respond/dest/respond.matchmedia.addListener.min.js"></script>
     <![endif]-->
 
     <?php print $scripts; ?>
 
    <!--[if IE 7]>
-    <script src="/sites/all/themes/de_theme/dist/ie.min.js"></script>
+    <script src="/<?php print $theme_path; ?>/dist/ie.min.js"></script>
    <![endif]-->
 
-    <link rel="apple-touch-icon" sizes="57x57" href="/sites/all/themes/de_theme/img/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/sites/all/themes/de_theme/img/favicons/apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/sites/all/themes/de_theme/img/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/sites/all/themes/de_theme/img/favicons/apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="/sites/all/themes/de_theme/img/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/sites/all/themes/de_theme/img/favicons/apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/sites/all/themes/de_theme/img/favicons/apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/sites/all/themes/de_theme/img/favicons/apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/sites/all/themes/de_theme/img/favicons/apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="/sites/all/themes/de_theme/img/favicons/favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="/sites/all/themes/de_theme/img/favicons/favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="/sites/all/themes/de_theme/img/favicons/favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="/sites/all/themes/de_theme/img/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="/sites/all/themes/de_theme/img/favicons/favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-TileImage" content="/sites/all/themes/de_theme/img/favicons/mstile-144x144.png">
+    <script type="text/javascript">if (!$ && jQuery) { var $ = jQuery; }</script>
+
+<link rel="apple-touch-icon" sizes="57x57" href="/<?php print $theme_path; ?>/img/favicons/apple-touch-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/<?php print $theme_path; ?>/img/favicons/apple-touch-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/<?php print $theme_path; ?>/img/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/<?php print $theme_path; ?>/img/favicons/apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/<?php print $theme_path; ?>/img/favicons/apple-touch-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/<?php print $theme_path; ?>/img/favicons/apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/<?php print $theme_path; ?>/img/favicons/apple-touch-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/<?php print $theme_path; ?>/img/favicons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/<?php print $theme_path; ?>/img/favicons/apple-touch-icon-180x180.png">
+<link rel="icon" type="image/png" href="/<?php print $theme_path; ?>/img/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/<?php print $theme_path; ?>/img/favicons/favicon-194x194.png" sizes="194x194">
+<link rel="icon" type="image/png" href="/<?php print $theme_path; ?>/img/favicons/favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/<?php print $theme_path; ?>/img/favicons/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="/<?php print $theme_path; ?>/img/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/<?php print $theme_path; ?>/img/favicons/manifest.json">
+<link rel="mask-icon" href="/<?php print $theme_path; ?>/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/<?php print $theme_path; ?>/img/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-TileImage" content="/<?php print $theme_path; ?>/img/favicons/mstile-144x144.png">
+<meta name="msapplication-config" content="/<?php print $theme_path; ?>/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
+
 
   </head>
   <body class="<?php print $classes; ?>" <?php print $body_attributes;?>>

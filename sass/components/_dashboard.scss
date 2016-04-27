@@ -4,12 +4,13 @@
 @import 'dashboard/dashboard__block--bookmark-lists';
 @import 'dashboard/dashboard__block--workflow-reports';
 @import 'dashboard/dashboard__block--saved-searches';
-@import 'dashboard/dashboard';
 @import 'dashboard/dashboard-project';
 @import 'dashboard/dashboard-project__block--utilities';
 @import 'dashboard/dashboard-project__block--project-members';
 @import 'dashboard/dashboard-project__block--pending-applications';
-
+@import 'dashboard/dashboard__block--recently-edited-objects';
+@import 'dashboard/dashboard-project__block--disk-quota';
+@import 'dashboard/dashboard-project__block--credit-visualizations';
 
 /* =============================================================================
     PAGE USER SECTION - GENERAL STYLES
@@ -20,60 +21,13 @@
 
 .page-user {
 
-  // .section-content {
-  //   background: #E2E2E2;
-  //   border-top: 1px solid $shade1;
-  //   border-bottom: 1px solid $shade1;
-  // }
-
-  h1#page-title {
-    font-weight: $bold;
-    // margin-bottom: .8em;
-    // margin-top: .8em;
-
-    &:before {
-      @extend %circle-icon;
-      @extend %icon-profile;
-      height: 48px !important;
-      width: 48px !important;
-      font-size: 48px !important;
-      line-height: 44px !important;
-      margin-right: .3em !important;
-      top: -4px;
-    }
+  .user-picture-header {
+    float: left;
+    margin-right: 1em;
+    img{border-radius: 50px; border: 1px solid $shade3;}
   }
 }
 
-
-
-
-
-
-//LAYOUT
-
-// .one-sidebar.sidebar-second.page-user #main {
-//   width: 100%;
-//   margin-right: 0;
-//   @include breakpoint($standard-screen) {
-//    width: 71.46809%;
-//   }
-// }
-
-// .one-sidebar.sidebar-second.page-user #sidebar-second {
-//   width: 100%;
-//   @include breakpoint($standard-screen) {
-//    width: 26.40426%;
-//   }
-// }
-
-
-//SIDEBARS
-
-//no padding on sidebar for user section
-
-// .page-user #sidebar-first .region, .page-user #sidebar-second .region {
-//   padding-top: 0;
-// }
 
 
 /* =============================================================================
@@ -83,79 +37,72 @@
 
 //GENERAL
 
+.page-user-dashboard,
+.page-node-dashboard {
+  .section-content .block h2 {
+    margin: 0 !important;
+  }
+}
+
 //BUTTONS / INPUT
 
 .section-content #main input.form-submit {
   margin: ms(0) 0 0;
 }
 
-.page-user.page-node-dashboard .section-content .block,
-.page-user.page-user-dashboard .section-content .block {
-  // margin-bottom: 1em;
-  // float: left !important;
-  // width: 100% !important;
-  padding: 0;
+//HEADERS
 
-  .content {
-    // float: left;
-    // width: 100%;
+#block-islandora-saved-searches-saved-searches {
+  h2:before {
+    @extend %icon-floppy-disk;
   }
 }
 
-//titles
-
-.page-user .section-content .block h2 {
-  //font-size: 1em;
-  // font-weight: $bold;
-  // color: #000;
+#block-islandora-saved-searches-saved-searches {
+  h2:before {
+    @extend %icon-floppy-disk;
+  }
 }
 
-//no margin on tables within blocks
+#block-block-2 {
+  h2:before {
+    @extend %icon-pie-chart;
+  }
+}
 
-.page-user .section-content .block table {
-  //margin-bottom: 0;
+#block-cwrc-dashboards-user-recently-edited {
+  h2:before {
+    @extend %icon-pencil;
+  }
+}
+
+#block-cwrc-dashboards-user-assigned-to-me {
+  h2:before {
+    @extend %icon-star;
+  }
+}
+
+//BLOCKS
+
+.page-user.page-node-dashboard .section-content .block,
+.page-user.page-user-dashboard .section-content .block {
+  padding: 0;
+
+  h2 {
+    a {
+      color: $brand1 !important;
+    }
+  }
+
+  h2:first-of-type:before {
+    font-size: 16px !important;
+    left: -5px;
+    margin-right: .3em !important;
+  }
 }
 
 
-//TABLES IN BLOCKS
 
-// table th {
-//   padding: 0 0 .6em 0;
-// }
-
-// table td {
-//   padding: .8em .4em;
-//   border-bottom: 1px solid $shade4;
-// }
-
-// table tbody tr:last-child td:first-child,
-// table tbody tr:last-child td:last-child {
-//   border-radius: 0;
-// }
-
-// table tbody tr td:last-child {
-//   border-right: none;
-// }
-
-// table tbody tr td:first-child {
-//   border-left: none;
-// }
-
-// table tr:nth-child(odd) {
-//   background-color: #fff;
-// }
-
-// table {
-//   thead th {
-//     background: #fff;
-//     color: $brand1;
-//     border-bottom: 3px solid $shade2;
-//   }
-
-//   a {
-//     text-decoration: none;
-//   }
-// }
 
 
 //HEADING BEFORE LIST Example: bookmark list0
@@ -247,7 +194,6 @@
 //ADMIN ACESS WRAPPER EXAMPLE: Workflow report admin button area
 
   .admin-access-wrapper {
-    //margin: 1em;
     float: right;
     width: 100%;
     border-top: 1px solid $shade3;
@@ -265,122 +211,6 @@
     }
   }
 
-
-
-/* =============================================================================
-    SIDEBAR BLOCK STYLES
-   ========================================================================== */
-
-// //main header
-
-// .page-user .sidebar .block h2 {
-//   font-size: .95em;
-// }
-
-// //inner content
-
-// .page-user .sidebar .block .view-content,
-// .page-user .sidebar .block .content {
-//   font-size: .8em;
-//   float: left;
-//   width: 100%;
-// }
-
-// //inner content sub header
-
-// .page-user .sidebar .block .view-content,
-// .page-user .sidebar .block .content {
-
-//   h2, h3 {
-//     font-size: .83em;
-//     float: left;
-//   }
-// }
-
-// //links
-
-// .page-user .sidebar .block .view-content,
-// .page-user .sidebar .block .content {
-//   a{
-//     text-decoration: none;
-//     font-weight: $bold;
-//   }
-// }
-
-
-//GENERAL LISTS
-
-// .page-user .section-content .content {
-//   ul {
-//     margin: 0;
-//     padding: 0;
-
-//     li {
-//       list-style-image: none;
-//       list-style: none;
-//       float: left;
-//       width: 100%;
-
-//         &.last {
-//           margin-bottom: 0;
-//         }
-//     }
-//   }
-// }
-
-
-//LOCKED OBJECTS
-
-table td.cwrc-object-locked-owned{
-  &:after{
-    @extend %icon-locked;
-    float: right;
-    color: #D4456F;
-    margin-right: 1em;
-  }
-
-  span.hide-txt {
-    overflow: hidden;
-    text-indent: -100px;
-    width: 1px;
-    height: 1px;
-    display: block;
-  }
-}
-
-table td.cwrc-object-locked-not-owned{
-  &:after{
-    @extend %icon-locked;
-    float: right;
-    color: #D4456F;
-    margin-right: 1em;
-  }
-
-  span.hide-txt {
-    overflow: hidden;
-    text-indent: -100px;
-    width: 1px;
-    height: 1px;
-    display: block;
-  }
-}
-
-table td.cwrc-object-not-locked{
-  &:after{
-    @extend %icon-unlocked;
-    float: right;
-    color: #4FAF4F;
-    margin-right: 1em;
-  }
-
-  span.hide-txt {
-    overflow: hidden;
-    text-indent: -100px;
-    width: 1px;
-    height: 1px;
-    display: block;
-  }
-}
 
 
 /* =============================================================================
@@ -415,6 +245,21 @@ table td.cwrc-object-not-locked{
     padding: .7em;
     display: block;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

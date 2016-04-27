@@ -13,12 +13,12 @@
 
 @import 'components/section-content';
 @import 'components/blocks';
-@import 'components/blog';
+//@import 'components/blog';
 @import 'components/brand';
-@import 'components/comments';
-@import 'components/events';
+//@import 'components/comments';
+//@import 'components/events';
 // @import 'components/forums';
-@import 'components/news';
+//@import 'components/news';
 @import 'components/nodes';
 @import 'components/search';
 @import 'components/user';
@@ -34,4 +34,9 @@
 @import 'components/find-and-replace';
 @import 'components/permissions';
 @import 'components/admin-manage-pages';
-@import 'components/administrator-profile';
+//@import 'components/administrator-profile';
+@import 'components/object-viewer';
+@import 'components/views';
+@import 'components/homepage';
+@import 'components/EAP';
+@import 'components/cwrc-writer';

@@ -6,7 +6,7 @@ jQuery(function($) {
     setMenu(thisMenu, !status);
 
     // Don't bother with hover-only menus
-    if ($(this).hasClass("hover-menu")) return;
+    if ($(this).hasClass("hover-menu") && !$(this).parent().parent().parent().hasClass("hamburger")) return;
 
     // close all open dropdowns
     $("a.dropdown-toggle").each(function(e) {
@@ -32,14 +32,20 @@ jQuery(function($) {
   var closeHoverTimeout = 0;
 
   $("div#tabs a.dropdown-toggle").hover(function(e) {
+    if ($(this).parent().parent().parent().hasClass("hamburger")) return;
+
     if (closeHoverTimeout != 0) clearTimeout(closeHoverTimeout);
     setMenu($(this).parent(), true);
   }).mouseleave(function(e) {
+    if ($(this).parent().parent().parent().hasClass("hamburger")) return;
+
     closeHoverTimeout = setTimeout(closeMenus, 500);
   });
   $("div#tabs ul.dropdown-menu").mouseenter(function(e) {
     if (closeHoverTimeout != 0) clearTimeout(closeHoverTimeout);
   }).mouseleave(function(e) {
+    if ($(this).parent().parent().parent().hasClass("hamburger")) return;
+
     closeHoverTimeout = setTimeout(closeMenus, 500);
   });
 
@@ -50,7 +56,7 @@ jQuery(function($) {
 
   function closeMenus() {
     if (closeHoverTimeout != 0) clearTimeout(closeHoverTimeout);
-    $("li.open").removeClass("open");
+    $(".open").removeClass("open");
   }
 
 });

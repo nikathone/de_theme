@@ -119,13 +119,14 @@
   width: 100%;
 
   .layouts-wrapper {
+    margin-bottom: 1em;
+
     ul {
       float: right;
       width: 100%;
       border-bottom: 1px solid $shade3;
       margin-bottom: ms(0);
       padding-bottom: .3em;
-      //margin-top: 2.4em;
         @include breakpoint(0 550px) {
           width: 100%;
           margin-top: 0;
@@ -146,6 +147,10 @@
           font-size: .9em;
           text-decoration: none;
           &:hover{color: $brand2;}
+
+          &.dropdown-toggle {
+            @extend %icon-circle-down;
+          }
         }
       }
 
@@ -186,10 +191,19 @@
   }
 }
 
+//TOP FILTERS
+
 .sorts-wrapper {
+  width: 56%;
+}
+
+.layouts-wrapper {
+  width: 44%;
+}
+
+.sorts-wrapper, .layouts-wrapper {
   float: left;
-  width: 82%;
-      @include breakpoint(0 550px) {
+      @include breakpoint(0 560px) {
         width: 100%;
       }
 
@@ -197,7 +211,7 @@
     width: 38%;
     float: left;
     margin-right: 2%;
-      @include breakpoint(0 550px) {
+      @include breakpoint(0 560px) {
         width: 100%;
         margin-right: 0;
       }
@@ -212,12 +226,58 @@
     width: 20%;
     margin-right: 0 !important;
     margin-top: 2.2em !important;
-        @include breakpoint(0 550px) {
+        @include breakpoint(0 560px) {
         width: 100%;
-        margin-top: 1em !important;
+        margin-top: 0em !important;
+        margin-bottom: 1.5em !important;
       }
   }
 }
+
+.layouts-wrapper {
+
+  .form-item.form-type-select {
+    width: 64%;
+    @include breakpoint(0 560px) {
+      width: 100%;
+    }
+  }
+
+  .form-submit {
+    width: 25%;
+    @include breakpoint(0 560px) {
+      width: 100%;
+      margin-bottom: 0 !important;
+    }
+  }
+}
+
+//With 2 sidebars
+
+.two-sidebars, .one-sidebar {
+
+  .sorts-wrapper, .layouts-wrapper {
+    @include breakpoint(0 1120px) {
+      width: 100%;
+    }
+  }
+
+  .layouts-wrapper {
+    .form-item.form-type-select {
+      @include breakpoint(0 1120px) {
+      width: 100%;
+    }
+  }
+
+    .form-submit {
+      @include breakpoint(0 1120px) {
+        width: 100%;
+        margin-top: 0 !important;
+      }
+    }
+  }
+}
+
 
 
 /* =============================================================================
@@ -238,32 +298,13 @@
 }
 
 ul.results {
-  //border-top: none !important;
-  border: 1px solid #E1E1E1;
   border-radius: 5px;
-  background:#F7FCFF;
+  border-top: none !important;
 
   li.result {
-   // margin-top: ms(0);
     border-bottom: 1px solid $shade3;
-    //padding-bottom: ms(0);
-    padding: .4em .7em;
+    border-top: none;
     margin-bottom: 0;
-
-    &:nth-child(odd) {
-      background: #EEF5F9;
-    }
-
-    &:last-child {
-      border-bottom: none;
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
-    }
-
-    &:first-child {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-    }
 
     a {
       text-decoration: none;
@@ -271,8 +312,207 @@ ul.results {
       font-size: ms(-.4);
     }
   }
-
 }
+
+//ALL RESULTS VIEW
+
+.cwrc-search-wrapper {
+  .results ul {
+    margin-bottom: 2em;
+    float: left;
+    width: 100%;
+
+    li {
+      border-bottom: 1px solid $shade3;
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+
+      .summary {
+        float: none;
+      }
+
+      .text-wrapper .label a {
+        text-decoration: none;
+        font-weight: $bold;
+      }
+
+      .image {
+        background: #fff;
+        float: left;
+        display: inline-block;
+        vertical-align: top;
+        width: 64px;
+        height: 64px;
+        margin-right: 1em;
+        margin-bottom: .3em;
+
+        .image-wrapper {
+          height: 100%;
+          overflow: hidden;
+          position: relative;
+
+          img {
+            display: block;
+            min-width: 100%;
+            min-height: 100%;
+            margin: auto;
+            position: absolute;
+            top: -100%;
+            right: -100%;
+            bottom: -100%;
+            left: -100%;
+            border-radius: 5px;
+            border: 1px solid $shade3;
+          }
+        }
+      }
+
+      .no-image, .image img {
+        float: left;
+      }
+
+      .no-image {
+        background: $brand4;
+        float: left;
+        display: inline-block;
+        vertical-align: top;
+        width: 64px;
+        height: 64px;
+        margin-right: 1em;
+        margin-bottom: .3em;
+        color: #fff;
+        border-radius: 5px;
+        &:before {
+          @extend %icon-image;
+          font-size: 1.5em !important;
+          padding: .95em .75em .8em .85em;
+        }
+      }
+
+      .below {
+        float: left;
+        width: 100%;
+        margin-top: 1.5em;
+
+        a img {
+          height: 52px;
+        }
+
+        .no-image {
+          width: 47px;
+          height: 47px;
+          &:before {font-size: 1.2em !important; padding: .7em .75em .8em .75em;}
+        }
+      }
+
+
+      //ICON CHANGES
+
+      .ircitationcmodel .below .no-image:before,
+      .ircitationcmodel .no-image:before {
+        @extend %icon-annotation;
+      }
+
+      .islandora-criticaleditioncontainercmodel .below .no-image:before,
+      .islandora-criticaleditioncontainercmodel .no-image:before {
+        @extend %icon-folder-open;
+      }
+
+      .islandora-versioncmodel .below .no-image:before,
+      .islandora-versioncmodel .no-image:before {
+        @extend %icon-clipboard;
+      }
+
+      .islandora-transcriptioncmodel .below .no-image:before,
+      .islandora-transcriptioncmodel .no-image:before {
+        @extend %icon-file-text2;
+      }
+
+      .islandora-versioncmodel .below .no-image:before,
+      .islandora-versioncmodel .no-image:before {
+        @extend %icon-pencil;
+      }
+
+      .islandora-sp-audiocmodel .below .no-image:before,
+      .islandora-sp-audiocmodel .no-image:before {
+        @extend %icon-file-music;
+      }
+
+      .islandora-collectioncmodel .below .no-image:before,
+      .islandora-collectioncmodel .no-image:before {
+        @extend %icon-files-empty;
+      }
+
+      .islandora-sp_basic_image .below .no-image:before,
+      .islandora-sp_basic_image .no-image:before {
+        @extend %icon-file-picture;
+      }
+
+      .islandora-bookcmodel .below .no-image:before,
+      .islandora-bookcmodel .no-image:before {
+        @extend %icon-internet-archive;
+      }
+
+      .islandora-pagecmodel .below .no-image:before,
+      .islandora-pagecmodel .no-image:before {
+        @extend %icon-file-empty;
+      }
+
+      .islandora-compoundcmodel .below .no-image:before,
+      .islandora-compoundcmodel .no-image:before {
+        @extend %icon-object;
+      }
+
+      .cwrc-organization-entitycmodel .below .no-image:before,
+      .cwrc-organization-entitycmodel .no-image:before {
+        @extend %icon-drawer;
+      }
+
+      .cwrc-person-entitycmodel .below .no-image:before,
+      .cwrc-person-entitycmodel .no-image:before {
+        @extend %icon-person;
+      }
+
+      .cwrc-place-entitycmodel .below .no-image:before,
+      .cwrc-place-entitycmodel .no-image:before {
+        @extend %icon-location;
+      }
+
+      .cwrc-schemacmodel .below .no-image:before,
+      .cwrc-schemacmodel .no-image:before {
+        @extend %icon-libreoffice;
+      }
+
+      .islandora-sp_large_image_cmodel .below .no-image:before,
+      .islandora-sp_large_image_cmodel .no-image:before {
+        @extend %icon-file-picture;
+      }
+
+      .islandora-sp_pdf .below .no-image:before,
+      .islandora-sp_pdf .no-image:before {
+        @extend %icon-file-pdf;
+      }
+
+      .islandora-sp_videocmodel .below .no-image:before,
+      .islandora-sp_videocmodel .no-image:before {
+        @extend %icon-file-play;
+      }
+
+      .cwrc-documentcmodel .below .no-image:before,
+      .cwrc-documentcmodel .no-image:before {
+        @extend %icon-file-text;
+      }
+
+      .cwrc-citationcmodel .below .no-image:before,
+      .cwrc-citationcmodel .no-image:before {
+        @extend %icon-annotation;
+      }
+
+    }
+  }
+}
+
+//SUMMARY
 
 .cwrc-search-wrapper {
   .summary {
@@ -372,6 +612,9 @@ dl.solr-fields {
   }
 }
 
+ul#secondary-display-profiles {
+  display: none;
+}
 
 /* =============================================================================
     QUERY PREVIEW

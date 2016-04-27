@@ -22,6 +22,7 @@
       &:before {
         @extend %icon-star;
         margin-right: 0;
+        top: -1px;
       }
 
     //unflagged icon

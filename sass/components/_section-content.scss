@@ -7,34 +7,50 @@
   //MAIN BACKGROUND
 
   .section-content {
-    background: #E2E2E2;
-    border-top: 1px solid $shade1;
+    background: #fff;
     border-bottom: 1px solid $shade1;
+    border-top: 1px solid $shade1;
+  }
+
+  .page-node-dashboard, .page-user-dashboard {
+    .section-content {
+      background: #E2E2E2;
+    }
   }
 
 
-  //PAGE TITLE,LOGO AND MENU
+  //------------------------PAGE TITLE,LOGO AND MENU
 
   .main-prefix-section-wrapper {
     clear: both;
+    padding: 1.5em 0;
 
     .region-main-prefix, .region-main-prefix-right {
+
       .container {
         padding: 0;
       }
     }
 
     h1#page-title {
-      line-height: 36px;
+      font-weight: $bold;
+      //line-height: 47px;
       float: left;
-      margin: .4em 0 0;
+      margin: .3em 0 0;
+      @include breakpoint(0 550px) {
+        float: none;
+      }
     }
 
     .region-main-prefix {
       float: left;
       width: 54%;
+       @include breakpoint(0 550px) {
+        width: 100%;
+        margin-bottom: 1em;
+       }
 
-      .field-name-field-logo {
+      #block-cwrc-projects-project-context-logo {
         float: left;
 
         img {
@@ -49,11 +65,17 @@
       float: right;
       width: 42%;
       margin-left: 4%;
+      @include breakpoint(0 550px) {
+        width: 100%;
+        margin-left: 0;
+      }
     }
   }
 
 
-  //MENU LINKS
+
+
+  //-----------------------------MENU IN HEADER
 
   .sidebar .block,
   .sidebar .block .view-content,
@@ -68,19 +90,34 @@
   .region-main-prefix ul.action-links {
     margin: 0;
     padding: 0;
-    line-height: 60px;
+    line-height: 50px;
+    float: right;
+     @include breakpoint(0 550px) {
+      width: 100%;
+      margin-left: 0;
+     }
 
    li {
     list-style-image: none;
     list-style: none;
-    float: right;
+    float: left;
     margin-left: ms(0);
     margin-bottom: 0;
+     @include breakpoint(0 550px) {
+      width: 100%;
+      margin-left: 0;
+     }
 
     a {
       @include btn-blue;
       padding: .75em 1.3em !important;
       margin: 0 !important;
+      @include breakpoint(0 550px) {
+        display: block;
+        width: 100%;
+        margin-bottom: 1em !important;
+        text-align: center;
+      }
     }
    }
   }
@@ -105,8 +142,10 @@
 
 
   .region-content form .form-actions {
-    a {
+    a, input#edit-submit {
       @include btn;
+      margin-top: 1em;
+      padding: 8px 16px;
     }
   }
 
@@ -141,6 +180,7 @@
   .admin-menu .section-content #main input.form-submit {
     margin-right: ms(0);
   }
+
 
 
 /* =============================================================================
@@ -233,12 +273,12 @@ table {
 
  form {
     input.form-submit, input#edit-submit {
-      padding: .4em ms(0) !Important;
+     // padding: .4em ms(0) !Important;
     }
   }
 
   select {
-    height: 28px !Important;
+    height: 28px;
   }
 
   select, textarea.form-textarea, input.form-text {
@@ -265,6 +305,7 @@ table {
 
 //PLOTIT
 
+.cwrc-search-wrapper iframe,
 iframe.cwrc-visualization {
   width: 100%;
   border: none;

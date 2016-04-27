@@ -9,6 +9,11 @@
     padding: 0;
   }
 
+  h2:before {
+    top: 2px;
+    left: -5px !important;
+  }
+
   ul.cwrc-dashboard-utilities-list li {
     padding: 0;
     margin-bottom: 0;
@@ -65,9 +70,6 @@
 
     &.add-page{
       a:before {
-        // @extend %icon-plus;
-        // font-size: 1.2em !Important;
-        // line-height: 15px;
         content: "+";
         font-weight: $bold;
         top: -4px;
