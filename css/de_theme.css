@@ -474,15 +474,24 @@ th {
 input#edit-submit, .vertical-tabs #edit-help a, .block-menu-block ul li a,
 .region-main-prefix ul.action-links li a, .region-content form .form-actions a, .region-content form .form-actions input#edit-submit, .sidebar #block-islandora-blocks-collections ul li a, .front .view-homepage-slider .cta-btn a, .section-content .block, .node-type-article .field-name-field-tags .field-items .field-item a, ul.islandora-solr-filter-list li,
 ul.islandora-solr-query-list.query-list li, ul.islandora-solr-facet li, a.soft-limit, article.profile a.privatemsg-send-link, #block-views-my-projects-block li.views-row a[href^="/user/my-research-space"], form#privatemsg-list .compose-new-message a, a#privatemsg-filter-tags-cancel,
-a.privatemsg-filter-tags-add, #privatemsg-filter-tags a:not(:last-child), .field-name-field-featured-links .field-item a, .page-islandora-object .islandora .mods-multisite-link a, .cwrc-workflow-stamps .cwrc-workflow-history-link-wrapper a,
+a.privatemsg-filter-tags-add, #privatemsg-filter-tags a:not(:last-child), .field-name-field-featured-links .field-item a, .page-islandora-object .islandora .mods-multisite-link a, #block-islandora-blocks-metadata .content a, .ir_citationCModel fieldset a.bag-datastreams-link,
+#block-islandora-blocks-datastreams fieldset a.bag-datastreams-link,
+#block-islandora-blocks-metadata fieldset.islandora-metadata a.bag-datastreams-link, .cwrc-workflow-stamps .cwrc-workflow-history-link-wrapper a,
 .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .region-content .fullscreen-link-wrapper a, .cwrc-workflow-stamp-form-modal button.remodal-cancel, .xml-form-elements-tags span.tag-list > span, #islandora-solr-top ul#secondary-display-profiles li a, .page-islandora-xquery-preview ul.islandora-xquery-preview-control-list li a, .page-admin-people-permissions .fpa-toggle-container a, .region-content .view .read-more-link a, .sidebar .view .read-more-link a, .region-content .block-views .view .view-footer a.view-all-items, .sidebar .block-views .view .view-footer a.view-all-items {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
+.page-islandora-search .results ul.list-layout li,
+.page-islandora-search .results ul.grid-layout li,
 .islandora-basic-collection ul.list-layout li,
-.islandora-basic-collection ul.grid-layout li, .islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image, .badge, .lists-with-actions .actions-list-group li a span.no-txt:after {
+.islandora-basic-collection ul.grid-layout li, .page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a .no-image,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a .no-image,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a .no-image,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a .no-image,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a .no-image,
+.islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image, .badge, .lists-with-actions .actions-list-group li a span.no-txt:after {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -546,10 +555,12 @@ table tbody tr:last-child td:last-child, .page-node-edit.node-type-project.admin
 .btn, #block-cwrc-dashboards-user-privatemsg .compose-new-message a,
 #block-cwrc-dashboards-user-privatemsg .view-all-messages a, #block-cwrc-dashboards-user-bookmark-lists .content .new-bookmark a, .page-node-dashboard fieldset.form-wrapper .fieldset-wrapper input.form-submit, .cwrc-dashboards-new-member-link-wrapper a, .admin-access-wrapper a, input.form-submit,
 input#edit-submit, .vertical-tabs #edit-help a, .block-menu-block ul li a,
-.region-main-prefix ul.action-links li a, .region-content form .form-actions a, .region-content form .form-actions input#edit-submit, .sidebar #block-islandora-blocks-collections ul li a, .front .view-homepage-slider .cta-btn a, .node-type-article .field-name-field-tags .field-items .field-item a, form#cwrc-search-bar-search .form-item.form-type-textfield, form#cwrc-search-bar-search .form-item-scope, ul.islandora-solr-filter-list li,
+.region-main-prefix ul.action-links li a, .region-content form .form-actions a, .region-content form .form-actions input#edit-submit, .sidebar #block-islandora-blocks-collections ul li a, .front .view-homepage-slider .cta-btn a, .node-type-article .field-name-field-tags .field-items .field-item a, form#cwrc-search-bar-search .form-item.form-type-textfield, form#cwrc-search-bar-search .form-item-scope, .section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li, ul.islandora-solr-filter-list li,
 ul.islandora-solr-query-list.query-list li, ul.islandora-solr-filter-list li a,
-ul.islandora-solr-query-list.query-list li a, ul.islandora-solr-facet li, ul.islandora-solr-facet li span.plusminus a, a.soft-limit, .section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li, article.profile a.privatemsg-send-link, .islandora-basic-collection-display-switch ul.links li a, #block-views-my-projects-block li.views-row a[href^="/user/my-research-space"], #block-cwrc-dashboards-project-utilities ul.cwrc-dashboard-utilities-list li a, .lists-with-actions .actions-list-group li a span.no-txt:after, .region-masthead ul.navbar > li, .open ul.dropdown-menu, .open ul.dropdown-menu li, form#privatemsg-list .compose-new-message a, a#privatemsg-filter-tags-cancel,
-a.privatemsg-filter-tags-add, #privatemsg-filter-tags a:not(:last-child), .field-name-field-featured-links .field-item a, .page-islandora-object .islandora .mods-multisite-link a, .cwrc-workflow-stamps .cwrc-workflow-history-link-wrapper a,
+ul.islandora-solr-query-list.query-list li a, ul.islandora-solr-facet li, ul.islandora-solr-facet li span.plusminus a, a.soft-limit, article.profile a.privatemsg-send-link, .islandora-basic-collection-display-switch ul.links li a, #block-views-my-projects-block li.views-row a[href^="/user/my-research-space"], #block-cwrc-dashboards-project-utilities ul.cwrc-dashboard-utilities-list li a, .lists-with-actions .actions-list-group li a span.no-txt:after, .region-masthead ul.navbar > li, .open ul.dropdown-menu, .open ul.dropdown-menu li, form#privatemsg-list .compose-new-message a, a#privatemsg-filter-tags-cancel,
+a.privatemsg-filter-tags-add, #privatemsg-filter-tags a:not(:last-child), .field-name-field-featured-links .field-item a, .page-islandora-object .islandora .mods-multisite-link a, #block-islandora-blocks-metadata .content a, .ir_citationCModel fieldset a.bag-datastreams-link,
+#block-islandora-blocks-datastreams fieldset a.bag-datastreams-link,
+#block-islandora-blocks-metadata fieldset.islandora-metadata a.bag-datastreams-link, .cwrc-workflow-stamps .cwrc-workflow-history-link-wrapper a,
 .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .region-content .fullscreen-link-wrapper a, .cwrc-workflow-stamp-form-modal button.remodal-cancel, .xml-form-elements-tags span.tag-list > span, #islandora-solr-top ul#secondary-display-profiles li a, .page-islandora-xquery-preview ul.islandora-xquery-preview-control-list li a, .page-admin-people-permissions .fpa-toggle-container a, .fpa-wrapper .fpa-left-section ul li, .region-content .view .read-more-link a, .sidebar .view .read-more-link a, .region-content .block-views .view .view-footer a.view-all-items, .sidebar .block-views .view .view-footer a.view-all-items, .section-content .cwrc-eap .materials.tabs > ul > li:hover {
   -webkit-transition: all 0.3s ease-out;
   /* Safari */
@@ -962,8 +973,10 @@ icons with borders
 
 #block-cwrc-homepage-slider-writing header h2:before,
 #block-cwrc-homepage-slider-collecting header h2:before,
-#block-views-what-we-are-sharing-block header h2:before, .islandora-basic-collection .islandora-basic-collection .left-wrapper.cwrc-person-entitycmodel a .no-image:before, .cwrc-search-wrapper .results ul li .cwrc-person-entitycmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .cwrc-person-entitycmodel .no-image:before {
+#block-views-what-we-are-sharing-block header h2:before, .page-islandora-search .results .left-wrapper.cwrc-person-entitycmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.cwrc-person-entitycmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.cwrc-person-entitycmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.cwrc-person-entitycmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1009,8 +1022,10 @@ icons with borders
   content: "\e93e";
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-bookcmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-bookcmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-bookcmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-bookcmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-bookcmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-bookcmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-bookcmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1054,8 +1069,10 @@ icons with borders
   content: "\e942";
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-compoundcmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-compoundcmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-compoundcmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-compoundcmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-compoundcmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-compoundcmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-compoundcmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1099,8 +1116,8 @@ icons with borders
   content: "\e949";
 }
 
-.islandora-basic-collection-display-switch ul.links li a.islandora-view-list:before, .cwrc-search-wrapper .layouts-wrapper ul li.grid a:before,
-.cwrc-search-wrapper .layouts-wrapper ul li.list a:before {
+.cwrc-search-wrapper .layouts-wrapper ul li.grid a:before,
+.cwrc-search-wrapper .layouts-wrapper ul li.list a:before, .islandora-basic-collection-display-switch ul.links li a.islandora-view-list:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1389,9 +1406,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   content: "\e969";
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.cwrc-citationcmodel a .no-image:before, .cwrc-search-wrapper .results ul li .ircitationcmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .ircitationcmodel .no-image:before, .cwrc-search-wrapper .results ul li .cwrc-citationcmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .cwrc-citationcmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.cwrc-citationcmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.cwrc-citationcmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.cwrc-citationcmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.cwrc-citationcmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1463,8 +1481,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-#block-cwrc-homepage-slider-writing header h2:before, .islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-versioncmodel a .no-image:before, #block-cwrc-dashboards-project-recently-edited h2:before, #block-cwrc-dashboards-user-recently-edited h2:before, .cwrc-search-wrapper .results ul li .islandora-versioncmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-versioncmodel .no-image:before {
+#block-cwrc-homepage-slider-writing header h2:before, .page-islandora-search .results .left-wrapper.islandora-versioncmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-versioncmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-versioncmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-versioncmodel a .no-image .no-image-icon:before, #block-cwrc-dashboards-project-recently-edited h2:before, #block-cwrc-dashboards-user-recently-edited h2:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1520,7 +1540,7 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.cwrc-search-wrapper .results ul li .no-image:before, .section-content .cwrc-eap .materials.tabs .material-tab-inner-row ul li .no-image:before {
+.section-content .cwrc-eap .materials.tabs .material-tab-inner-row ul li .no-image:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1548,8 +1568,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-pagecmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-pagecmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-pagecmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-pagecmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-pagecmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-pagecmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-pagecmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1577,8 +1599,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image:before, .islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-collectioncmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-collectioncmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-collectioncmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-collectioncmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-collectioncmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-collectioncmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-collectioncmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1606,8 +1630,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-transcriptioncmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-transcriptioncmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-transcriptioncmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-transcriptioncmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-transcriptioncmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-transcriptioncmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-transcriptioncmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1635,9 +1661,13 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-sp-basic-image a .no-image:before, .islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-sp-large-image-cmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-sp_basic_image .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-sp_basic_image .no-image:before, .cwrc-search-wrapper .results ul li .islandora-sp_large_image_cmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-sp_large_image_cmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-sp-basic-image a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-sp-basic-image a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-basic-image a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-basic-image a .no-image .no-image-icon:before, .page-islandora-search .results .left-wrapper.islandora-sp-large-image-cmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-sp-large-image-cmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-large-image-cmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-large-image-cmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1665,8 +1695,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-sp-audiocmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-sp-audiocmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-sp-audiocmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-sp-audiocmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-sp-audiocmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-audiocmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-audiocmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1694,8 +1726,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-sp-videocmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-sp_videocmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-sp_videocmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-sp-videocmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-sp-videocmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-videocmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-videocmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1751,8 +1785,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-criticaleditioncontainercmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-criticaleditioncontainercmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-criticaleditioncontainercmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-criticaleditioncontainercmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-criticaleditioncontainercmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-criticaleditioncontainercmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-criticaleditioncontainercmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1780,8 +1816,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.cwrc-place-entitycmodel a .no-image:before, .cwrc-search-wrapper .results ul li .cwrc-place-entitycmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .cwrc-place-entitycmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.cwrc-place-entitycmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.cwrc-place-entitycmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.cwrc-place-entitycmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.cwrc-place-entitycmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1809,8 +1847,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.cwrc-organization-entitycmodel a .no-image:before, .cwrc-search-wrapper .results ul li .cwrc-organization-entitycmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .cwrc-organization-entitycmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.cwrc-organization-entitycmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.cwrc-organization-entitycmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.cwrc-organization-entitycmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.cwrc-organization-entitycmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1894,8 +1934,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-tei-rdfcmodel a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-versioncmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-versioncmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-tei-rdfcmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-tei-rdfcmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-tei-rdfcmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-tei-rdfcmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1923,8 +1965,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-sp-pdf a .no-image:before, .cwrc-search-wrapper .results ul li .islandora-sp_pdf .below .no-image:before,
-.cwrc-search-wrapper .results ul li .islandora-sp_pdf .no-image:before {
+.page-islandora-search .results .left-wrapper.islandora-sp-pdf a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-sp-pdf a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-pdf a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-sp-pdf a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1952,8 +1996,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.cwrc-schemacmodel a .no-image:before, .cwrc-search-wrapper .results ul li .cwrc-schemacmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .cwrc-schemacmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.cwrc-schemacmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.cwrc-schemacmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.cwrc-schemacmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.cwrc-schemacmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -1981,8 +2027,10 @@ article.profile .field-name-field-full-name:before, #block-user-online h2:before
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.cwrc-documentcmodel a .no-image:before, .cwrc-search-wrapper .results ul li .cwrc-documentcmodel .below .no-image:before,
-.cwrc-search-wrapper .results ul li .cwrc-documentcmodel .no-image:before {
+.page-islandora-search .results .left-wrapper.cwrc-documentcmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.cwrc-documentcmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.cwrc-documentcmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.cwrc-documentcmodel a .no-image .no-image-icon:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -2291,8 +2339,7 @@ ul.islandora-solr-query-list.query-list li a:before, .lists-with-actions .action
   top: 1px;
 }
 
-.islandora-basic-collection .islandora-basic-collection-object dl dd.read-more a:after,
-.islandora-basic-collection dl.islandora-basic-collection-object dd.read-more a:after, .cwrc-search-wrapper .islandora-solr-grid .solr-grid-caption a:after, .front .section-content .region-content .block.homepage-news-event span.read-more-link a:after, .region-content .block-views .view .view-footer a.view-all-items:before, .sidebar .block-views .view .view-footer a.view-all-items:before {
+.cwrc-search-wrapper .islandora-solr-grid .solr-grid-caption a:after, .front .section-content .region-content .block.homepage-news-event span.read-more-link a:after, .region-content .block-views .view .view-footer a.view-all-items:before, .sidebar .block-views .view .view-footer a.view-all-items:before {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -3285,6 +3332,11 @@ img, video {
   height: auto;
 }
 
+.jwplayer {
+  margin: 0 auto;
+  float: none;
+}
+
 .maintenance-page #content {
   position: relative;
   margin: 0 auto;
@@ -3312,7 +3364,7 @@ img, video {
 }
 
 .jwplayer {
-  margin: 0 auto;
+  margin: 0 auto !important;
   float: none;
 }
 
@@ -3402,6 +3454,15 @@ select {
 
 select[multiple] {
   height: auto !important;
+}
+
+.ui-widget, .ui-widget-content, form .ui-widget select {
+  font-family: "Lato", Arial, Helvetica, sans-serif !important;
+  font-size: 15px;
+}
+
+.form-item .description {
+  font-size: 15px !important;
 }
 
 fieldset {
@@ -4157,8 +4218,8 @@ body > .region,
 }
 .main-prefix-section-wrapper h1#page-title {
   font-weight: 700;
-  float: left;
   margin: .3em 0 0;
+  word-break: break-word;
 }
 @media (min-width: 0) and (max-width: 550px) {
   .main-prefix-section-wrapper h1#page-title {
@@ -4168,6 +4229,19 @@ body > .region,
 .main-prefix-section-wrapper .region-main-prefix {
   float: left;
   width: 54%;
+}
+.main-prefix-section-wrapper .region-main-prefix:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em;
+  /* Adjusts for spacing */
+}
+.main-prefix-section-wrapper .region-main-prefix .container, .main-prefix-section-wrapper .region-main-prefix .view-nodequeue-projects-featured .view-content, .view-nodequeue-projects-featured .main-prefix-section-wrapper .region-main-prefix .view-content, .main-prefix-section-wrapper .region-main-prefix .view-homepage-slider .view-content, .view-homepage-slider .main-prefix-section-wrapper .region-main-prefix .view-content {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
 }
 @media (min-width: 0) and (max-width: 550px) {
   .main-prefix-section-wrapper .region-main-prefix {
@@ -4182,6 +4256,7 @@ body > .region,
   height: 59px;
   width: auto !important;
   margin-right: 1em;
+  float: left;
 }
 .main-prefix-section-wrapper .region-main-prefix-right {
   float: right;
@@ -4619,6 +4694,8 @@ ul.language-switcher-locale-url ul li a.active {
   margin-right: 1em;
   padding-left: 1em;
   top: 0;
+  position: relative;
+  z-index: 700;
 }
 @media (min-width: 0) and (max-width: 745px) {
   .view-nodequeue-projects-featured .field.field-name-field-logo {
@@ -4650,6 +4727,8 @@ ul.language-switcher-locale-url ul li a.active {
 
 .view-nodequeue-projects-featured .field-name-body {
   font-weight: 700;
+  position: relative;
+  z-index: 100;
 }
 
 .view-nodequeue-projects-featured .field-name-node-link {
@@ -5383,7 +5462,333 @@ div .collapsiblock.collapsiblockCollapsed a:before {
   float: left;
 }
 
-/* components/_search.scss */
+/* =============================================================================
+    RESULTS
+   ========================================================================== */
+/*
+.spelling-suggestions{
+  @extend %box-ui-light-simple;
+  @include ui-box($box-padding: ms(1));
+  margin-bottom: ms(1);
+  dl,dt,dd{
+    margin: 0;
+  }
+}
+
+.search-results{
+  @include reset;
+  @include no-bullets;
+  .title{
+    @include adjust-font-size-to(18px);
+    a[href*="/document/"] {
+      // @include svg-bkgd($misc, 'filter-dark');
+      padding-left: rhythm(.65);
+    }
+  }
+  .search-snippet-info{
+    @include reset;
+  }
+
+  .search-snippet,
+  .search-info{
+    @include adjust-font-size-to(15px);
+  }
+
+  .search-result{
+    @include list-divider($spacing-bottom: ms());
+    margin-bottom: ms();
+  }
+}
+*/
+.cwrc-search-wrapper .results {
+  float: left;
+  border-top: 1px solid #E1E1E1;
+  padding-top: 1em;
+  width: 100%;
+}
+.cwrc-search-wrapper .results p.no-results,
+.cwrc-search-wrapper .results span.no-results {
+  padding: 0;
+  font-style: italic;
+}
+
+ul.results {
+  border-radius: 5px;
+  border-top: none !important;
+  margin-top: 1em;
+}
+ul.results li.result {
+  border-bottom: 1px solid #E1E1E1;
+  border-top: none;
+  margin-bottom: 0;
+  padding: 1em 0;
+}
+ul.results li.result a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.82491em;
+}
+
+.cwrc-search-wrapper .results-summary {
+  margin-top: 1em;
+  float: left;
+}
+
+dl.solr-fields {
+  border-top: none;
+}
+
+dl.solr-thumb {
+  width: 100%;
+  margin: 0 0 .5em;
+}
+dl.solr-thumb dt {
+  background: #fff;
+  display: inline-block;
+  vertical-align: top;
+  width: 130px;
+  height: 130px;
+  margin-right: .5em;
+  margin-bottom: .3em;
+}
+dl.solr-thumb dt a {
+  display: block;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+dl.solr-thumb dt a img {
+  background: #ac0033;
+  border-radius: 5px;
+  border: none;
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  margin: auto;
+  position: absolute;
+  top: -100%;
+  right: -100%;
+  bottom: -100%;
+  left: -100%;
+}
+
+dl.solr-fields {
+  width: 100%;
+}
+
+.islandora-solr-search-result {
+  font-size: 0.90824em;
+  padding-top: 1em;
+  border: 1px solid #E1E1E1;
+  padding: .7em;
+  border-radius: 5px;
+}
+
+.solr-fields dt, .solr-fields dd {
+  border-top: 1px solid #E1E1E1;
+}
+
+.cwrc-search-wrapper .islandora-solr-grid {
+  margin: 0 0 1em;
+  width: 100%;
+}
+.cwrc-search-wrapper .islandora-solr-grid .solr-grid-thumb img {
+  background-color: #ac0033;
+  height: 70px;
+}
+.cwrc-search-wrapper .islandora-solr-grid dl.solr-grid-field {
+  border: 1px solid #E1E1E1;
+  border-radius: 5px;
+  padding: .7em;
+  width: 31.5%;
+  margin: 0;
+  margin-right: 2%;
+  margin-bottom: 2%;
+  float: left;
+  position: relative;
+}
+@media (min-width: 0) and (max-width: 550px) {
+  .cwrc-search-wrapper .islandora-solr-grid dl.solr-grid-field {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+}
+.cwrc-search-wrapper .islandora-solr-grid dl.solr-grid-field:nth-child(3n+3) {
+  margin-right: 0;
+}
+.cwrc-search-wrapper .islandora-solr-grid .solr-grid-caption a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.cwrc-search-wrapper .islandora-solr-grid .solr-grid-caption a:after {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  top: auto;
+  color: #ac0033;
+}
+
+ul#secondary-display-profiles {
+  display: none;
+}
+
+#sidebar-second .block-search-filter .content li {
+  margin: 0;
+  padding: 0;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  line-height: 1.43463em;
+  margin-bottom: 1em;
+}
+
+/* =============================================================================
+    FILTERS
+   ========================================================================== */
+.cwrc-search-wrapper {
+  float: left;
+  width: 100%;
+}
+.cwrc-search-wrapper .layouts-wrapper {
+  margin-bottom: 1em;
+}
+.cwrc-search-wrapper .layouts-wrapper ul {
+  float: right;
+  width: 100%;
+  border-bottom: 1px solid #E1E1E1;
+  margin-bottom: 1em;
+  padding-bottom: .3em;
+}
+@media (min-width: 0) and (max-width: 550px) {
+  .cwrc-search-wrapper .layouts-wrapper ul {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.cwrc-search-wrapper .layouts-wrapper ul li {
+  display: inline-block;
+  float: left;
+  width: auto;
+  margin-right: 1em;
+  padding-right: 1em;
+  border-right: 1px solid #ddd;
+  line-height: 14px;
+}
+.cwrc-search-wrapper .layouts-wrapper ul li a {
+  color: #333;
+  font-weight: 700;
+  font-size: .9em;
+  text-decoration: none;
+}
+.cwrc-search-wrapper .layouts-wrapper ul li a:hover {
+  color: #336699;
+}
+.cwrc-search-wrapper .layouts-wrapper ul li.active a {
+  color: #336699;
+}
+.cwrc-search-wrapper .layouts-wrapper ul li.grid,
+.cwrc-search-wrapper .layouts-wrapper ul li.list {
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 0;
+  margin-right: 0;
+  padding-left: 0;
+  line-height: 35px;
+  border-right: none;
+}
+.cwrc-search-wrapper .layouts-wrapper ul li.grid a:before {
+  content: "\e949" !important;
+}
+.cwrc-search-wrapper ul.pager {
+  float: left;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.sorts-wrapper {
+  width: 56%;
+  padding-bottom: 1em;
+}
+
+.layouts-wrapper {
+  width: 44%;
+}
+
+.sorts-wrapper, .layouts-wrapper {
+  float: left;
+}
+@media (min-width: 0) and (max-width: 560px) {
+  .sorts-wrapper, .layouts-wrapper {
+    width: 100%;
+  }
+}
+.sorts-wrapper .form-item, .layouts-wrapper .form-item {
+  width: 38%;
+  float: left;
+  margin-right: 2%;
+}
+@media (min-width: 0) and (max-width: 560px) {
+  .sorts-wrapper .form-item, .layouts-wrapper .form-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+.sorts-wrapper .form-item select,
+.sorts-wrapper .form-item input, .layouts-wrapper .form-item select,
+.layouts-wrapper .form-item input {
+  width: 100%;
+}
+.sorts-wrapper .form-submit, .layouts-wrapper .form-submit {
+  width: 20%;
+  margin-right: 0 !important;
+  margin-top: 2.2em !important;
+}
+@media (min-width: 0) and (max-width: 560px) {
+  .sorts-wrapper .form-submit, .layouts-wrapper .form-submit {
+    width: 100%;
+    margin-top: 0em !important;
+    margin-bottom: 1.5em !important;
+  }
+}
+
+.layouts-wrapper .form-item.form-type-select {
+  width: 64%;
+}
+@media (min-width: 0) and (max-width: 560px) {
+  .layouts-wrapper .form-item.form-type-select {
+    width: 100%;
+  }
+}
+.layouts-wrapper .form-submit {
+  width: 25%;
+}
+@media (min-width: 0) and (max-width: 560px) {
+  .layouts-wrapper .form-submit {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+}
+
+@media (min-width: 0) and (max-width: 1120px) {
+  .two-sidebars .sorts-wrapper, .two-sidebars .layouts-wrapper, .one-sidebar .sorts-wrapper, .one-sidebar .layouts-wrapper {
+    width: 100%;
+  }
+}
+@media (min-width: 0) and (max-width: 1120px) {
+  .two-sidebars .layouts-wrapper .form-item.form-type-select, .one-sidebar .layouts-wrapper .form-item.form-type-select {
+    width: 100%;
+  }
+}
+@media (min-width: 0) and (max-width: 1120px) {
+  .two-sidebars .layouts-wrapper .form-submit, .one-sidebar .layouts-wrapper .form-submit {
+    width: 100%;
+    margin-top: 0 !important;
+  }
+}
+
 .block-search {
   text-align: center;
 }
@@ -5581,34 +5986,79 @@ form#cwrc-search-bar-search a.advanced_search_button:before {
 }
 
 /* =============================================================================
-   SEARCH
+   ADVANCED SEARCH
    ========================================================================== */
-.page-cwrc-search .section-content #block-system-main {
+.section-content .block #quicktabs-cwrc_advanced_search .block {
   padding: 0;
   border: none;
   float: none;
   width: auto;
   background: transparent;
+  margin-bottom: 0;
 }
-
-#block-islandora-solr-cwrc-current-query h3 {
-  display: none;
+.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs {
+  border-bottom: 2px solid #E1E1E1;
+  float: left;
+  width: 100%;
+  padding-bottom: 0;
+  margin-bottom: 1em;
+  padding-left: .6em;
 }
-
-.page-islandora-search .section-content #sidebar-first .block header {
-  margin: -.7em;
+@media (min-width: 0) and (max-width: 500px) {
+  .section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs {
+    padding-left: 0;
+  }
+}
+.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li {
+  width: auto;
+  margin-bottom: 0;
+  border: 1px solid #E1E1E1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #fafafa;
+  border-bottom: none;
+  margin-left: .2em;
+}
+@media (min-width: 0) and (max-width: 500px) {
+  .section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li {
+    width: 100%;
+  }
+}
+.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li:hover {
+  background: #fff;
+}
+.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li.active {
+  border-bottom: none;
+  background: #fff;
+}
+.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li.active a {
+  color: #336699 !important;
+}
+.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li a {
+  text-decoration: none;
+  font-weight: 700;
+  padding: .4em .7em;
+  display: inline-block;
+  color: #333;
+  font-size: .9em;
+}
+.section-content .block #quicktabs-cwrc_advanced_search #block-islandora-solr-advanced .form-submit {
+  top: -3px;
+  position: relative;
+}
+.section-content .block #quicktabs-cwrc_advanced_search .islandora-solr-advanced-controls {
   margin-bottom: 1em;
 }
-
-.page-islandora-search .section-content .region-content .block {
-  border: none;
-  padding: 0;
+.section-content .block #quicktabs-cwrc_advanced_search .form-item.form-item-xquery {
+  margin: 0;
+}
+.section-content .block #quicktabs-cwrc_advanced_search iframe {
+  margin-bottom: 0;
 }
 
-.region-toolbar {
-  margin-bottom: 1em;
-}
-
+/* =============================================================================
+   FACET SIDEBAR
+   ========================================================================== */
 #block-islandora-solr-cwrc-basic-facets h4,
 #block-islandora-solr-cwrc-basic-facets h3,
 #block-islandora-solr-current-query h4,
@@ -5828,72 +6278,33 @@ a.soft-limit:hover {
   text-decoration: none;
 }
 
-.section-content .block #quicktabs-cwrc_advanced_search .block {
+/* =============================================================================
+   SEARCH
+   ========================================================================== */
+.page-cwrc-search .section-content #block-system-main {
   padding: 0;
   border: none;
   float: none;
   width: auto;
   background: transparent;
-  margin-bottom: 0;
 }
-.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs {
-  border-bottom: 2px solid #E1E1E1;
-  float: left;
-  width: 100%;
-  padding-bottom: 0;
-  margin-bottom: 1em;
-  padding-left: .6em;
+
+#block-islandora-solr-cwrc-current-query h3 {
+  display: none;
 }
-@media (min-width: 0) and (max-width: 500px) {
-  .section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs {
-    padding-left: 0;
-  }
-}
-.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li {
-  width: auto;
-  margin-bottom: 0;
-  border: 1px solid #E1E1E1;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: #fafafa;
-  border-bottom: none;
-  margin-left: .2em;
-}
-@media (min-width: 0) and (max-width: 500px) {
-  .section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li {
-    width: 100%;
-  }
-}
-.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li:hover {
-  background: #fff;
-}
-.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li.active {
-  border-bottom: none;
-  background: #fff;
-}
-.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li.active a {
-  color: #336699 !important;
-}
-.section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li a {
-  text-decoration: none;
-  font-weight: 700;
-  padding: .4em .7em;
-  display: inline-block;
-  color: #333;
-  font-size: .9em;
-}
-.section-content .block #quicktabs-cwrc_advanced_search #block-islandora-solr-advanced .form-submit {
-  top: -3px;
-  position: relative;
-}
-.section-content .block #quicktabs-cwrc_advanced_search .islandora-solr-advanced-controls {
+
+.page-islandora-search .section-content #sidebar-first .block header {
+  margin: -.7em;
   margin-bottom: 1em;
 }
-.section-content .block #quicktabs-cwrc_advanced_search .form-item.form-item-xquery {
-  margin: 0;
+
+.page-islandora-search .section-content .region-content .block {
+  border: none;
+  padding: 0;
 }
-.section-content .block #quicktabs-cwrc_advanced_search iframe {
-  margin-bottom: 0;
+
+.region-toolbar {
+  margin-bottom: 1em;
 }
 
 /* components/_user-login.scss */
@@ -6413,11 +6824,14 @@ article.profile .info dd {
   float: left;
 }
 
+.page-islandora-search .results,
 .islandora-basic-collection {
   overflow: visible;
   top: -1em;
   position: relative;
 }
+.page-islandora-search .results ul.list-layout li,
+.page-islandora-search .results ul.grid-layout li,
 .islandora-basic-collection ul.list-layout li,
 .islandora-basic-collection ul.grid-layout li {
   width: 31.5%;
@@ -6430,40 +6844,50 @@ article.profile .info dd {
   min-height: 99px;
   width: 48.5%;
 }
-@media (max-width: 710px) {
+@media (max-width: 715px) {
+  .page-islandora-search .results ul.list-layout li,
+  .page-islandora-search .results ul.grid-layout li,
   .islandora-basic-collection ul.list-layout li,
   .islandora-basic-collection ul.grid-layout li {
     min-height: 80px;
-  }
-}
-@media (max-width: 710px) and (max-width: 715px) {
-  .islandora-basic-collection ul.list-layout li,
-  .islandora-basic-collection ul.grid-layout li {
     width: 98%;
     margin: 2% 0;
   }
 }
-
 @media (min-width: 420px) {
+  .page-islandora-search .results ul.grid-layout li:nth-child(2n+2),
   .islandora-basic-collection ul.grid-layout li:nth-child(2n+2) {
     margin-right: 0;
   }
 }
+.page-islandora-search .results .top-wrapper,
 .islandora-basic-collection .top-wrapper {
   position: relative;
-  width: 100%;
-  float: left;
 }
+.page-islandora-search .results .right-wrapper,
 .islandora-basic-collection .right-wrapper {
-  float: left;
-  padding-left: 65px;
-  width: 100%;
+  width: 75%;
+  float: right;
 }
-@media (min-width: 715px) {
+@media (min-width: 370px) {
+  .page-islandora-search .results .right-wrapper,
   .islandora-basic-collection .right-wrapper {
-    padding-left: 80px;
+    width: 82%;
   }
 }
+@media (min-width: 600px) {
+  .page-islandora-search .results .right-wrapper,
+  .islandora-basic-collection .right-wrapper {
+    width: 87%;
+  }
+}
+@media (min-width: 970px) {
+  .page-islandora-search .results .right-wrapper,
+  .islandora-basic-collection .right-wrapper {
+    width: 90%;
+  }
+}
+.page-islandora-search .results .right-wrapper .project-info a img,
 .islandora-basic-collection .right-wrapper .project-info a img {
   width: auto;
   height: 30px;
@@ -6471,114 +6895,204 @@ article.profile .info dd {
   float: left;
   margin-right: 1em;
 }
+.page-islandora-search .results .left-wrapper,
 .islandora-basic-collection .left-wrapper {
+  width: 22%;
+  margin-right: 3%;
   float: left;
-  position: absolute;
+  margin-bottom: .3em;
 }
+@media (min-width: 370px) {
+  .page-islandora-search .results .left-wrapper,
+  .islandora-basic-collection .left-wrapper {
+    width: 15%;
+  }
+}
+@media (min-width: 600px) {
+  .page-islandora-search .results .left-wrapper,
+  .islandora-basic-collection .left-wrapper {
+    width: 10%;
+  }
+}
+@media (min-width: 970px) {
+  .page-islandora-search .results .left-wrapper,
+  .islandora-basic-collection .left-wrapper {
+    width: 8%;
+    margin-right: 2%;
+  }
+}
+@media (min-width: 716px) {
+  .page-islandora-search .results ul.grid-layout .right-wrapper,
+  .islandora-basic-collection ul.grid-layout .right-wrapper {
+    width: 77%;
+  }
+}
+@media (min-width: 1000px) {
+  .page-islandora-search .results ul.grid-layout .right-wrapper,
+  .islandora-basic-collection ul.grid-layout .right-wrapper {
+    width: 79%;
+  }
+}
+@media (min-width: 716px) {
+  .page-islandora-search .results ul.grid-layout .left-wrapper,
+  .islandora-basic-collection ul.grid-layout .left-wrapper {
+    width: 20%;
+  }
+}
+@media (min-width: 1000px) {
+  .page-islandora-search .results ul.grid-layout .left-wrapper,
+  .islandora-basic-collection ul.grid-layout .left-wrapper {
+    width: 18%;
+  }
+}
+.page-islandora-search .results .creation-info,
 .islandora-basic-collection .creation-info {
   font-weight: 700;
   font-size: .8em;
   margin-bottom: .5em;
 }
-.islandora-basic-collection .creation-info .creator, .islandora-basic-collection .creation-info .date {
+.page-islandora-search .results .creation-info .creator, .page-islandora-search .results .creation-info .date,
+.islandora-basic-collection .creation-info .creator,
+.islandora-basic-collection .creation-info .date {
   line-height: 14px;
 }
+.page-islandora-search .results .creation-info .date,
 .islandora-basic-collection .creation-info .date {
   display: inline-block;
 }
+.page-islandora-search .results .top-wrapper .right-wrapper .label,
+.page-islandora-search .results .islandora-basic-collection .right-wrapper .label,
+.islandora-basic-collection .top-wrapper .right-wrapper .label,
 .islandora-basic-collection .islandora-basic-collection .right-wrapper .label {
   padding: 0;
   margin-bottom: .2em;
 }
+.page-islandora-search .results .top-wrapper .right-wrapper .label a,
+.page-islandora-search .results .islandora-basic-collection .right-wrapper .label a,
+.islandora-basic-collection .top-wrapper .right-wrapper .label a,
 .islandora-basic-collection .islandora-basic-collection .right-wrapper .label a {
   text-decoration: none;
   font-weight: 900;
+  word-wrap: break-word;
 }
-.islandora-basic-collection .islandora-basic-collection-object dl dd.read-more a,
-.islandora-basic-collection dl.islandora-basic-collection-object dd.read-more a {
-  color: #ac0033;
-  font-weight: 700;
-  font-size: .8em;
-  position: absolute;
-  right: 1em;
-  bottom: 1em;
-  text-decoration: none;
-}
-@media (max-width: 420px) {
-  .islandora-basic-collection .islandora-basic-collection-object dl dd.read-more a,
-  .islandora-basic-collection dl.islandora-basic-collection-object dd.read-more a {
-    position: relative;
-    float: right;
-    margin-top: 1em;
-  }
-}
-.islandora-basic-collection .islandora-basic-collection-object dl dd.read-more a:hover,
-.islandora-basic-collection dl.islandora-basic-collection-object dd.read-more a:hover {
-  color: #790024;
-}
-.islandora-basic-collection .islandora-basic-collection-object dl dd.read-more a:after,
-.islandora-basic-collection dl.islandora-basic-collection-object dd.read-more a:after {
-  float: right;
-  font-weight: 700;
-  top: 4px;
-  font-size: .7em;
-  margin-left: .5em;
-}
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a .no-image,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a .no-image,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a .no-image,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a .no-image,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a .no-image,
 .islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image {
   float: left;
-  height: 64px;
-  width: 64px;
+  width: 100%;
+  height: 100%;
   background-color: #ac0033;
+  border-radius: 5px;
 }
-@media (min-width: 0) and (max-width: 715px) {
-  .islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image {
-    width: 45px;
-    height: 45px;
-  }
-}
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a .no-image:before,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a .no-image:before,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a .no-image:before,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a .no-image:before,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a .no-image:before,
 .islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image:before {
+  content: '' !important;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: 0em;
+}
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a .no-image .no-image-icon,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a .no-image .no-image-icon,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a .no-image .no-image-icon,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a .no-image .no-image-icon,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a .no-image .no-image-icon,
+.islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image .no-image-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
   color: #fff;
-  width: 64px !important;
-  line-height: 64px !important;
-  font-size: 1.8em !important;
-  font-weight: 400 !important;
 }
-@media (min-width: 0) and (max-width: 715px) {
-  .islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image:before {
-    width: 45px !important;
-    height: 45px !important;
-    font-size: 1.3em !important;
-    line-height: 45px !important;
-  }
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a .no-image .no-image-icon:before,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a .no-image .no-image-icon:before,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a .no-image .no-image-icon:before,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a .no-image .no-image-icon:before,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a .no-image .no-image-icon:before,
+.islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image .no-image-icon:before {
+  margin-right: 0 !important;
+  text-align: center;
+  float: none !Important;
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  font-size: 1.3em;
+  top: 5px;
 }
-.islandora-basic-collection .islandora-basic-collection .left-wrapper a .no-image img {
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a img,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a img,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a img,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a img,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a img,
+.islandora-basic-collection .islandora-basic-collection .left-wrapper a img {
   display: none;
 }
-.islandora-basic-collection .islandora-basic-collection .left-wrapper a img {
-  background-color: #fff !important;
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper,
+.islandora-basic-collection .islandora-basic-collection .left-wrapper {
+  background: #fff !important;
   border: 1px solid #E1E1E1;
-  border-radius: 3px;
+  border-radius: 5px;
   display: inline-block;
   vertical-align: top;
-  width: 64px;
-  height: 64px;
 }
-@media (min-width: 0) and (max-width: 715px) {
-  .islandora-basic-collection .islandora-basic-collection .left-wrapper a img {
-    width: 45px;
-    height: 45px;
-  }
-}
-.islandora-basic-collection .islandora-basic-collection .left-wrapper a img a {
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a,
+.islandora-basic-collection .islandora-basic-collection .left-wrapper a {
   height: 100%;
   overflow: hidden;
   position: relative;
   display: block;
+  transition: all 0.3s ease-in;
 }
-.islandora-basic-collection .islandora-basic-collection .left-wrapper a img:before {
-  content: none !important;
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a.has-image:before,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a.has-image:before,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a.has-image:before,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a.has-image:before,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a.has-image:before,
+.islandora-basic-collection .islandora-basic-collection .left-wrapper a.has-image:before {
+  content: none;
+  transition: all 0.3s ease-in;
 }
-.islandora-basic-collection .islandora-basic-collection .left-wrapper a img img {
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a.has-image:hover:before,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a.has-image:hover:before,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a.has-image:hover:before,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a.has-image:hover:before,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a.has-image:hover:before,
+.islandora-basic-collection .islandora-basic-collection .left-wrapper a.has-image:hover:before {
+  float: right;
+  z-index: 800;
+  bottom: 6px;
+  top: auto;
+  height: 20px;
+  width: 20px;
+  right: 0;
+  background: #ac0033;
+  border-radius: 2px;
+  position: absolute;
+  color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  transition: all 0.3s ease-in;
+}
+.page-islandora-search .results .cwrc-search-teaser-grid .left-wrapper a img,
+.page-islandora-search .results .cwrc-search-teaser-list .left-wrapper a img,
+.page-islandora-search .results .islandora-basic-collection .left-wrapper a img,
+.islandora-basic-collection .cwrc-search-teaser-grid .left-wrapper a img,
+.islandora-basic-collection .cwrc-search-teaser-list .left-wrapper a img,
+.islandora-basic-collection .islandora-basic-collection .left-wrapper a img {
   display: block !important;
   padding: 0em;
   min-width: 100%;
@@ -6591,27 +7105,77 @@ article.profile .info dd {
   left: -100%;
   border-radius: 3px;
 }
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-bookcmodel a .no-image:before:before {
+.page-islandora-search .results .left-wrapper.islandora-bookcmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-bookcmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-bookcmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-bookcmodel a .no-image .no-image-icon:before {
   font-size: 2.8em !important;
+  top: 8px;
 }
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.islandora-compoundcmodel a .no-image:before:before {
+.page-islandora-search .results .left-wrapper.islandora-compoundcmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.islandora-compoundcmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.islandora-compoundcmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.islandora-compoundcmodel a .no-image .no-image-icon:before {
   font-size: 2.2em !important;
 }
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.cwrc-organization-entitycmodel a .no-image:before:before {
+.page-islandora-search .results .left-wrapper.cwrc-organization-entitycmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.cwrc-organization-entitycmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.cwrc-organization-entitycmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.cwrc-organization-entitycmodel a .no-image .no-image-icon:before {
   top: -4px !important;
 }
-.islandora-basic-collection .islandora-basic-collection .left-wrapper.cwrc-person-entitycmodel a .no-image:before:before {
+.page-islandora-search .results .left-wrapper.cwrc-person-entitycmodel a.has-image:hover:before,
+.page-islandora-search .results .left-wrapper.cwrc-person-entitycmodel a .no-image .no-image-icon:before,
+.islandora-basic-collection .left-wrapper.cwrc-person-entitycmodel a.has-image:hover:before,
+.islandora-basic-collection .left-wrapper.cwrc-person-entitycmodel a .no-image .no-image-icon:before {
   font-size: 2.2em !important;
+}
+
+/* =============================================================================
+    fix for different pages layouts for icon size
+   ========================================================================== */
+@media (min-width: 692px) {
+  .two-sidebars .cwrc-search-wrapper ul.grid-layout .right-wrapper {
+    width: 70%;
+  }
+}
+@media (min-width: 900px) {
+  .two-sidebars .cwrc-search-wrapper ul.grid-layout .right-wrapper {
+    width: 74%;
+  }
+}
+@media (min-width: 692px) {
+  .two-sidebars .cwrc-search-wrapper ul.grid-layout .left-wrapper {
+    width: 27%;
+  }
+}
+@media (min-width: 900px) {
+  .two-sidebars .cwrc-search-wrapper ul.grid-layout .left-wrapper {
+    width: 23%;
+  }
+}
+
+@media (min-width: 623px) {
+  .two-sidebars .cwrc-search-wrapper ul.list-layout .right-wrapper {
+    width: 85%;
+  }
+}
+@media (min-width: 623px) {
+  .two-sidebars .cwrc-search-wrapper ul.list-layout .left-wrapper {
+    width: 12%;
+  }
 }
 
 /* =============================================================================
     List View
    ========================================================================== */
+.page-islandora-search .cwrc-search-wrapper .results ul.list-layout,
 .islandora-basic-collection ul.list-layout {
   padding-bottom: .5em;
   margin-bottom: .5em;
   width: 100% !important;
 }
+.page-islandora-search .cwrc-search-wrapper .results ul.list-layout li,
 .islandora-basic-collection ul.list-layout li {
   float: left;
   width: 100%;
@@ -8124,6 +8688,10 @@ ul.privatemsg-message-actions {
   list-style: disc;
 }
 
+.cwrc-project-homepage .group-left .field ul li ul, .cwrc-project-homepage .group-right .field ul li ul {
+  margin-left: 1em;
+}
+
 /* =============================================================================
    BANNER
    ========================================================================== */
@@ -9027,6 +9595,9 @@ ul.privatemsg-message-actions {
   float: left;
   width: 100%;
 }
+.page-islandora-object .islandora .islandora-video-content {
+  float: none !important;
+}
 .page-islandora-object .islandora .islandora-basic-image-content {
   width: 100% !important;
   background: #fff;
@@ -9145,7 +9716,31 @@ ul.privatemsg-message-actions {
 #block-islandora-blocks-metadata .content {
   padding: 0;
 }
+#block-islandora-blocks-metadata .content a {
+  font-weight: 900 !important;
+  color: #fff;
+  background-color: #ac0033;
+  font-size: 11.5px !important;
+  line-height: 16px;
+  padding: .75em 1.3em;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 .5em .8em 0;
+  margin-top: 1em;
+}
+#block-islandora-blocks-metadata .content a:hover {
+  background-color: #880028;
+}
+#block-islandora-blocks-metadata .content .mods-multisite-link {
+  float: right;
+  width: 100%;
+}
+#block-islandora-blocks-metadata .content .mods-multisite-link a {
+  float: right;
+}
 
+.ir_citationCModel fieldset,
+#block-islandora-blocks-datastreams fieldset,
 #block-islandora-blocks-metadata fieldset.islandora-metadata {
   padding: 0;
   border: none;
@@ -9156,6 +9751,8 @@ ul.privatemsg-message-actions {
   padding-bottom: 0 !important;
   font-size: .9em;
 }
+.ir_citationCModel fieldset legend,
+#block-islandora-blocks-datastreams fieldset legend,
 #block-islandora-blocks-metadata fieldset.islandora-metadata legend {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
@@ -9164,6 +9761,27 @@ ul.privatemsg-message-actions {
   width: 1px;
   word-wrap: normal;
 }
+.ir_citationCModel fieldset a.bag-datastreams-link,
+#block-islandora-blocks-datastreams fieldset a.bag-datastreams-link,
+#block-islandora-blocks-metadata fieldset.islandora-metadata a.bag-datastreams-link {
+  font-weight: 900 !important;
+  color: #fff;
+  background-color: #ac0033;
+  font-size: 11.5px !important;
+  line-height: 16px;
+  padding: .75em 1.3em;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 .5em .8em 0;
+  margin-top: 1em;
+}
+.ir_citationCModel fieldset a.bag-datastreams-link:hover,
+#block-islandora-blocks-datastreams fieldset a.bag-datastreams-link:hover,
+#block-islandora-blocks-metadata fieldset.islandora-metadata a.bag-datastreams-link:hover {
+  background-color: #880028;
+}
+.ir_citationCModel fieldset .fieldset-wrapper dl,
+#block-islandora-blocks-datastreams fieldset .fieldset-wrapper dl,
 #block-islandora-blocks-metadata fieldset.islandora-metadata .fieldset-wrapper dl {
   margin: 0;
 }
@@ -9751,346 +10369,6 @@ div.xml-form-elements-tabs.ui-tabs .ui-tabs-nav li.ui-tabs-selected a {
 
 .page-islandora-search.og-context table {
   margin-bottom: 1em;
-}
-
-/* =============================================================================
-    FILTERS
-   ========================================================================== */
-.cwrc-search-wrapper {
-  float: left;
-  width: 100%;
-}
-.cwrc-search-wrapper .layouts-wrapper {
-  margin-bottom: 1em;
-}
-.cwrc-search-wrapper .layouts-wrapper ul {
-  float: right;
-  width: 100%;
-  border-bottom: 1px solid #E1E1E1;
-  margin-bottom: 1em;
-  padding-bottom: .3em;
-}
-@media (min-width: 0) and (max-width: 550px) {
-  .cwrc-search-wrapper .layouts-wrapper ul {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-.cwrc-search-wrapper .layouts-wrapper ul li {
-  display: inline-block;
-  float: left;
-  width: auto;
-  margin-right: 1em;
-  padding-right: 1em;
-  border-right: 1px solid #ddd;
-  line-height: 14px;
-}
-.cwrc-search-wrapper .layouts-wrapper ul li a {
-  color: #333;
-  font-weight: 700;
-  font-size: .9em;
-  text-decoration: none;
-}
-.cwrc-search-wrapper .layouts-wrapper ul li a:hover {
-  color: #336699;
-}
-.cwrc-search-wrapper .layouts-wrapper ul li.active a {
-  color: #336699;
-}
-.cwrc-search-wrapper .layouts-wrapper ul li.grid,
-.cwrc-search-wrapper .layouts-wrapper ul li.list {
-  display: inline-block;
-  float: right;
-  overflow: hidden;
-  width: 30px;
-  height: 30px;
-  margin-bottom: 0;
-  margin-right: 0;
-  padding-left: 0;
-  line-height: 35px;
-  border-right: none;
-}
-.cwrc-search-wrapper .layouts-wrapper ul li.grid a:before {
-  content: "\e949" !important;
-}
-.cwrc-search-wrapper ul.pager {
-  float: left;
-  width: 100%;
-  margin-top: 1em;
-}
-
-.sorts-wrapper {
-  width: 56%;
-}
-
-.layouts-wrapper {
-  width: 44%;
-}
-
-.sorts-wrapper, .layouts-wrapper {
-  float: left;
-}
-@media (min-width: 0) and (max-width: 560px) {
-  .sorts-wrapper, .layouts-wrapper {
-    width: 100%;
-  }
-}
-.sorts-wrapper .form-item, .layouts-wrapper .form-item {
-  width: 38%;
-  float: left;
-  margin-right: 2%;
-}
-@media (min-width: 0) and (max-width: 560px) {
-  .sorts-wrapper .form-item, .layouts-wrapper .form-item {
-    width: 100%;
-    margin-right: 0;
-  }
-}
-.sorts-wrapper .form-item select,
-.sorts-wrapper .form-item input, .layouts-wrapper .form-item select,
-.layouts-wrapper .form-item input {
-  width: 100%;
-}
-.sorts-wrapper .form-submit, .layouts-wrapper .form-submit {
-  width: 20%;
-  margin-right: 0 !important;
-  margin-top: 2.2em !important;
-}
-@media (min-width: 0) and (max-width: 560px) {
-  .sorts-wrapper .form-submit, .layouts-wrapper .form-submit {
-    width: 100%;
-    margin-top: 0em !important;
-    margin-bottom: 1.5em !important;
-  }
-}
-
-.layouts-wrapper .form-item.form-type-select {
-  width: 64%;
-}
-@media (min-width: 0) and (max-width: 560px) {
-  .layouts-wrapper .form-item.form-type-select {
-    width: 100%;
-  }
-}
-.layouts-wrapper .form-submit {
-  width: 25%;
-}
-@media (min-width: 0) and (max-width: 560px) {
-  .layouts-wrapper .form-submit {
-    width: 100%;
-    margin-bottom: 0 !important;
-  }
-}
-
-@media (min-width: 0) and (max-width: 1120px) {
-  .two-sidebars .sorts-wrapper, .two-sidebars .layouts-wrapper, .one-sidebar .sorts-wrapper, .one-sidebar .layouts-wrapper {
-    width: 100%;
-  }
-}
-@media (min-width: 0) and (max-width: 1120px) {
-  .two-sidebars .layouts-wrapper .form-item.form-type-select, .one-sidebar .layouts-wrapper .form-item.form-type-select {
-    width: 100%;
-  }
-}
-@media (min-width: 0) and (max-width: 1120px) {
-  .two-sidebars .layouts-wrapper .form-submit, .one-sidebar .layouts-wrapper .form-submit {
-    width: 100%;
-    margin-top: 0 !important;
-  }
-}
-
-/* =============================================================================
-    RESULTS
-   ========================================================================== */
-.cwrc-search-wrapper .results {
-  float: left;
-  border-top: 1px solid #E1E1E1;
-  padding-top: 1em;
-  width: 100%;
-}
-.cwrc-search-wrapper .results p.no-results,
-.cwrc-search-wrapper .results span.no-results {
-  padding: 0;
-  font-style: italic;
-}
-
-ul.results {
-  border-radius: 5px;
-  border-top: none !important;
-}
-ul.results li.result {
-  border-bottom: 1px solid #E1E1E1;
-  border-top: none;
-  margin-bottom: 0;
-}
-ul.results li.result a {
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 0.82491em;
-}
-
-.cwrc-search-wrapper .results ul {
-  margin-bottom: 2em;
-  float: left;
-  width: 100%;
-}
-.cwrc-search-wrapper .results ul li {
-  border-bottom: 1px solid #E1E1E1;
-  margin-bottom: 1em;
-  padding-bottom: 1em;
-}
-.cwrc-search-wrapper .results ul li .summary {
-  float: none;
-}
-.cwrc-search-wrapper .results ul li .text-wrapper .label a {
-  text-decoration: none;
-  font-weight: 700;
-}
-.cwrc-search-wrapper .results ul li .image {
-  background: #fff;
-  float: left;
-  display: inline-block;
-  vertical-align: top;
-  width: 64px;
-  height: 64px;
-  margin-right: 1em;
-  margin-bottom: .3em;
-}
-.cwrc-search-wrapper .results ul li .image .image-wrapper {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-}
-.cwrc-search-wrapper .results ul li .image .image-wrapper img {
-  display: block;
-  min-width: 100%;
-  min-height: 100%;
-  margin: auto;
-  position: absolute;
-  top: -100%;
-  right: -100%;
-  bottom: -100%;
-  left: -100%;
-  border-radius: 5px;
-  border: 1px solid #E1E1E1;
-}
-.cwrc-search-wrapper .results ul li .no-image, .cwrc-search-wrapper .results ul li .image img {
-  float: left;
-}
-.cwrc-search-wrapper .results ul li .no-image {
-  background: #ac0033;
-  float: left;
-  display: inline-block;
-  vertical-align: top;
-  width: 64px;
-  height: 64px;
-  margin-right: 1em;
-  margin-bottom: .3em;
-  color: #fff;
-  border-radius: 5px;
-}
-.cwrc-search-wrapper .results ul li .no-image:before {
-  font-size: 1.5em !important;
-  padding: .95em .75em .8em .85em;
-}
-.cwrc-search-wrapper .results ul li .below {
-  float: left;
-  width: 100%;
-  margin-top: 1.5em;
-}
-.cwrc-search-wrapper .results ul li .below a img {
-  height: 52px;
-}
-.cwrc-search-wrapper .results ul li .below .no-image {
-  width: 47px;
-  height: 47px;
-}
-.cwrc-search-wrapper .results ul li .below .no-image:before {
-  font-size: 1.2em !important;
-  padding: .7em .75em .8em .75em;
-}
-
-.cwrc-search-wrapper .summary {
-  float: left;
-}
-.cwrc-search-wrapper .results-summary {
-  margin-top: 1em;
-}
-
-dl.solr-fields {
-  border-top: none;
-}
-
-dl.solr-thumb {
-  width: 100%;
-  margin: 0 0 .5em;
-}
-
-.solr-thumb img {
-  background: #ac0033;
-  border-radius: 5px;
-  border: none;
-}
-
-dl.solr-fields {
-  width: 100%;
-}
-
-.islandora-solr-search-result {
-  font-size: 0.90824em;
-  padding-top: 1em;
-  border: 1px solid #E1E1E1;
-  padding: .7em;
-  border-radius: 5px;
-}
-
-.solr-fields dt, .solr-fields dd {
-  border-top: 1px solid #E1E1E1;
-}
-
-.cwrc-search-wrapper .islandora-solr-grid {
-  margin: 0 0 1em;
-  width: 100%;
-}
-.cwrc-search-wrapper .islandora-solr-grid .solr-grid-thumb img {
-  background-color: #ac0033;
-  height: 70px;
-}
-.cwrc-search-wrapper .islandora-solr-grid dl.solr-grid-field {
-  border: 1px solid #E1E1E1;
-  border-radius: 5px;
-  padding: .7em;
-  width: 31.5%;
-  margin: 0;
-  margin-right: 2%;
-  margin-bottom: 2%;
-  float: left;
-  position: relative;
-}
-@media (min-width: 0) and (max-width: 550px) {
-  .cwrc-search-wrapper .islandora-solr-grid dl.solr-grid-field {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 1em;
-  }
-}
-.cwrc-search-wrapper .islandora-solr-grid dl.solr-grid-field:nth-child(3n+3) {
-  margin-right: 0;
-}
-.cwrc-search-wrapper .islandora-solr-grid .solr-grid-caption a {
-  text-decoration: none;
-  font-weight: bold;
-}
-.cwrc-search-wrapper .islandora-solr-grid .solr-grid-caption a:after {
-  position: absolute;
-  right: 5px;
-  bottom: 5px;
-  top: auto;
-  color: #ac0033;
-}
-
-ul#secondary-display-profiles {
-  display: none;
 }
 
 /* =============================================================================
@@ -11123,7 +11401,7 @@ div#BRnavline {
   color: #fff;
   font-weight: 900;
   margin-left: 25px !important;
-  margin-left: 28px !important;
+  margin-left: 36px !important;
 }
 
 #cwrc_header h2 {

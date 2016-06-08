@@ -191,6 +191,19 @@ function de_theme_js_alter(&$js) {
 }
 // */
 
+/**
+ * Implements hook_preprocess_HOOK() for islandora datastreams block
+ */
+function de_theme_preprocess_islandora_blocks_datastreams(&$variables) {
+  $obj = menu_get_object('islandora_object', 2);
+  if ($obj != NULL && $obj->id) {
+    $variables['bagit_link'] = l(t('Bag these datastreams for download'), "islandora/object/" . $obj->id . "/manage/bagit", array(
+      'attributes' => array(
+        'class' => 'bag-datastreams-link'
+      ),
+    ));
+  }
+}
 
 /**
  * Implements hook_preprocess_HOOK() for block templates.

@@ -121,6 +121,7 @@
   };
 
   $(function() {
+      $('.cwrc-search-wrapper .grid-layout li').matchHeight();
       $('.islandora-basic-collection-grid .grid-layout li').matchHeight();
       $('.islandora-solr-grid .solr-grid-field').matchHeight();
       $('.cwrc-project-homepage .group-footer .field-collection-container .field-items .field-item').matchHeight();
@@ -128,6 +129,23 @@
       $('.views-row .slider-float').matchHeight();
       $('.front .homepage-news-event').matchHeight();
       $('.front .what-we-are-homepage').matchHeight();
+      $('.main-prefix-section-wrapper .region').matchHeight();
   });
+
+
+
+//icon on search need to be same height dynamically as the width
+
+$(window).resize(function(){
+
+    $('.left-wrapper').each(function() {
+        $(this).height($(this).width());
+    });
+
+    $('left-wrapper').height($('left-wrapper').width());
+}).resize();
+
+
+
 
 })(jQuery);

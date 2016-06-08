@@ -1153,6 +1153,11 @@ img, video {
   height: auto;
 }
 
+.jwplayer {
+  margin: 0 auto;
+  float: none;
+}
+
 .maintenance-page #content {
   position: relative;
   margin: 0 auto;
@@ -1180,7 +1185,7 @@ img, video {
 }
 
 .jwplayer {
-  margin: 0 auto;
+  margin: 0 auto !important;
   float: none;
 }
 

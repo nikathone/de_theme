@@ -501,6 +501,11 @@ img, video {
   height: auto;
 }
 
+.jwplayer {
+  margin: 0 auto;
+  float: none;
+}
+
 
 //MAINTENANCE
 
@@ -537,7 +542,7 @@ img, video {
 }
 
 .jwplayer {
-  margin: 0 auto;
+  margin: 0 auto !important;
   float: none;
 }
 

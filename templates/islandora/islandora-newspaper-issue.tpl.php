@@ -5,8 +5,6 @@
  */
 ?>
 <div class="islandora-object islandora-newspaper-issue clearfix">
-  <h2><?php print t('Details'); ?></h2>
-
   <span class="islandora-newspaper-issue-navigator">
     <?php print theme('islandora_newspaper_issue_navigator', array('object' => $object)); ?>
   </span>

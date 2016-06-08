@@ -22,8 +22,6 @@
  */
 ?>
 <div class="islandora-object islandora-large-image-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="ImageObject">
-  <h2><?php print t('Details'); ?></h2>
-
   <div class="islandora-large-image-content-wrapper clearfix">
     <?php if ($islandora_content): ?>
       <?php if (isset($image_clip)): ?>

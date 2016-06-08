@@ -8,19 +8,25 @@
 // Find the correct logo and alt text to use for this slider item
 $logo_uri = NULL;
 $logo_alt = "";
-if (!empty($field_logo)) {
-  $logo_uri = $field_logo[0]['uri'];
-  $logo_alt = $field_logo[0]['alt'];
-}
+
 if (!empty($field_featured_objects)) {
   if (isset($field_featured_objects[$language][0]['value'])) {
     $featitem = field_collection_item_load($field_featured_objects[$language][0]['value']);
     if ($featitem && !empty($featitem->field_image)) {
-      $logo_uri = $featitem->field_image[LANGUAGE_NONE][0]['uri'];
-      $logo_alt = $featitem->field_image[LANGUAGE_NONE][0]['alt'];
+      $lang = $language;
+      if (!array_key_exists($lang, $featitem->field_image)) $lang = LANGUAGE_NONE;
+
+      $logo_uri = $featitem->field_image[$lang][0]['uri'];
+      $logo_alt = $featitem->field_image[$lang][0]['alt'];
     }
   }
 }
+
+if ($logo_uri == NULL && !empty($field_logo)) {
+  $logo_uri = $field_logo[0]['uri'];
+  $logo_alt = $field_logo[0]['alt'];
+}
+
 if ($logo_uri == NULL) {
   $logo_uri = file_create_url(drupal_get_path('theme', 'de_theme') . '/img/project-carousel-default.png');
 } else {

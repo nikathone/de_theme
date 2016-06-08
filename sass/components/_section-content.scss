@@ -34,9 +34,9 @@
 
     h1#page-title {
       font-weight: $bold;
-      //line-height: 47px;
-      float: left;
+      //float: left;
       margin: .3em 0 0;
+      word-break: break-word;
       @include breakpoint(0 550px) {
         float: none;
       }
@@ -45,10 +45,25 @@
     .region-main-prefix {
       float: left;
       width: 54%;
-       @include breakpoint(0 550px) {
+
+        &:before {
+          content: '';
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          margin-right: -0.25em; /* Adjusts for spacing */
+        }
+
+      .container {
+        display: inline-block;
+        vertical-align: middle;
+        width: 100%;
+      }
+
+      @include breakpoint(0 550px) {
         width: 100%;
         margin-bottom: 1em;
-       }
+      }
 
       #block-cwrc-projects-project-context-logo {
         float: left;
@@ -57,6 +72,7 @@
           height: 59px;
           width: auto !important;
           margin-right: 1em;
+          float: left;
         }
       }
     }
@@ -71,7 +87,6 @@
       }
     }
   }
-
 
 
 
@@ -259,7 +274,6 @@ table {
 
 //page user sections base styles aside from home dashboard view
 
-//TEST
 .page-admin.admin-menu .region-content,
 .page-user.admin-menu .region-content {
 

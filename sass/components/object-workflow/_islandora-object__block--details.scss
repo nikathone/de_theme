@@ -21,6 +21,10 @@
 
    //CONTENT
 
+   .islandora-video-content {
+    float: none !important;
+   }
+
    .islandora-basic-image-content {
       width: 100% !important;
       background: #fff;
@@ -158,9 +162,22 @@
 #block-islandora-blocks-metadata {
   .content {
     padding: 0;
+
+    a {
+      @include btn;
+      margin-top: 1em;
+    }
+
+    .mods-multisite-link {
+      float: right;
+      width: 100%;
+      a {float: right;}
+    }
   }
 }
 
+.ir_citationCModel fieldset,
+#block-islandora-blocks-datastreams fieldset,
 #block-islandora-blocks-metadata fieldset.islandora-metadata {
   @include unblock;
   margin-bottom: 0;
@@ -169,6 +186,11 @@
 
   legend {
     @include visually-hidden;
+  }
+
+  a.bag-datastreams-link {
+    @include btn;
+    margin-top: 1em;
   }
 
   .fieldset-wrapper dl {

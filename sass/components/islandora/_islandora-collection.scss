@@ -127,6 +127,7 @@
   float: left;
 }
 
+.page-islandora-search .results,
 .islandora-basic-collection {
   overflow: visible;
   top: -1em;
@@ -147,13 +148,11 @@
     @extend %border-radius-small;
     min-height: 99px;
     width: 48.5%;
-    @include breakpoint(max-width 710px) {
+    @include breakpoint(max-width 715px) {
       min-height: 80px;
-      @include breakpoint(max-width 715px) {
-        width: 98%;
-        margin: 2% 0;
-        }
-      }
+      width: 98%;
+      margin: 2% 0;
+    }
   }
 
   ul.grid-layout li:nth-child(2n+2) {
@@ -167,16 +166,19 @@
 
 .top-wrapper {
   position: relative;
-  width: 100%;
-  float: left;
 }
 
 .right-wrapper {
-  float: left;
-  padding-left: 65px;
-  width: 100%;
-  @include breakpoint(715px) {
-    padding-left: 80px;
+  width: 75%;
+  float: right;
+  @include breakpoint(370px) {
+    width: 82%;
+  }
+  @include breakpoint(600px) {
+    width: 87%;
+  }
+  @include breakpoint(970px) {
+    width: 90%;
   }
 
   .project-info {
@@ -193,8 +195,39 @@
 }
 
 .left-wrapper {
+  width: 22%;
+  margin-right: 3%;
   float: left;
-  position: absolute;
+  margin-bottom: .3em;
+  @include breakpoint(370px) {
+    width: 15%;
+  }
+  @include breakpoint(600px) {
+    width: 10%;
+  }
+  @include breakpoint(970px) {
+    width: 8%;
+    margin-right: 2%;
+  }
+}
+
+ul.grid-layout {
+  .right-wrapper {
+    @include breakpoint(716px) {
+      width: 77%;
+    }
+    @include breakpoint(1000px) {
+      width: 79%;
+    }
+  }
+  .left-wrapper {
+    @include breakpoint(716px) {
+      width: 20%;
+    }
+    @include breakpoint(1000px) {
+      width: 18%;
+    }
+  }
 }
 
 .creation-info {
@@ -213,7 +246,7 @@
 
 
 //CAPTION / TITLE
-
+.top-wrapper .right-wrapper .label,
 .islandora-basic-collection .right-wrapper .label {
   padding: 0;
   margin-bottom: .2em;
@@ -221,71 +254,52 @@
   a {
     text-decoration: none;
     font-weight: $xbold;
-  }
-}
-
-
-//READ MORE
-
-.islandora-basic-collection-object dl dd.read-more,
-dl.islandora-basic-collection-object dd.read-more {
-  a {
-    color: $brand4;
-    font-weight: $bold;
-    font-size: .8em;
-    position: absolute;
-    right: 1em;
-    bottom: 1em;
-    text-decoration: none;
-      @include breakpoint(max-width 420px) {
-        position: relative;
-        float: right;
-        margin-top: 1em;
-      }
-
-    &:hover {
-      color: darken($brand4, 10%);
-    }
-
-    &:after {
-      @extend %icon-arrow-right;
-      float: right;
-      font-weight: $bold;
-      top: 4px;
-      font-size: .7em;
-      margin-left: .5em;
-    }
+    word-wrap: break-word;
   }
 }
 
 
 //IMAGES / ICONS
 
-  .islandora-basic-collection .left-wrapper a .no-image {
-    float: left;
-    height: 64px;
-    width: 64px;
-    background-color: $brand4;
-    @extend %border-radius-small;
-    @include breakpoint(0 715px) {
-      width: 45px;
-      height: 45px;
-    }
+  .cwrc-search-teaser-grid .left-wrapper a,
+  .cwrc-search-teaser-list .left-wrapper a,
+  .islandora-basic-collection .left-wrapper a  {
 
-    &:before {
-      @extend %icon-files-empty;
-      color: #fff;
-      width: 64px !important;
-      line-height: 64px !important;
-      font-size: 1.8em !important;
-      font-weight: $normal !important;
-      @include breakpoint(0 715px) {
-        width: 45px !important;
-        height: 45px !important;
-        font-size: 1.3em !important;
-        line-height: 45px !important;
+    .no-image{
+      float: left;
+      width: 100%;
+      height: 100%;
+      background-color: $brand4;
+      border-radius: 5px;
+      @extend %border-radius-small;
+
+        &:before {
+          content: '' !important;
+          display: inline-block;
+          height: 100%;
+          vertical-align: middle;
+          margin-right: 0em;
+        }
+
+        .no-image-icon {
+          display: inline-block;
+          vertical-align: middle;
+          width: 100%;
+          color: #fff;
+
+          &:before {
+            //@extend %icon-star;
+            margin-right: 0 !important;
+            text-align: center;
+            float: none !Important;
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            font-size: 1.3em;
+            top: 5px;
+          }
+        }
       }
-    }
 
     img {
       display: none;
@@ -294,48 +308,63 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //if it has an img
 
-  .islandora-basic-collection .left-wrapper a img {
-    background-color: #fff !important;
+  .cwrc-search-teaser-grid .left-wrapper,
+  .cwrc-search-teaser-list .left-wrapper,
+  .islandora-basic-collection .left-wrapper {
+    background: #fff !important;
     border: 1px solid $shade3;
-    border-radius: 3px;
+    border-radius: 5px;
     display: inline-block;
     vertical-align: top;
-    width: 64px;
-    height: 64px;
-    @include breakpoint(0 715px) {
-      width: 45px;
-      height: 45px;
-    }
 
     a {
       height: 100%;
       overflow: hidden;
       position: relative;
       display: block;
-    }
+      transition: all 0.3s ease-in;
+      &.has-image:before {content: none; transition: all 0.3s ease-in;}
+      &.has-image:hover:before {
+        //@extend %icon-file-empty;
+        float: right;
+        z-index: 800;
+        bottom: 6px;
+        top: auto;
+        height: 20px;
+        width: 20px;
+        right: 0;
+        background: $brand4;
+        border-radius: 2px;
+        position: absolute;
+        color: #fff;
+        font-size: 12px;
+        line-height: 20px;
+        transition: all 0.3s ease-in;
+      }
 
-    &:before {
-      content: none !important;
-    }
-
-    img {
-      display: block !important;
-      padding: 0em;
-      min-width: 100%;
-      min-height: 100%;
-      margin: auto;
-      position: absolute;
-      top: -100%;
-      right: -100%;
-      bottom: -100%;
-      left: -100%;
-      border-radius: 3px;
+      img {
+        display: block !important;
+        padding: 0em;
+        min-width: 100%;
+        min-height: 100%;
+        margin: auto;
+        position: absolute;
+        top: -100%;
+        right: -100%;
+        bottom: -100%;
+        left: -100%;
+        border-radius: 3px;
+      }
     }
   }
 
+
+
+
 //Critical Edition Container Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-criticaleditioncontainercmodel a .no-image:before {
+  .left-wrapper.islandora-criticaleditioncontainercmodel a.has-image:hover,
+  .left-wrapper.islandora-criticaleditioncontainercmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-folder-open;
     }
@@ -343,7 +372,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //TEI-RDF Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-tei-rdfcmodel a .no-image:before  {
+  .left-wrapper.islandora-tei-rdfcmodel a.has-image:hover,
+  .left-wrapper.islandora-tei-rdfcmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-clipboard;
     }
@@ -351,7 +381,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Transcription Content Model Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-transcriptioncmodel a .no-image:before {
+  .left-wrapper.islandora-transcriptioncmodel a.has-image:hover,
+  .left-wrapper.islandora-transcriptioncmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-file-text2;
     }
@@ -359,7 +390,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Version Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-versioncmodel a .no-image:before {
+  .left-wrapper.islandora-versioncmodel a.has-image:hover,
+  .left-wrapper.islandora-versioncmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-pencil;
     }
@@ -367,7 +399,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Audio Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-sp-audiocmodel a .no-image:before {
+  .left-wrapper.islandora-sp-audiocmodel a.has-image:hover,
+  .left-wrapper.islandora-sp-audiocmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-file-music;
     }
@@ -375,7 +408,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Collection Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-collectioncmodel a .no-image:before {
+  .left-wrapper.islandora-collectioncmodel a.has-image:hover,
+  .left-wrapper.islandora-collectioncmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-files-empty;
     }
@@ -383,7 +417,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Basic Image Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-sp-basic-image a .no-image:before {
+  .left-wrapper.islandora-sp-basic-image a.has-image:hover,
+  .left-wrapper.islandora-sp-basic-image a .no-image .no-image-icon {
     &:before {
       @extend %icon-file-picture;
     }
@@ -391,16 +426,19 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Internet Archive Book Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-bookcmodel a .no-image:before {
+  .left-wrapper.islandora-bookcmodel a.has-image:hover,
+  .left-wrapper.islandora-bookcmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-internet-archive;
       font-size: 2.8em !important;
+      top: 8px;
     }
   }
 
 //Islandora Page Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-pagecmodel a .no-image:before {
+  .left-wrapper.islandora-pagecmodel a.has-image:hover,
+  .left-wrapper.islandora-pagecmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-file-empty;
     }
@@ -408,7 +446,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Compound Object Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-compoundcmodel a .no-image:before {
+  .left-wrapper.islandora-compoundcmodel a.has-image:hover,
+  .left-wrapper.islandora-compoundcmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-object;
       font-size: 2.2em !important;
@@ -417,7 +456,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Organization Entity Content Model
 
-  .islandora-basic-collection .left-wrapper.cwrc-organization-entitycmodel a .no-image:before {
+  .left-wrapper.cwrc-organization-entitycmodel a.has-image:hover,
+  .left-wrapper.cwrc-organization-entitycmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-drawer;
       top: -4px !important;
@@ -426,7 +466,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Person Entity Content Model
 
-  .islandora-basic-collection .left-wrapper.cwrc-person-entitycmodel a .no-image:before {
+  .left-wrapper.cwrc-person-entitycmodel a.has-image:hover,
+  .left-wrapper.cwrc-person-entitycmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-person;
       font-size: 2.2em !important;
@@ -435,7 +476,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Place Entity Content Model
 
-  .islandora-basic-collection .left-wrapper.cwrc-place-entitycmodel a .no-image:before {
+  .left-wrapper.cwrc-place-entitycmodel a.has-image:hover,
+  .left-wrapper.cwrc-place-entitycmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-location;
     }
@@ -443,7 +485,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Schema Content Model
 
-  .islandora-basic-collection .left-wrapper.cwrc-schemacmodel a .no-image:before {
+  .left-wrapper.cwrc-schemacmodel a.has-image:hover,
+  .left-wrapper.cwrc-schemacmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-libreoffice;
     }
@@ -451,7 +494,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Large Image Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-sp-large-image-cmodel a .no-image:before {
+  .left-wrapper.islandora-sp-large-image-cmodel a.has-image:hover,
+  .left-wrapper.islandora-sp-large-image-cmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-file-picture;
     }
@@ -459,7 +503,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora PDF Content Mode
 
-  .islandora-basic-collection .left-wrapper.islandora-sp-pdf a .no-image:before {
+  .left-wrapper.islandora-sp-pdf a.has-image:hover,
+  .left-wrapper.islandora-sp-pdf a .no-image .no-image-icon {
     &:before {
       @extend %icon-file-pdf;
     }
@@ -467,7 +512,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Islandora Video Content Model
 
-  .islandora-basic-collection .left-wrapper.islandora-sp-videocmodel a .no-image:before {
+  .left-wrapper.islandora-sp-videocmodel a.has-image:hover,
+  .left-wrapper.islandora-sp-videocmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-file-play;
     }
@@ -475,7 +521,8 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //CWRC Document Content Model
 
-  .islandora-basic-collection .left-wrapper.cwrc-documentcmodel a .no-image:before {
+  .left-wrapper.cwrc-documentcmodel a.has-image:hover,
+  .left-wrapper.cwrc-documentcmodel a .no-image .no-image-icon{
     &:before {
       @extend %icon-file-text;
     }
@@ -483,9 +530,47 @@ dl.islandora-basic-collection-object dd.read-more {
 
 //Citation Content Model
 
-  .islandora-basic-collection .left-wrapper.cwrc-citationcmodel a .no-image:before {
+  .left-wrapper.cwrc-citationcmodel a.has-image:hover,
+  .left-wrapper.cwrc-citationcmodel a .no-image .no-image-icon {
     &:before {
       @extend %icon-annotation;
+    }
+  }
+}
+
+
+/* =============================================================================
+    fix for different pages layouts for icon size
+   ========================================================================== */
+
+.two-sidebars .cwrc-search-wrapper ul.grid-layout {
+  .right-wrapper {
+    @include breakpoint(692px) {
+      width: 70%;
+    }
+    @include breakpoint(900px) {
+      width: 74%;
+    }
+  }
+  .left-wrapper {
+    @include breakpoint(692px) {
+      width: 27%;
+    }
+    @include breakpoint(900px) {
+      width: 23%;
+    }
+  }
+}
+
+.two-sidebars .cwrc-search-wrapper ul.list-layout {
+  .right-wrapper {
+    @include breakpoint(623px) {
+      width: 85%;
+    }
+  }
+  .left-wrapper {
+    @include breakpoint(623px) {
+      width: 12%;
     }
   }
 }
@@ -495,7 +580,9 @@ dl.islandora-basic-collection-object dd.read-more {
     List View
    ========================================================================== */
 
+//List only
 
+.page-islandora-search .cwrc-search-wrapper .results ul.list-layout,
 .islandora-basic-collection ul.list-layout {
   padding-bottom: .5em;
   margin-bottom: .5em;

@@ -27,8 +27,6 @@ $link_text = $field_link[0]['title'];
 
   <?php print render($content['field_text']); ?>
 
-  <div class="learn-more"><?php print l(t('Learn more'), $link_path); ?></div>
-
 </div>
 
 

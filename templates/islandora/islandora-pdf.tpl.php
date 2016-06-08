@@ -9,7 +9,6 @@
 ?>
 
 <div class="islandora-object islandora-pdf-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="Article">
-  <h2><?php print t('Details'); ?></h2>
   <div class="islandora-pdf-content-wrapper clearfix">
     <?php if (isset($islandora_content)): ?>
       <div class="islandora-pdf-content">

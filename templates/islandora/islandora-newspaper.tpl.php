@@ -14,8 +14,6 @@
  */
 ?>
 <div class="islandora-object islandora-newspaper-object islandora">
-  <h2><?php print t('Details'); ?></h2>
-
   <div class="islandora-newspaper-content-wrapper clearfix">
     <?php if ($islandora_content): ?>
       <div class="islandora-newspaper-content">

@@ -5,6 +5,7 @@
   color: $brand-color;
 }
 
+
 // form inputs   ==============================================
 
 //button
@@ -60,7 +61,19 @@ select[multiple] {
   height: auto !important;
 }
 
+//widget
 
+.ui-widget, .ui-widget-content, form .ui-widget select {
+  font-family: $font1 !important;
+  font-size: 15px;
+}
+
+
+//description
+
+.form-item .description {
+  font-size: 15px !important;
+}
 
 //FIELDSET AND LEGEND
 

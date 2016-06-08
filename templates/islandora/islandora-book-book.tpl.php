@@ -6,8 +6,6 @@
 ?>
 
 <div class="islandora-object islandora">
-  <h2><?php print t('Details'); ?></h2>
-
   <?php if(isset($viewer)): ?>
     <div id="book-viewer">
       <?php print $viewer; ?>

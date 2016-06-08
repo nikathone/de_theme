@@ -19,8 +19,6 @@
  */
 ?>
 <div class="islandora-object islandora-newspaper-object">
-  <h2><?php print t('Details'); ?></h2>
-
   <div class="islandora-newspaper-controls">
     <?php print theme('islandora_newspaper_page_controls', array('object' => $object)); ?>
   </div>

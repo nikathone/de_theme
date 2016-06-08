@@ -9,8 +9,6 @@
 ?>
 
 <div class="islandora-object islandora-audio-object islandora" vocab="http://schema.org/" prefix="dcterms: http://purl.org/dc/terms/" typeof="AudioObject">
-  <h2><?php print t('Details'); ?></h2>
-
   <div class="islandora-audio-content-wrapper clearfix">
     <?php if (isset($islandora_content)): ?>
       <div class="islandora-audio-content">
