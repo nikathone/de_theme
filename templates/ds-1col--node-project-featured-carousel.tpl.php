@@ -41,6 +41,36 @@ if ($banner_img == NULL) {
   $banner_img = file_create_url(drupal_get_path('theme', 'de_theme') . '/img/new-banner.jpg');
 }
 
+
+if (!empty($field_project_intro)) {
+  $project_intro = strip_tags($elements['field_project_intro']['#items'][0]['value']);
+  $project_intro = str_replace('  ', ' ', str_replace('\n', ' ', $project_intro));
+  if (strlen($project_intro) > 200) {
+    $words = explode(" ", $project_intro);
+    $project_intro = "";
+    $new_words = array();
+
+    // Build a string >= 200 characters
+    while (strlen($project_intro) < 200 && count($words) > 0) {
+      $w = array_shift($words);
+      $project_intro .= $w . " ";
+      $new_words[] = $w;
+    }
+
+    // Trim the last word, if applicable
+    if (strlen($project_intro) > 200) {
+      array_pop($new_words);
+      $project_intro = implode(" ", $new_words);
+    }
+
+    $project_intro = trim($project_intro);
+    if (count($words) != 0) {
+      $project_intro = rtrim($project_intro, ".");
+      $project_intro .= "&hellip;";
+    }
+  }
+} else $project_intro = "";
+
 ?>
 <<?php print $ds_content_wrapper; print $layout_attributes; ?> class="ds-1col <?php print $classes;?> clearfix" data-background="<?php print $banner_img; ?>">
 
@@ -69,7 +99,7 @@ if ($banner_img == NULL) {
 <div class="field field-name-body field-type-text-with-summary field-label-hidden">
   <div class="field-items">
     <div class="field-item even" property="content:encoded">
-      <?php if (!empty($field_project_intro)) print strip_tags($elements['field_project_intro'][0]['#markup']); ?>
+      <?php if (!empty($project_intro)) print $project_intro; ?>
     </div>
   </div>
 </div>
