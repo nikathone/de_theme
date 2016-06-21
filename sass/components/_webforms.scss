@@ -1,23 +1,5 @@
 /* components/_webform.scss */
 
-// .node-webform{
-//   .form-text,
-//   .form-textarea{
-//     @include reset-font;
-//     width:  100%;
-//     @include rhythm-borders(1px,.25,$base-font-size,solid);
-//     border-color: darken(white,23);
-//   }
-
-//   .form-item-submitted-date-year{
-//     .year.form-text{
-//       width:  auto;
-//       @include adjust-font-size-to(12px,0,$base-font-size);
-//       @include rhythm-borders(1px,0,12px,solid);
-//     }
-//   }
-// }
-
-
 //WEBFORM SECTION
 
+@import 'webforms/form--og-members-admin';

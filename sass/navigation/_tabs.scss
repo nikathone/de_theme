@@ -201,6 +201,13 @@ ul.tabs {
           }
         }
       }
+
+      &.divider-above {
+        border-top: 1px dotted #D2D1D1;
+      }
+      &.divider-below {
+        border-bottom: 1px dotted #D2D1D1;
+      }
     }
   }
  }

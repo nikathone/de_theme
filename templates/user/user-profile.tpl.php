@@ -39,6 +39,8 @@
   <div class="profile-info-wrapper">
     <div class="profile-info"><?php print render($user_profile['field_full_name']); ?></div>
     <div class="profile-info"><?php print render($user_profile['summary']); ?></div>
+    <div class="profile-info"><?php print render($user_profile['field_user_bio']); ?></div>
+    <div class="profile-info"><?php print render($user_profile['field_user_website']); ?></div>
     <div class="contact-btn"><?php print render($user_profile['privatemsg_send_new_message']); ?></div>
   </div>
 </div>

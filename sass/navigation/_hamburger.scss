@@ -1,6 +1,10 @@
 /* _hamburger.scss file */
 // styles for hamburger menu
 
+.region-user-menu button.navbar-toggle {
+  margin: .5em .7em .5em 0;
+}
+
 button.navbar-toggle {
   float: right;
   border: /*1px solid $grey-icon-back*/ none;
@@ -39,7 +43,7 @@ div#masthead {
     display: block;
     float: left;
     @include breakpoint(0 48em) {
-      margin-bottom: .7em;
+      margin-bottom: .2em;
       margin-left: .7em;
     }
 
@@ -85,6 +89,7 @@ div#masthead {
       border: none;
       float: left;
       width: 100%;
+      max-width: 100%;
 
       a {
         color: #fff;

@@ -1,4 +1,6 @@
 
+@import 'admin-pages/admin-manage-pages--object-management';
+
 /* =============================================================================
    ADMIN MANAGE PAGES
    ========================================================================== */
@@ -68,6 +70,16 @@
     }
   }
 
+  .view-content {
+    float: left;
+    width: 100%;
+    margin: 1em 0 0;
+
+    .vbo-views-form .cwrc-dashboards-new-member-link-wrapper a {
+      color: #fff;
+    }
+  }
+
   .container-inline {
     float: left;
     width: 100%;
@@ -99,7 +111,13 @@ form#views-form-og-members-admin-default {
 }
 
 
+//PERMISSIONS
 
+form#user-admin-permissions {
+  thead tr th {
+    padding: 1em;
+  }
+}
 
 
 

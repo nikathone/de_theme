@@ -1,6 +1,10 @@
 
 
-.block-islandora-saved-searches {
+#block-islandora-saved-searches-saved-searches {
+  .content {
+    padding: 0;
+  }
+
   ul {
     float: left;
     width: 100%;
@@ -8,9 +12,8 @@
     li {
      padding: 0em;
      margin-bottom: 0;
-     font-size: ms(-.5);
      border-bottom: 1px solid $shade1;
-    padding: .5em 1em;
+     padding: .85em .8em;
 
       &:last-child {
         border-bottom: none;

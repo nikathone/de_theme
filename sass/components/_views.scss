@@ -1,6 +1,7 @@
 
 @import 'views/view--events';
 @import 'views/view--news';
+@import 'views/view--project_overview--page_grid_3.scss';
 @import 'views/view__block--events';
 @import 'views/view__block--news';
 @import 'views/view__block--homepage-news-and-events';
@@ -12,7 +13,7 @@
   .view {
 
     .views-row {
-      margin: 0 0 1em;
+      margin: 0 0 1.5em;
       padding: 0 0 1.5em;
       border-bottom: 1px solid $shade3;
       &:last-child{border-bottom: none; padding-bottom: 0;}
@@ -37,7 +38,19 @@
       float: right;
     }
 
+    .view-all-link a {
+      @include btn-blue;
+      margin: 0;
+      float: right;
+    }
+
     //image
+
+    .field-name-field-image {
+      @include breakpoint(0 400px) {
+        width: 100%;
+      }
+    }
 
     .field-name-field-image img {
       padding: 0;
@@ -45,6 +58,10 @@
       border-radius : 5px;
       margin: 0 1em 0 0;
       float: left;
+      @include breakpoint(0 400px) {
+        width: 100% !important;
+        margin: 0 0 1em 0;
+      }
     }
   }
 

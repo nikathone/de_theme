@@ -19,6 +19,23 @@
   }
 
 
+.region-main-prefix-right {
+  &:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+    }
+
+    #block-menu-block-7 {
+      display: inline-block;
+      vertical-align: middle;
+      width: 95%;
+    }
+}
+
+
   //------------------------PAGE TITLE,LOGO AND MENU
 
   .main-prefix-section-wrapper {
@@ -34,9 +51,11 @@
 
     h1#page-title {
       font-weight: $bold;
-      //float: left;
-      margin: .3em 0 0;
+      margin: .5em 0 0;
       word-break: break-word;
+      @include breakpoint($medium-screen) {
+        margin: .3em 0 0;
+      }
       @include breakpoint(0 550px) {
         float: none;
       }
@@ -51,13 +70,12 @@
           display: inline-block;
           height: 100%;
           vertical-align: middle;
-          margin-right: -0.25em; /* Adjusts for spacing */
         }
 
       .container {
         display: inline-block;
         vertical-align: middle;
-        width: 100%;
+        width: 95%;
       }
 
       @include breakpoint(0 550px) {
@@ -192,9 +210,10 @@
 
   //BUTTONS
 
-  .admin-menu .section-content #main input.form-submit {
-    margin-right: ms(0);
+  .section-content #main form input.form-submit {
+    margin-right: 1em;
   }
+
 
 
 
@@ -304,7 +323,7 @@ table {
 //saved searches
 
 .page-user-islandora-saved-searches {
-  form{
+  form#islandora-saved-searches-user-listing {
     input {
       margin-top: 0 !Important;
       margin-bottom: ms(0) !Important;

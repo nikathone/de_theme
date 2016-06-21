@@ -31,3 +31,12 @@
 .view-News .views-field.views-field-view-node {
   float: right;
 }
+
+.view-News.view-display-id-page {
+  .field-name-body {
+    padding-left: 6.2em;
+    @include breakpoint(0 400px) {
+      padding-left: 0;
+    }
+  }
+}

@@ -39,7 +39,7 @@
     li {
       display: inline-block;
       float: left;
-      word-break: break-all;
+      word-break: break-word;
       @include btn;
       background-color:  #FBFBFB;
       padding: .8em 1.27202em 0.6em;
@@ -47,7 +47,7 @@
       border: 1px solid $shade3;
       &:hover {background-color: #fff; color: $brand1;}
 
-      a{
+      a {
         position: relative;
         right: -6px;
         display: inline-block;
@@ -113,7 +113,7 @@
     li {
       display: inline-block;
       float: left;
-      word-break: break-all;
+      word-break: break-word;
       @include btn;
       background-color: #FBFBFB;
       padding: .8em 1.27202em 0.6em;
@@ -195,7 +195,6 @@ a.soft-limit {
 //SEARCH RESULT
 
 .islandora-solr-search-result {
-  .solr-label,
   .solr-value {
     word-break: break-all;
 

@@ -71,12 +71,31 @@
 //BODY
 
 .cwrc-project-homepage .group-left .field, .cwrc-project-homepage .group-right .field {
-  ul li {
-    ul {
-      margin-left: ms(0);
+
+  // ul, ol {
+  //   @include reset;
+  //   li {
+  //     @include reset;
+  //   }
+  // }
+
+  ul, ol {
+    @include reset;
+    margin: 0 0 1em 0;
+    width: 100%;
+    float: left;
+
+    li {
+      @include reset;
+      ul, ol {
+        margin: .2em 0 .2em 2em;
+      }
     }
   }
+
+
 }
+
 
 
 
@@ -115,7 +134,7 @@
     background: none;
     color: $brand1;
     padding: 0 0 1em 0;
-    margin-bottom: 1em;
+    margin: 0 0 1em 0 !important;
     border-bottom: 1px solid $shade3;
     border-radius: 0;
     font-size: 1.2em;
@@ -186,7 +205,6 @@
 //sidebar content
 
 .cwrc-project-homepage .field-name-field-acknowledgements.field-type-field-collection {
-
   a {
     color: #fff !important;
   }
@@ -208,14 +226,12 @@
     padding: 1em;
     background: #eee;
     color: $brand1;
+    float: right;
+    width: 100%;
 
     .field-item {
       margin-top: 0;
     }
-  }
-
-  .field-items .field-item:nth-child(even) .field-collection-view .field-type-text-long {
-    //background: red;
   }
 }
 
@@ -300,6 +316,14 @@
     &:before {
       @extend %icon-star;
       top: -1px;
+    }
+    &.facebook:before {
+      @extend %icon-facebook;
+      top: 0;
+    }
+    &.twitter:before {
+      @extend %icon-twitter;
+      top: 0;
     }
   }
 }

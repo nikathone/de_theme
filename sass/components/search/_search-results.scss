@@ -54,6 +54,15 @@
   }
 }
 
+.page-islandora-search .cwrc-search-wrapper {
+  .sorts-wrapper {
+    padding-bottom: 0.25em;
+  }
+  .results {
+    top: inherit;
+  }
+}
+
 ul.results {
   border-radius: 5px;
   border-top: none !important;
@@ -78,7 +87,7 @@ ul.results {
 
 .cwrc-search-wrapper {
   .results-summary {
-    margin-top: ms(0);
+    margin: 0 0 1em;
     float: left;
   }
 }
@@ -144,6 +153,10 @@ dl.solr-fields {
   border: 1px solid $shade3;
   padding: .7em;
   border-radius: 5px;
+
+  &.even {
+    background-color: #f7f7f7;
+  }
 }
 
 .solr-fields dt, .solr-fields dd {

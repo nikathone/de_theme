@@ -666,6 +666,10 @@ icons with borders
     content: "\e938";
    }
 
+   %icon-citation{
+    @include icon;
+    content: "\e927";
+   }
 
 
 //DEFAULT
@@ -1115,12 +1119,29 @@ icons with borders
     @include default-icomoon-icon-styles;
   }
 
-  %icon-heart{
+  %icon-heart {
     @include icon;
     content: "\e906";
     @include default-icomoon-icon-styles;
   }
 
+  %icon-facebook {
+    @include icon;
+    content: "\ea90";
+    @include default-icomoon-icon-styles;
+  }
+
+  %icon-twitter {
+    @include icon;
+    content: "\ea96";
+    @include default-icomoon-icon-styles;
+  }
+
+  %icon-google{
+    @include icon;
+    content: "\ea8b";
+    @include default-icomoon-icon-styles;
+  }
 
 /* =============================================================================
     DEFAULT

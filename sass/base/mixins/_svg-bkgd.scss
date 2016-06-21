@@ -9,3 +9,4 @@
   background-repeat: no-repeat;
   @include no-svg { background-image: image-url($filename + $extension); }
 }
+

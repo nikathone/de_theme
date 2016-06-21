@@ -22,66 +22,6 @@
 }
 
 
-
-
-/* =============================================================================
-    List / Grid Toggle
-   ========================================================================== */
-
-.islandora-basic-collection-display-switch {
-  position: Relative;
-  top: 3.5em;
-  z-index: 500;
-
-  ul.links {
-    float: right;
-
-    li {
-      display: inline-block;
-      margin-left: .5em;
-      width: auto;
-
-      a{
-        background-repeat: no-repeat;
-        background-position: center right;
-        display: block;
-        position: relative;
-        width: 25px;
-        height: 25px;
-        overflow: hidden;
-        color: lighten($brand1, 40%);
-        @extend %transition;
-        padding-top: 5px;
-
-        //grid
-
-        &.islandora-view-grid {
-          &:before {
-            @extend %icon-grid-view;
-          }
-        }
-
-        //list
-
-        &.islandora-view-list {
-          &:before {
-            @extend %icon-list-view;
-          }
-        }
-
-        &:hover {
-         color: $brand1;
-        }
-
-        &.active:before{
-         color: $brand1;
-        }
-      }
-    }
-  }
-}
-
-
 /* =============================================================================
     Sort
    ========================================================================== */
@@ -169,18 +109,6 @@
 }
 
 .right-wrapper {
-  width: 75%;
-  float: right;
-  @include breakpoint(370px) {
-    width: 82%;
-  }
-  @include breakpoint(600px) {
-    width: 87%;
-  }
-  @include breakpoint(970px) {
-    width: 90%;
-  }
-
   .project-info {
     a {
       img {
@@ -195,38 +123,14 @@
 }
 
 .left-wrapper {
-  width: 22%;
-  margin-right: 3%;
+  width: 45px;
+  height: 45px;
+  margin-right: 1em;
   float: left;
   margin-bottom: .3em;
-  @include breakpoint(370px) {
-    width: 15%;
-  }
-  @include breakpoint(600px) {
-    width: 10%;
-  }
-  @include breakpoint(970px) {
-    width: 8%;
-    margin-right: 2%;
-  }
-}
-
-ul.grid-layout {
-  .right-wrapper {
-    @include breakpoint(716px) {
-      width: 77%;
-    }
-    @include breakpoint(1000px) {
-      width: 79%;
-    }
-  }
-  .left-wrapper {
-    @include breakpoint(716px) {
-      width: 20%;
-    }
-    @include breakpoint(1000px) {
-      width: 18%;
-    }
+  @include breakpoint(1120px) {
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -241,6 +145,14 @@ ul.grid-layout {
 
   .date {
     display: inline-block;
+  }
+}
+
+.summary {
+  text-indent: 0;
+  padding-left: 3.9em;
+  @include breakpoint(1120px) {
+    padding-left: 4.9em;
   }
 }
 
@@ -261,9 +173,9 @@ ul.grid-layout {
 
 //IMAGES / ICONS
 
-  .cwrc-search-teaser-grid .left-wrapper a,
+  /*.cwrc-search-teaser-grid .left-wrapper a,
   .cwrc-search-teaser-list .left-wrapper a,
-  .islandora-basic-collection .left-wrapper a  {
+  .islandora-basic-collection .left-wrapper*/ a  {
 
     .no-image{
       float: left;
@@ -286,9 +198,10 @@ ul.grid-layout {
           vertical-align: middle;
           width: 100%;
           color: #fff;
+          text-align: center;
 
           &:before {
-            //@extend %icon-star;
+            @extend %icon-file-empty;
             margin-right: 0 !important;
             text-align: center;
             float: none !Important;
@@ -296,21 +209,22 @@ ul.grid-layout {
             display: block;
             width: 100%;
             font-size: 1.3em;
-            top: 5px;
+            top: 3px;
+            line-height: normal;
           }
         }
       }
 
     img {
-      display: none;
+      display: block;
     }
   }
 
 //if it has an img
 
-  .cwrc-search-teaser-grid .left-wrapper,
+  /*.cwrc-search-teaser-grid .left-wrapper,
   .cwrc-search-teaser-list .left-wrapper,
-  .islandora-basic-collection .left-wrapper {
+  .islandora-basic-collection */.left-wrapper {
     background: #fff !important;
     border: 1px solid $shade3;
     border-radius: 5px;
@@ -325,7 +239,7 @@ ul.grid-layout {
       transition: all 0.3s ease-in;
       &.has-image:before {content: none; transition: all 0.3s ease-in;}
       &.has-image:hover:before {
-        //@extend %icon-file-empty;
+        @extend %icon-file-empty;
         float: right;
         z-index: 800;
         bottom: 6px;
@@ -354,226 +268,13 @@ ul.grid-layout {
         bottom: -100%;
         left: -100%;
         border-radius: 3px;
+        // height: 45px;
+        // width: 45px;
       }
     }
   }
-
-
-
-
-//Critical Edition Container Content Model
-
-  .left-wrapper.islandora-criticaleditioncontainercmodel a.has-image:hover,
-  .left-wrapper.islandora-criticaleditioncontainercmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-folder-open;
-    }
-  }
-
-//TEI-RDF Content Model
-
-  .left-wrapper.islandora-tei-rdfcmodel a.has-image:hover,
-  .left-wrapper.islandora-tei-rdfcmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-clipboard;
-    }
-  }
-
-//Transcription Content Model Content Model
-
-  .left-wrapper.islandora-transcriptioncmodel a.has-image:hover,
-  .left-wrapper.islandora-transcriptioncmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-file-text2;
-    }
-  }
-
-//Version Content Model
-
-  .left-wrapper.islandora-versioncmodel a.has-image:hover,
-  .left-wrapper.islandora-versioncmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-pencil;
-    }
-  }
-
-//Islandora Audio Content Model
-
-  .left-wrapper.islandora-sp-audiocmodel a.has-image:hover,
-  .left-wrapper.islandora-sp-audiocmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-file-music;
-    }
-  }
-
-//Islandora Collection Content Model
-
-  .left-wrapper.islandora-collectioncmodel a.has-image:hover,
-  .left-wrapper.islandora-collectioncmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-files-empty;
-    }
-  }
-
-//Islandora Basic Image Content Model
-
-  .left-wrapper.islandora-sp-basic-image a.has-image:hover,
-  .left-wrapper.islandora-sp-basic-image a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-file-picture;
-    }
-  }
-
-//Islandora Internet Archive Book Content Model
-
-  .left-wrapper.islandora-bookcmodel a.has-image:hover,
-  .left-wrapper.islandora-bookcmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-internet-archive;
-      font-size: 2.8em !important;
-      top: 8px;
-    }
-  }
-
-//Islandora Page Content Model
-
-  .left-wrapper.islandora-pagecmodel a.has-image:hover,
-  .left-wrapper.islandora-pagecmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-file-empty;
-    }
-  }
-
-//Islandora Compound Object Content Model
-
-  .left-wrapper.islandora-compoundcmodel a.has-image:hover,
-  .left-wrapper.islandora-compoundcmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-object;
-      font-size: 2.2em !important;
-    }
-  }
-
-//CWRC Organization Entity Content Model
-
-  .left-wrapper.cwrc-organization-entitycmodel a.has-image:hover,
-  .left-wrapper.cwrc-organization-entitycmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-drawer;
-      top: -4px !important;
-    }
-  }
-
-//CWRC Person Entity Content Model
-
-  .left-wrapper.cwrc-person-entitycmodel a.has-image:hover,
-  .left-wrapper.cwrc-person-entitycmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-person;
-      font-size: 2.2em !important;
-    }
-  }
-
-//CWRC Place Entity Content Model
-
-  .left-wrapper.cwrc-place-entitycmodel a.has-image:hover,
-  .left-wrapper.cwrc-place-entitycmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-location;
-    }
-  }
-
-//CWRC Schema Content Model
-
-  .left-wrapper.cwrc-schemacmodel a.has-image:hover,
-  .left-wrapper.cwrc-schemacmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-libreoffice;
-    }
-  }
-
-//Islandora Large Image Content Model
-
-  .left-wrapper.islandora-sp-large-image-cmodel a.has-image:hover,
-  .left-wrapper.islandora-sp-large-image-cmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-file-picture;
-    }
-  }
-
-//Islandora PDF Content Mode
-
-  .left-wrapper.islandora-sp-pdf a.has-image:hover,
-  .left-wrapper.islandora-sp-pdf a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-file-pdf;
-    }
-  }
-
-//Islandora Video Content Model
-
-  .left-wrapper.islandora-sp-videocmodel a.has-image:hover,
-  .left-wrapper.islandora-sp-videocmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-file-play;
-    }
-  }
-
-//CWRC Document Content Model
-
-  .left-wrapper.cwrc-documentcmodel a.has-image:hover,
-  .left-wrapper.cwrc-documentcmodel a .no-image .no-image-icon{
-    &:before {
-      @extend %icon-file-text;
-    }
-  }
-
-//Citation Content Model
-
-  .left-wrapper.cwrc-citationcmodel a.has-image:hover,
-  .left-wrapper.cwrc-citationcmodel a .no-image .no-image-icon {
-    &:before {
-      @extend %icon-annotation;
-    }
-  }
 }
 
-
-/* =============================================================================
-    fix for different pages layouts for icon size
-   ========================================================================== */
-
-.two-sidebars .cwrc-search-wrapper ul.grid-layout {
-  .right-wrapper {
-    @include breakpoint(692px) {
-      width: 70%;
-    }
-    @include breakpoint(900px) {
-      width: 74%;
-    }
-  }
-  .left-wrapper {
-    @include breakpoint(692px) {
-      width: 27%;
-    }
-    @include breakpoint(900px) {
-      width: 23%;
-    }
-  }
-}
-
-.two-sidebars .cwrc-search-wrapper ul.list-layout {
-  .right-wrapper {
-    @include breakpoint(623px) {
-      width: 85%;
-    }
-  }
-  .left-wrapper {
-    @include breakpoint(623px) {
-      width: 12%;
-    }
-  }
-}
 
 
 /* =============================================================================

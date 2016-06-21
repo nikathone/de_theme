@@ -103,7 +103,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme1-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-      .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a   {
+      .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a, a.btn   {
       background-color: $theme1-main-colour !important;
       &:hover{background-color: darken($theme1-main-colour, 7%) !important;}
     }
@@ -145,7 +145,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme2-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a   {
+    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a, a.btn   {
       background-color: $theme2-main-colour !important;
       &:hover{background-color: darken($theme2-main-colour, 7%) !important;}
     }
@@ -187,7 +187,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme3-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a   {
+    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a, a.btn   {
       background-color: $theme3-main-colour !important;
       &:hover{background-color: darken($theme3-main-colour, 7%) !important;}
     }
@@ -229,7 +229,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme4-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a   {
+    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a, a.btn   {
       background-color: $theme4-main-colour !important;
       &:hover{background-color: darken($theme4-main-colour, 7%) !important;}
     }
@@ -271,7 +271,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme5-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a  {
+    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a, a.btn  {
       background-color: $theme5-main-colour !important;
       &:hover{background-color: darken($theme5-main-colour, 7%) !important; color: #fff;}
     }
@@ -313,7 +313,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme6-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a  {
+    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, a.btn   {
       background-color: $theme6-main-colour !important;
       &:hover{background-color: darken($theme6-main-colour, 7%) !important;}
     }
@@ -355,7 +355,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme7-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a   {
+    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a, a.btn   {
       background-color: $theme7-main-colour !important;
       &:hover{background-color: darken($theme7-main-colour, 7%) !important;}
     }
@@ -397,7 +397,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme8-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a  {
+    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a, a.btn  {
       background-color: $theme8-main-colour !important;
       &:hover{background-color: darken($theme8-main-colour, 7%) !important;}
     }
@@ -439,7 +439,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme9-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a  {
+    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a, a.btn  {
       background-color: $theme9-main-colour !important;
       &:hover{background-color: darken($theme9-main-colour, 7%) !important;}
     }
@@ -481,7 +481,7 @@ $theme10-secondary-colour: #704a64;
     &:hover{background-color: darken($theme10-main-colour, 7%) !important;}}
 
   .main-prefix-section-wrapper, .region-breadcrumb, .section-content {
-    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a   {
+    .cwrc-dashboards-new-member-link-wrapper a, .fieldset-wrapper input.form-submit, input.form-submit, input#edit-submit, .field-name-field-featured-links .field-item a, .region-content form .form-actions a, .cwrc-workflow-stamps-block .cwrc-workflow-history-link-wrapper a, .sidebar #block-islandora-blocks-collections ul li a, .islandora-default-metadata a:first-of-type, .sidebar #block-islandora-blocks-collections ul li a, a.btn {
       background-color: $theme10-main-colour !important;
       &:hover{background-color: darken($theme10-main-colour, 7%) !important;}
     }

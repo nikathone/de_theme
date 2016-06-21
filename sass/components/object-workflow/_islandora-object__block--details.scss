@@ -159,11 +159,12 @@
   }
 }
 
+#block-islandora-blocks-datastreams,
 #block-islandora-blocks-metadata {
   .content {
     padding: 0;
 
-    a {
+    a.bag-datastreams-link {
       @include btn;
       margin-top: 1em;
     }
@@ -186,11 +187,6 @@
 
   legend {
     @include visually-hidden;
-  }
-
-  a.bag-datastreams-link {
-    @include btn;
-    margin-top: 1em;
   }
 
   .fieldset-wrapper dl {

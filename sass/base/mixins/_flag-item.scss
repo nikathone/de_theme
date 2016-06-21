@@ -29,6 +29,9 @@
 
       &.flag-action {
         color: #D5D5D5 !important;
+        &:hover {
+          color: #A8840E !important;
+        }
       }
     }
 

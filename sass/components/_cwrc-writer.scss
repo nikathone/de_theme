@@ -35,3 +35,131 @@
     color: #fff !important;
   }
 
+#islandora-cwrc-document-display-cwrc-writer .tabs a{
+  padding: 0px 1em !important;
+}
+
+ul.jstree-container-ul.jstree-no-icons.jstree-no-dots.jstree-wholerow-ul {
+  padding-left: .5em;
+}
+
+#cwrc_wrapper {
+  ::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+  }
+}
+
+@-moz-document url-prefix() {
+
+  #westTabsContent #tree.iu-layout-center.jstree {
+    width: 400px;
+  }
+
+  #westTabs.tabs {
+    margin-bottom: 0;
+    overflow-x:hidden;
+    overflow-y: hidden;
+    width: 325px;
+    position: relative;
+    height: 948px;
+  }
+
+  #westTabsContent {
+    position: relative;
+    width: 350px;
+    height: 980 !important;
+  }
+
+  #cwrc_main.ui-layout-center.ui-layout-pane {
+    overflow-x: hidden !important;
+    position: relative !important;
+  }
+
+  #cwrc_main.ui-layout-center.ui-layout-pane .ui-layout-center {
+    position: relative !important;
+    width: 104% !important;
+    padding-right: 0.5em;
+  }
+
+  .jstree-cwrc > .jstree-no-dots .jstree-open > .jstree-ocl {
+    position: absolute;
+  }
+
+  .jstree-cwrc > .jstree-no-dots .jstree-closed > .jstree-ocl {
+    position: absolute;
+  }
+
+  i.jstree-icon.jstree-ocl {
+    position: absolute;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -114,7 +114,7 @@ form#privatemsg-list {
 
     @include breakpoint(0 769px) {
       width: 100%;
-      margin: 0;
+      margin: 0 0 1em;
       text-align: center;
     }
   }

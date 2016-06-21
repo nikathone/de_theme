@@ -134,18 +134,4 @@
 
 
 
-//icon on search need to be same height dynamically as the width
-
-$(window).resize(function(){
-
-    $('.left-wrapper').each(function() {
-        $(this).height($(this).width());
-    });
-
-    $('left-wrapper').height($('left-wrapper').width());
-}).resize();
-
-
-
-
 })(jQuery);
