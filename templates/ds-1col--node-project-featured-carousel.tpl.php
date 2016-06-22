@@ -10,7 +10,10 @@ $logo_uri = NULL;
 $logo_alt = "";
 
 if (!empty($field_featured_objects)) {
-  if (isset($field_featured_objects[$language][0]['value'])) {
+  $lang = $language;
+  if (!array_key_exists($language, $field_features_objects)) $lang = LANGUAGE_NONE;
+
+  if (isset($field_featured_objects[$lang][0]['value'])) {
     $featitem = field_collection_item_load($field_featured_objects[$language][0]['value']);
     if ($featitem && !empty($featitem->field_image)) {
       $lang = $language;
