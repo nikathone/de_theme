@@ -3437,10 +3437,15 @@ div.messages {
 /* @main sections
 ========================================================================== */
 body > .region,
-.section-content,
 #footer,
+.region-user-menu,
 .main-prefix-section-wrapper {
   float: left;
+  width: 100%;
+}
+
+.section-content {
+  clear: both;
   width: 100%;
 }
 
@@ -10339,7 +10344,19 @@ form#user-register-form > .form-item {
   border: 1px solid #E1E1E1;
 }
 
-form#islandora-xacml-editor-form .vertical-tabs-panes #edit-manage-fieldset .form-item.form-type-select.form-item-manage-groups .chosen-container {
+/**
+ * @file
+ * Styles for the "Manage Access" / XACML object management screens.
+ */
+form#islandora-xacml-editor-form .vertical-tabs-panes #edit-manage-fieldset .form-item.form-type-select.form-item-manage-groups .chosen-container,
+form#islandora-xacml-editor-form .vertical-tabs-panes #edit-manage-fieldset .form-item.form-type-select.form-item-access-groups .chosen-container,
+form#islandora-xacml-editor-form .vertical-tabs-panes #edit-manage-fieldset .form-item.form-type-select.form-item-dsid-mime-groups .chosen-container,
+form#islandora-xacml-editor-form .vertical-tabs-panes #edit-access-fieldset .form-item.form-type-select.form-item-manage-groups .chosen-container,
+form#islandora-xacml-editor-form .vertical-tabs-panes #edit-access-fieldset .form-item.form-type-select.form-item-access-groups .chosen-container,
+form#islandora-xacml-editor-form .vertical-tabs-panes #edit-access-fieldset .form-item.form-type-select.form-item-dsid-mime-groups .chosen-container,
+form#islandora-xacml-editor-form .vertical-tabs-panes #edit-dsid-mime-fieldset .form-item.form-type-select.form-item-manage-groups .chosen-container,
+form#islandora-xacml-editor-form .vertical-tabs-panes #edit-dsid-mime-fieldset .form-item.form-type-select.form-item-access-groups .chosen-container,
+form#islandora-xacml-editor-form .vertical-tabs-panes #edit-dsid-mime-fieldset .form-item.form-type-select.form-item-dsid-mime-groups .chosen-container {
   width: 100% !important;
 }
 
@@ -11601,10 +11618,10 @@ ul.jstree-container-ul.jstree-no-icons.jstree-no-dots.jstree-wholerow-ul {
   display: none;
 }
 .region-user-menu ul li.action-tab {
-  float: right;
+  float: none;
 }
 .region-user-menu ul li.action-tab.first-tab {
-  border-left: 1px solid #d7d7d7;
+  border-left: none;
 }
 @media (min-width: 0) and (max-width: 48em) {
   .region-user-menu .container, .region-user-menu .view-nodequeue-projects-featured .view-content, .view-nodequeue-projects-featured .region-user-menu .view-content, .region-user-menu .view-homepage-slider .view-content, .view-homepage-slider .region-user-menu .view-content {

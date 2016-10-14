@@ -67,10 +67,10 @@
       }
 
       &.action-tab {
-        float: right;
+        float: none;
       }
       &.action-tab.first-tab {
-        border-left: 1px solid $border-grey;
+        border-left: none;
       }
     }
   }

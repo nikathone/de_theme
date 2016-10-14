@@ -3,10 +3,16 @@
  * Styles for the "Manage Access" / XACML object management screens.
  */
 form#islandora-xacml-editor-form {
-  .vertical-tabs-panes #edit-manage-fieldset {
-    // The "Group Access" box.
-    .form-item.form-type-select.form-item-manage-groups .chosen-container {
-      width: 100% !important;
+  .vertical-tabs-panes {
+    #edit-manage-fieldset,
+    #edit-access-fieldset,
+    #edit-dsid-mime-fieldset {
+      // The "Group Access" box.
+      .form-item.form-type-select.form-item-manage-groups .chosen-container,
+      .form-item.form-type-select.form-item-access-groups .chosen-container,
+      .form-item.form-type-select.form-item-dsid-mime-groups .chosen-container {
+        width: 100% !important;
+      }
     }
   }
 }

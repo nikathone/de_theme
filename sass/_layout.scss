@@ -23,10 +23,15 @@
 }
 
 body > .region,
-.section-content,
 #footer,
+.region-user-menu,
 .main-prefix-section-wrapper {
   float: left;
+  width: 100%;
+}
+
+.section-content {
+  clear: both;
   width: 100%;
 }
 
