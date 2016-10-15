@@ -2323,8 +2323,8 @@ form#cwrc-search-bar-search a.advanced_search_button:before {
 .view-filters, .landing-page.grid-display .views-row, .block-global-comms, article.profile #group-employee-details, article.profile .field-name-field-contact-me, article.profile .field-name-field-about-me, article.profile .field-name-field-links {
   background-color: white;
   padding: 0.61803em;
-  border: 1px solid #9f9f9f;
-  box-shadow: #9f9f9f 0px 0px 3px;
+  border: 1px solid #a0a0a0;
+  box-shadow: #a0a0a0 0px 0px 3px;
   border-radius: 2px;
 }
 
@@ -2333,7 +2333,7 @@ form#cwrc-search-bar-search a.advanced_search_button:before {
 .inline-image-right, .highlight-box {
   background-color: white;
   padding: 0.38197em;
-  border: 1px solid #9f9f9f;
+  border: 1px solid #a0a0a0;
 }
 
 .date-time {
@@ -2358,10 +2358,10 @@ form#cwrc-search-bar-search a.advanced_search_button:before {
   background-color: transparent;
   font-weight: 700;
   color: #c2002f;
-  border: 0 solid #9f9f9f;
+  border: 0 solid #a0a0a0;
 }
 .pager a:hover {
-  background-color: #eaeaea;
+  background-color: #ebebeb;
   color: #141414;
 }
 .pager a:active {
@@ -2381,10 +2381,10 @@ form#cwrc-search-bar-search a.advanced_search_button:before {
   background-color: transparent;
   font-weight: 700;
   color: #c2002f;
-  border: 0 solid #9f9f9f;
+  border: 0 solid #a0a0a0;
 }
 .block-global-comms .more-link a:hover {
-  background-color: #eaeaea;
+  background-color: #ebebeb;
   color: #141414;
 }
 .block-global-comms .more-link a:active {
@@ -2406,7 +2406,7 @@ form#cwrc-search-bar-search a.advanced_search_button:before {
 @media (min-width: 48em) {
   #user-profile-form .form-textarea {
     background-color: white;
-    border: 1px solid #9f9f9f;
+    border: 1px solid #a0a0a0;
   }
 }
 
@@ -2483,7 +2483,7 @@ form#cwrc-search-bar-search a.advanced_search_button:before {
 }
 
 .view-id-taxonomy_term .views-row, .landing-page.list-display .views-row, .landing-page.list-display-images .views-row {
-  border-bottom: 1px solid #9f9f9f;
+  border-bottom: 1px solid #a0a0a0;
   padding-top: 0.38197em;
   padding-bottom: 1em;
   margin-bottom: 1em;
@@ -2501,7 +2501,7 @@ form#cwrc-search-bar-search a.advanced_search_button:before {
   margin-bottom: 0;
 }
 .view-id-taxonomy_term h2 a, .landing-page.list-display h2 a, .landing-page.list-display-images h2 a, .view-id-taxonomy_term h3 a, .landing-page.list-display h3 a, .landing-page.list-display-images h3 a {
-  color: #3f3f3f;
+  color: #404040;
 }
 .view-id-taxonomy_term h2 a:hover, .landing-page.list-display h2 a:hover, .landing-page.list-display-images h2 a:hover, .view-id-taxonomy_term h3 a:hover, .landing-page.list-display h3 a:hover, .landing-page.list-display-images h3 a:hover {
   color: #c2002f;
@@ -2525,7 +2525,7 @@ form#cwrc-search-bar-search a.advanced_search_button:before {
    ========================================================================== */
 html {
   font-size: 100%;
-  color: #3f3f3f;
+  color: #404040;
   overflow-y: scroll;
   min-height: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -2585,7 +2585,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #264c73;
+  color: #264d73;
 }
 
 /* Set consistent quote types.
@@ -2619,7 +2619,7 @@ h1 {
   }
 }
 h1 a {
-  color: #3f3f3f;
+  color: #404040;
 }
 
 h2 {
@@ -2696,7 +2696,7 @@ blockquote {
   font-size: 1.27202em;
   line-height: 2.35845em;
   line-height: 1.43463em;
-  border-left: 10px solid #3f3f3f;
+  border-left: 10px solid #404040;
   background-color: #f2f2f2;
   margin: 1em 1.61803em 1em 1.61803em;
   padding: 0.61803em 1.61803em;
@@ -2710,7 +2710,7 @@ blockquote p:last-child {
 }
 
 label {
-  color: #3f3f3f;
+  color: #404040;
   margin-bottom: 0.38197em;
   font-weight: 700;
 }
@@ -3362,7 +3362,7 @@ div.messages {
   margin-top: 0.61803em;
   font-size: 0.875em;
   line-height: 1.71429em;
-  color: #3f3f3f;
+  color: #404040;
 }
 
 .form-checkboxes .form-item,
@@ -3401,7 +3401,7 @@ div.messages {
   padding: 0;
 }
 .tabs a {
-  color: #3f3f3f;
+  color: #404040;
   transition: background-color 0.3s ease-out;
   display: block;
   float: left;
@@ -3424,7 +3424,7 @@ div.messages {
   background-color: #cfcfcf;
 }
 .tabs a:hover {
-  background-color: #9f9f9f;
+  background-color: #a0a0a0;
   color: black;
 }
 .tabs a:active {
@@ -3440,7 +3440,7 @@ body > .region,
 #footer,
 .region-user-menu,
 .main-prefix-section-wrapper {
-  float: left;
+  /*float: left;*/
   width: 100%;
 }
 
@@ -3752,7 +3752,7 @@ html body.admin-menu {
 
 .view-filters {
   margin-bottom: 1.61803em;
-  background-color: #f9f9f9;
+  background-color: #fafafa;
   padding: 1em;
 }
 .view-filters .views-exposed-widgets {
@@ -3820,13 +3820,13 @@ html body.admin-menu {
 .block-global-comms {
   box-shadow: none;
   border-radius: 0;
-  border: 0 solid #9f9f9f;
+  border: 0 solid #a0a0a0;
   margin: 0;
   padding: 0;
   position: relative;
 }
 .block-global-comms header {
-  border-bottom: 1px solid #9f9f9f;
+  border-bottom: 1px solid #a0a0a0;
   padding-top: 1em;
   padding-bottom: 1em;
   padding-left: 1em;
@@ -3890,11 +3890,11 @@ html body.admin-menu {
   background-color: transparent;
   font-weight: 700;
   color: #c2002f;
-  border: 0 solid #9f9f9f;
-  border-top: 1px solid #9f9f9f;
+  border: 0 solid #a0a0a0;
+  border-top: 1px solid #a0a0a0;
 }
 .block-global-comms .more-link a:hover {
-  background-color: #eaeaea;
+  background-color: #ebebeb;
   color: #141414;
 }
 .block-global-comms .more-link a:active {
@@ -6218,7 +6218,7 @@ article.profile .field-name-field-contact-me .field-label {
   font-weight: 400;
   font-size: 1.25em;
   line-height: 1.2em;
-  border-bottom: 1px solid #9f9f9f;
+  border-bottom: 1px solid #a0a0a0;
   padding-top: 0;
   padding-bottom: 0.38197em;
   margin-bottom: 0.38197em;
@@ -6267,8 +6267,8 @@ article.profile .field-name-field-links a:hover {
 .not-front.page-user-edit .content-section {
   background-color: white;
   border-radius: 3px 3px 0px 0px;
-  box-shadow: #9f9f9f 0px 0px 5px;
-  border: 1px solid #9f9f9f;
+  box-shadow: #a0a0a0 0px 0px 5px;
+  border: 1px solid #a0a0a0;
 }
 
 .not-front.page-user-edit .region-content {
@@ -6308,7 +6308,7 @@ article.profile .field-name-field-links a:hover {
   font-weight: 700;
 }
 #user-profile-form div.form-item div.password-suggestions {
-  border: 0px solid #9f9f9f;
+  border: 0px solid #a0a0a0;
   background-color: white;
   padding: 1.61803em;
   font-weight: 700;
@@ -6363,12 +6363,12 @@ article.profile .field-name-field-links a:hover {
 }
 #user-profile-form #edit-cancel {
   margin-left: 1em;
-  background-color: #e5e5e5;
-  color: #3f3f3f;
+  background-color: #e6e6e6;
+  color: #404040;
 }
 #user-profile-form #edit-cancel:hover {
-  background-color: #9f9f9f;
-  color: #3f3f3f;
+  background-color: #a0a0a0;
+  color: #404040;
 }
 #user-profile-form #edit-cancel:active {
   background-color: #cccccc;
@@ -11545,12 +11545,12 @@ ul.jstree-container-ul.jstree-no-icons.jstree-no-dots.jstree-wholerow-ul {
   background-color: transparent;
   font-weight: 700;
   color: #c2002f;
-  border: 0 solid #9f9f9f;
+  border: 0 solid #a0a0a0;
   margin-right: 0;
   color: #336699;
 }
 .pager a:hover {
-  background-color: #eaeaea;
+  background-color: #ebebeb;
   color: #141414;
 }
 .pager a:active {
@@ -12068,7 +12068,7 @@ ul.tabs.primary.collapsed {
 /* could be better */
 /* could be better */
 .inline-image-full-width {
-  border: 1px solid #9f9f9f;
+  border: 1px solid #a0a0a0;
   background-color: white;
   padding: 0.38197em;
   margin-left: auto;
@@ -12186,7 +12186,7 @@ ul.tabs.primary.collapsed {
   border-width: 0.0625em;
   border-style: solid;
   padding: -0.0625em;
-  border-color: #d8d8d8;
+  border-color: #d9d9d9;
 }
 .lt-ie8 table thead th {
   border-bottom-width: 0.14286em;
@@ -12204,7 +12204,7 @@ ul.tabs.primary.collapsed {
   width: 24.9% !important;
 }
 .lt-ie8 #echidnetmenu {
-  border: 1px solid #c5c5c5;
+  border: 1px solid #c6c6c6;
 }
 .lt-ie8 #echidnetmenu #link-list-panel {
   width: 59.5%;
@@ -12219,7 +12219,7 @@ ul.tabs.primary.collapsed {
   border-width: 0.0625em;
   border-style: solid;
   padding: -0.0625em;
-  border-color: #d8d8d8;
+  border-color: #d9d9d9;
 }
 .lt-ie8 .block-sub-nav-sitewide h2 {
   text-transform: capitalize;
@@ -12285,7 +12285,7 @@ ul.tabs.primary.collapsed {
   border-width: 0.0625em;
   border-style: solid;
   padding: -0.0625em;
-  border-color: #d8d8d8;
+  border-color: #d9d9d9;
 }
 .lt-ie9 .group-banner-copy .field-name-field-banner-image img {
   width: auto;
@@ -12496,5 +12496,3 @@ article.profile .field-name-field-full-name:before {
     margin-left: 0;
   }
 }
-
-/*# sourceMappingURL=de_theme.css.map */

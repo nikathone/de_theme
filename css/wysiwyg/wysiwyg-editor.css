@@ -825,7 +825,7 @@ icons with borders
 .inline-image-right, .highlight-box {
   background-color: white;
   padding: 0.38197em;
-  border: 1px solid #9f9f9f;
+  border: 1px solid #a0a0a0;
 }
 
 /* _elements.scss */
@@ -834,7 +834,7 @@ icons with borders
    ========================================================================== */
 html {
   font-size: 100%;
-  color: #3f3f3f;
+  color: #404040;
   overflow-y: scroll;
   min-height: 100%;
   -moz-osx-font-smoothing: grayscale;
@@ -894,7 +894,7 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: #264c73;
+  color: #264d73;
 }
 
 /* Set consistent quote types.
@@ -928,7 +928,7 @@ h1 {
   }
 }
 h1 a {
-  color: #3f3f3f;
+  color: #404040;
 }
 
 h2 {
@@ -1005,7 +1005,7 @@ blockquote {
   font-size: 1.27202em;
   line-height: 2.35845em;
   line-height: 1.43463em;
-  border-left: 10px solid #3f3f3f;
+  border-left: 10px solid #404040;
   background-color: #f2f2f2;
   margin: 1em 1.61803em 1em 1.61803em;
   padding: 0.61803em 1.61803em;
@@ -1019,7 +1019,7 @@ blockquote p:last-child {
 }
 
 label {
-  color: #3f3f3f;
+  color: #404040;
   margin-bottom: 0.38197em;
   font-weight: 700;
 }
@@ -1580,7 +1580,7 @@ icons with borders
 .inline-image-right, .highlight-box {
   background-color: white;
   padding: 0.38197em;
-  border: 1px solid #9f9f9f;
+  border: 1px solid #a0a0a0;
 }
 
 /* wysiwyg/_wysiwyg-styles.scss */
@@ -1614,7 +1614,7 @@ icons with borders
 /* could be better */
 /* could be better */
 .inline-image-full-width {
-  border: 1px solid #9f9f9f;
+  border: 1px solid #a0a0a0;
   background-color: white;
   padding: 0.38197em;
   margin-left: auto;
@@ -1673,5 +1673,3 @@ body {
 .cke_editable {
   padding: 1em;
 }
-
-/*# sourceMappingURL=wysiwyg-editor.css.map */
