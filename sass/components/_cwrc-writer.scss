@@ -39,6 +39,8 @@
   padding: 0px 1em !important;
 }
 
+
+
 ul.jstree-container-ul.jstree-no-icons.jstree-no-dots.jstree-wholerow-ul {
   padding-left: .5em;
 }
@@ -48,7 +50,13 @@ ul.jstree-container-ul.jstree-no-icons.jstree-no-dots.jstree-wholerow-ul {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
   }
+  a.jstree-anchor {
+    float: none;
+    display: inline;
+  }
 }
+
+
 
 @-moz-document url-prefix() {
 

@@ -3308,6 +3308,7 @@ div.messages {
   padding: 0.61803em;
   padding-left: 2.32128em;
   border-radius: 5px;
+  float: left;
 }
 
 .messages.warning {
@@ -3437,7 +3438,7 @@ div.messages {
 /* @main sections
 ========================================================================== */
 body > .region {
-  /*float: left;*/
+  float: left;
   width: 100%;
 }
 
@@ -11336,6 +11337,10 @@ ul.jstree-container-ul.jstree-no-icons.jstree-no-dots.jstree-wholerow-ul {
   /* remove scrollbar space */
   background: transparent;
   /* optional: just make scrollbar invisible */
+}
+#cwrc_wrapper a.jstree-anchor {
+  float: none;
+  display: inline;
 }
 
 @-moz-document url-prefix() {
