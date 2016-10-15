@@ -22,11 +22,20 @@
 
 }
 
-body > .region,
-#footer,
-.region-user-menu,
-.main-prefix-section-wrapper {
+body > .region{
   /*float: left;*/
+  width: 100%;
+}
+.section-content{
+  width: 100%;
+}
+#footer {
+  float: left;
+  width: 100%;
+}
+
+.main-prefix-section-wrapper {
+  float: left;
   width: 100%;
 }
 
