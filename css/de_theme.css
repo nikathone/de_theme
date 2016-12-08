@@ -11631,12 +11631,6 @@ ul.jstree-container-ul.jstree-no-icons.jstree-no-dots.jstree-wholerow-ul {
   margin-right: 0;
   display: none;
 }
-.region-user-menu ul li.action-tab {
-  float: none;
-}
-.region-user-menu ul li.action-tab.first-tab {
-  border-left: none;
-}
 @media (min-width: 0) and (max-width: 48em) {
   .region-user-menu .container, .region-user-menu .view-nodequeue-projects-featured .view-content, .view-nodequeue-projects-featured .region-user-menu .view-content, .region-user-menu .view-homepage-slider .view-content, .view-homepage-slider .region-user-menu .view-content {
     padding: 0;
