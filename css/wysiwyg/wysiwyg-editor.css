@@ -1031,6 +1031,7 @@ textarea {
 
 textarea {
   vertical-align: top;
+  word-break: normal;
 }
 
 table {
