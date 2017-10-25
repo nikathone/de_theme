@@ -60,6 +60,7 @@ stylesheets[print][] = 'css/print.css'
 scripts[] = bower_components/slick-carousel/slick/slick.min.js
 scripts[] = bower_components/SimpleStateManager/dist/ssm.min.js
 scripts[] = bower_components/matchHeight/jquery.matchHeight-min.js
+scripts[] = bower_components/jQuery-Collapse/src/jquery.collapse.js
 
 ; ========================================
 ; Scripts

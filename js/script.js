@@ -4,6 +4,14 @@
  */
 
 (function ($) {
+  Drupal.behaviors.de_theme_collapse_sidebar = {
+    attach: function (context, settings) {
+      $('#sidebar-second').wrapInner('<p></p>');
+      $('#sidebar-second').prepend('<h2 class="open">Collapse</h2>')
+      $('#sidebar-second').wrapInner('<div data-collapse></div>');
+    }
+  };
+
   Drupal.behaviors.de_theme_cwrc_featured_projects = {
     attach: function (context, settings) {
       "use strict";
