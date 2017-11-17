@@ -943,7 +943,7 @@ icons with borders
   content: "\e93b";
 }
 
-#block-cwrc-dashboards-project-locked-objects h2:before, table td.cwrc-object-locked-owned:after, table td.cwrc-object-locked-not-owned:after {
+#block-cwrc-dashboards-project-locked-objects h2:before, #block-cwrc-dashboards-user-locked-objects h2:before, table td.cwrc-object-locked-owned:after, table td.cwrc-object-locked-not-owned:after {
   font-family: 'icomoon';
   speak: none;
   height: .8em;
@@ -7178,6 +7178,7 @@ form#views-form-og-members-admin-default .form-actions.form-wrapper {
 }
 
 #block-cwrc-dashboards-project-locked-objects h2:before,
+#block-cwrc-dashboards-user-locked-objects h2:before,
 #block-cwrc-dashboards-project-utilities h2:before,
 #block-views-project-members-block h2:before {
   font-size: 23px !important;
