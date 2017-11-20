@@ -116,6 +116,14 @@
 
       <?php print $messages; ?>
 
+      <?php if ($page['sidebar_second']): ?>
+        <div class="collapse-handle-wrapper">
+          <a href="#" class="collapse-handle" data-collapse-target="sidebar-second">
+            <i class="fa fa-arrow-right"></i> <span class="sr-only"><?php print t('Collapse sidebar'); ?></span>
+          </a>
+        </div>
+      <?php endif; ?>
+
 <?php if ($page['content']): ?>
   <main id="main" role="main" class="column">
     <?php print render($page['content']); ?>

@@ -4,6 +4,25 @@
  */
 
 (function ($) {
+  Drupal.behaviors.de_theme_collapse_sidebar = {
+    attach: function (context, settings) {
+      $('a.collapse-handle').click(function (e) {
+        e.preventDefault();
+        var target = $('#' + $(this).data('collapse-target'));
+
+        if (target.hasClass('collapsed')) {
+          target.removeClass('collapsed');
+          $('#main').removeClass('full-width');
+          $(this).html('<i class="fa fa-arrow-right"></i> <span class="sr-only">' + Drupal.t('Collapse sidebar') + '</span>');
+        } else {
+          target.addClass('collapsed');
+          $('#main').addClass('full-width');
+          $(this).html('<i class="fa fa-arrow-left"></i> <span class="sr-only">' + Drupal.t('Show sidebar') + '</span>');
+        }
+      });
+    }
+  };
+
   Drupal.behaviors.de_theme_cwrc_featured_projects = {
     attach: function (context, settings) {
       "use strict";
