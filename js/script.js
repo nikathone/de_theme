@@ -35,6 +35,7 @@
       jQuery('.view-id-project_overview .view-mode-project_overview_grid_item').each(function(index, e)
       {
         jQuery(e).find('img').attr('alt', jQuery(e).find('.field-name-body .field-item').text());
+        jQuery(e).find('img').attr('title', jQuery(e).find('.field-name-body .field-item').text());
       });
     }
   };
