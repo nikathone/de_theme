@@ -142,16 +142,29 @@ body > .region,
 }
 
 // @layout with main column and second sidebar
-
 .one-sidebar.sidebar-second{
+  .collapse-handle-wrapper {
+    width: 100%;
+    text-align: right;
+    display: none;
+
+    @include breakpoint($weird-screen) {
+      display: block;
+    }
+    a {
+      @include btn-blue;
+    }
+  }
   #sidebar-second{
     width: 100%;
+    &.collapsed {
+      @include breakpoint($weird-screen) {
+        display: none;
+      }
+    }
 
     @include breakpoint(768px) {
       @include grid-span(3,10);
-    }
-    .region{
-
     }
   }
 
@@ -159,7 +172,8 @@ body > .region,
     @include breakpoint($weird-screen) {
       @include grid-span(9,1);
     }
-    .region{
+    &.full-width {
+      width: 100%;
     }
   }
 }

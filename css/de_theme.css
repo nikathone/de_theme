@@ -471,7 +471,7 @@ th {
    ========================================================================== */
 .btn, #block-cwrc-dashboards-user-privatemsg .compose-new-message a,
 #block-cwrc-dashboards-user-privatemsg .view-all-messages a, #block-cwrc-dashboards-user-bookmark-lists .content .new-bookmark a, .page-node-dashboard fieldset.form-wrapper .fieldset-wrapper input.form-submit, .cwrc-dashboards-new-member-link-wrapper a, .admin-access-wrapper a, input.form-submit,
-input#edit-submit, .vertical-tabs #edit-help a, .block-menu-block ul li a,
+input#edit-submit, .vertical-tabs #edit-help a, .one-sidebar.sidebar-second .collapse-handle-wrapper a, .block-menu-block ul li a,
 .region-main-prefix ul.action-links li a, .region-content form .form-actions a, .region-content form .form-actions input#edit-submit, .sidebar #block-islandora-blocks-collections ul li a, .front .view-homepage-slider .cta-btn a, .section-content .block, .node-type-article .field-name-field-tags .field-items .field-item a, ul.islandora-solr-filter-list li,
 ul.islandora-solr-query-list.query-list li, ul.islandora-solr-facet li, a.soft-limit, article.profile a.privatemsg-send-link, #block-views-my-projects-block li.views-row a[href^="/user/my-research-space"], form#privatemsg-list .compose-new-message a, a#privatemsg-filter-tags-cancel,
 a.privatemsg-filter-tags-add, #privatemsg-filter-tags a:not(:last-child), .field-name-field-featured-links .field-item a, .page-islandora-object .islandora .mods-multisite-link a, #block-islandora-blocks-datastreams .content a.bag-datastreams-link,
@@ -549,7 +549,7 @@ table tbody tr:last-child td:last-child, .page-node-edit.node-type-project.admin
 
 .btn, #block-cwrc-dashboards-user-privatemsg .compose-new-message a,
 #block-cwrc-dashboards-user-privatemsg .view-all-messages a, #block-cwrc-dashboards-user-bookmark-lists .content .new-bookmark a, .page-node-dashboard fieldset.form-wrapper .fieldset-wrapper input.form-submit, .cwrc-dashboards-new-member-link-wrapper a, .admin-access-wrapper a, input.form-submit,
-input#edit-submit, .vertical-tabs #edit-help a, .section-content .block .islandora-objects-display-switch ul.links li a, .section-content .block .islandora-basic-collection-display-switch ul.links li a, .block-menu-block ul li a,
+input#edit-submit, .vertical-tabs #edit-help a, .one-sidebar.sidebar-second .collapse-handle-wrapper a, .section-content .block .islandora-objects-display-switch ul.links li a, .section-content .block .islandora-basic-collection-display-switch ul.links li a, .block-menu-block ul li a,
 .region-main-prefix ul.action-links li a, .region-content form .form-actions a, .region-content form .form-actions input#edit-submit, .sidebar #block-islandora-blocks-collections ul li a, .front .view-homepage-slider .cta-btn a, .node-type-article .field-name-field-tags .field-items .field-item a, form#cwrc-search-bar-search .form-item.form-type-textfield, form#cwrc-search-bar-search .form-item-scope, .section-content .block #quicktabs-cwrc_advanced_search ul.quicktabs-tabs li, ul.islandora-solr-filter-list li,
 ul.islandora-solr-query-list.query-list li, ul.islandora-solr-filter-list li a,
 ul.islandora-solr-query-list.query-list li a, ul.islandora-solr-facet li, ul.islandora-solr-facet li span.plusminus a, a.soft-limit, article.profile a.privatemsg-send-link, #block-views-my-projects-block li.views-row a[href^="/user/my-research-space"], #block-cwrc-dashboards-project-utilities ul.cwrc-dashboard-utilities-list li a, .lists-with-actions .actions-list-group li a span.no-txt:after, .region-masthead ul.navbar > li, .open ul.dropdown-menu, .open ul.dropdown-menu li, form#privatemsg-list .compose-new-message a, a#privatemsg-filter-tags-cancel,
@@ -3548,8 +3548,37 @@ body > .region,
   }
 }
 
+.one-sidebar.sidebar-second .collapse-handle-wrapper {
+  width: 100%;
+  text-align: right;
+  display: none;
+}
+@media (min-width: 48em) {
+  .one-sidebar.sidebar-second .collapse-handle-wrapper {
+    display: block;
+  }
+}
+.one-sidebar.sidebar-second .collapse-handle-wrapper a {
+  font-weight: 900 !important;
+  color: #fff;
+  background-color: #336699;
+  font-size: 11.5px !important;
+  line-height: 16px;
+  padding: .75em 1.3em;
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 .5em .8em 0;
+}
+.one-sidebar.sidebar-second .collapse-handle-wrapper a:hover {
+  background-color: #2a547e;
+}
 .one-sidebar.sidebar-second #sidebar-second {
   width: 100%;
+}
+@media (min-width: 48em) {
+  .one-sidebar.sidebar-second #sidebar-second.collapsed {
+    display: none;
+  }
 }
 @media (min-width: 768px) {
   .one-sidebar.sidebar-second #sidebar-second {
@@ -3568,6 +3597,9 @@ body > .region,
     margin-left: 0;
     clear: none;
   }
+}
+.one-sidebar.sidebar-second #main.full-width {
+  width: 100%;
 }
 
 .two-sidebars #sidebar-first {
