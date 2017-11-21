@@ -30,8 +30,16 @@
       });
     }
   };
+  Drupal.behaviors.de_theme_cwrc_featured_projects = {
+    attach: function (context, settings) {
+      jQuery('.view-id-project_overview .view-mode-project_overview_grid_item').each(function(index, e)
+      {
+        jQuery(e).find('img').attr('alt', jQuery(e).find('.field-name-body .field-item').text());
+      });
+    }
+  };
 
-  Drupal.behaviors.de_theme_cwrc_homepage_slider = {
+    Drupal.behaviors.de_theme_cwrc_homepage_slider = {
     attach: function (context, settings) {
       "use strict";
 
