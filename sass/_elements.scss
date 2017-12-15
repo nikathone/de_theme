@@ -592,7 +592,9 @@ ul.contextual-links li a {
   //display: none;
 }
 
-
+.hide-this {
+  @include squish-text;
+}
 
 
 

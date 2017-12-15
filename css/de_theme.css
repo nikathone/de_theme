@@ -10737,7 +10737,9 @@ div#BRnavline {
   font-weight: 900;
   line-height: 1.6;
 }
-
+.view-display-id-page_grid_3 .node-project .field-name-body {
+    display: none;
+}
 .sidebar .block form#views-exposed-form-project-overview-page-grid-3 input[type=checkbox] {
   width: auto;
 }
