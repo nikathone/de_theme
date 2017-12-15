@@ -19,6 +19,10 @@
     line-height: 1.6;
   }
 
+  .field-name-body {
+    @include squish-text;
+  }
+
 }
 
 .sidebar .block form#views-exposed-form-project-overview-page-grid-3 {
