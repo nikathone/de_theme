@@ -3096,6 +3096,10 @@ input#edit-submit:hover {
   padding: .2em .4em;
 }
 
+input.form-autocomplete {
+  width: 100%;
+}
+
 select,
 textarea.form-textarea,
 input.form-text {
