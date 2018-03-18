@@ -497,32 +497,49 @@ $theme10-secondary-colour: #704a64;
   .islandora-basic-collection dl.islandora-basic-collection-object dt.islandora-basic-collection-thumb, .islandora-basic-collection dt, .islandora-basic-collection .islandora-basic-collection-object .islandora-collectioncmodel dt, .islandora-basic-collection dl.islandora-basic-collection-object dt.islandora-basic-collection-thumb {background-color:$theme10-secondary-colour !important; }
 }
 
+.view-project-featured-object {
+  width: 100%;
+  .field-collection-container {
+    padding: 0 .25em 0 .25em;
+  }
+  .field-name-field-image img {
+    border: none !important;
+  }
+  .views-row {
+    border-bottom: none !important;
+  }
+  button {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 35px;
+    height: 65px;
+    background-image: url('../img/slide-arrow-left.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-color: transparent;
+    filter:none;
+    border: none;
+    position: absolute;
+    z-index: 100;
+    top: 35%;
+    left: 0;
+    float: left;
+    @include breakpoint(0 1250px) {
+      left: 3%;
+      height: 38px;
+      top: 48%;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    &.slick-next {
+      background-image: url('../img/slide-arrow-right.png');
+      background-repeat: no-repeat;
+      background-position: center right;
+      float: right;
+      left: auto;
+      right: 0;
+      @include breakpoint(0 1250px) {
+        right: 3%;
+      }
+    }
+  }
+}

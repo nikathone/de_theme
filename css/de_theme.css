@@ -9333,6 +9333,56 @@ ul.privatemsg-message-actions {
   background-color: #704a64 !important;
 }
 
+.view-project-featured-object {
+  width: 100%;
+}
+.view-project-featured-object .field-collection-container {
+  padding: 0 .25em 0 .25em;
+}
+.view-project-featured-object .field-name-field-image img {
+  border: none !important;
+}
+.view-project-featured-object .views-row {
+  border-bottom: none !important;
+}
+.view-project-featured-object button {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 35px;
+  height: 65px;
+  background-image: url("../img/slide-arrow-left.png");
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-color: transparent;
+  filter: none;
+  border: none;
+  position: absolute;
+  z-index: 100;
+  top: 35%;
+  left: 0;
+  float: left;
+}
+@media (min-width: 0) and (max-width: 1250px) {
+  .view-project-featured-object button {
+    left: 3%;
+    height: 38px;
+    top: 48%;
+  }
+}
+.view-project-featured-object button.slick-next {
+  background-image: url("../img/slide-arrow-right.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  float: right;
+  left: auto;
+  right: 0;
+}
+@media (min-width: 0) and (max-width: 1250px) {
+  .view-project-featured-object button.slick-next {
+    right: 3%;
+  }
+}
+
 /* =============================================================================
     ADMIN SETTINGS
    ========================================================================== */
