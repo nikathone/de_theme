@@ -542,7 +542,7 @@ $theme10-secondary-colour: #704a64;
       }
     }
   }
-  .clearfix {
+  .clearfix:after {
     display: none;
   }
 }
