@@ -9336,6 +9336,9 @@ ul.privatemsg-message-actions {
 .view-project-featured-object {
   width: 100%;
 }
+.view-project-featured-object .clearfix {
+  display: none;
+}
 .view-project-featured-object .field-collection-container {
   padding: 0 .25em 0 .25em;
 }
