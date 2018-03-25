@@ -6,6 +6,10 @@
 (function ($) {
   Drupal.behaviors.de_theme_collapse_sidebar = {
     attach: function (context, settings) {
+      if (!$('body').hasClass('page-islandora-object')) {
+        $('.collapse-handle-wrapper').remove();
+        return;
+      }
       $('a.collapse-handle').once(function () {
         // Get target and default state.
         var target = $('#' + $(this).data('collapse-target'));
